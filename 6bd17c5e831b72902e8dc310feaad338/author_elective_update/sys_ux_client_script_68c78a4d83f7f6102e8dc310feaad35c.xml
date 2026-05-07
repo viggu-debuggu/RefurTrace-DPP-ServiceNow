@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">8cc74a4d83f7f6102e8dc310feaad38c</macroponent>
+        <name>form_default_2/fields</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const fieldsMap = api.data.record.form.fields;
+    const filteredFields = {};
+
+    for (const fieldName in fieldsMap) {
+        const fieldData = fieldsMap[fieldName];
+        const fieldType = fieldData.dictionary? fieldData.dictionary.type: fieldData.type;
+
+        if (fieldType == 'html' || fieldType == 'translated_html') {
+            filteredFields[fieldName] = fieldData;
+        }
+    }
+
+    return filteredFields;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:28:28</sys_created_on>
+        <sys_id>68c78a4d83f7f6102e8dc310feaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>form_default_2/fields</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_client_script_68c78a4d83f7f6102e8dc310feaad35c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:28:28</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>6261d6d8eb41ae54c040fddacad0cdd2</instance_id>
+        <instance_name>dev331255</instance_name>
+        <name>sys_ux_client_script_68c78a4d83f7f6102e8dc310feaad35c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;8cc74a4d83f7f6102e8dc310feaad38c&lt;/macroponent&gt;&lt;name&gt;form_default_2/fields&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const fieldsMap = api.data.record.form.fields;
+    const filteredFields = {};
+
+    for (const fieldName in fieldsMap) {
+        const fieldData = fieldsMap[fieldName];
+        const fieldType = fieldData.dictionary? fieldData.dictionary.type: fieldData.type;
+
+        if (fieldType == 'html' || fieldType == 'translated_html') {
+            filteredFields[fieldName] = fieldData;
+        }
+    }
+
+    return filteredFields;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-03-21 15:28:28&lt;/sys_created_on&gt;&lt;sys_id&gt;68c78a4d83f7f6102e8dc310feaad35c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;form_default_2/fields&lt;/sys_name&gt;&lt;sys_package display_value="RefurTrace" source="x_1919710_refurt_0"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RefurTrace"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_68c78a4d83f7f6102e8dc310feaad35c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-03-21 15:28:28&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>425654614</payload_hash>
+        <record_name>form_default_2/fields</record_name>
+        <reverted_from/>
+        <source>efd17c5e831b72902e8dc310feaad372</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:28:28</sys_created_on>
+        <sys_id>8bd8c2c1833bf6102e8dc310feaad3c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19d110318190000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:28:28</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>4bd8c2c1bf3bf610aef8213db19f07bf</update_guid>
+        <update_guid_history>4bd8c2c1bf3bf610aef8213db19f07bf:425654614,4d788a01f63bf610e24f7d368a54a30c:-374934070,60c78a4d32f7f6104460369bc09dfb5f:-1391508558</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:30:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>059e198072214404b22b05369d95edb9</sys_id>
+        <sys_metadata>68c78a4d83f7f6102e8dc310feaad35c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>form_default_2/fields</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_68c78a4d83f7f6102e8dc310feaad35c</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_68c78a4d83f7f6102e8dc310feaad35c">8bd8c2c1833bf6102e8dc310feaad3c0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:30:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

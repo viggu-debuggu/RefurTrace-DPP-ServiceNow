@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=1299923000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>049a0e497743011031e3b3c64b5a9996</copied_from>
+        <copied_from_name>FlowTemplate: Record Trigger</copied_from_name>
+        <description>Approves ownership change before updating asset passport</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>ownership_transfer_approval_flow</internal_name>
+        <label_cache>[{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["approval_conditions"]}},{"name":"{{static.62826bf03710200044e0bfc8bcbe5df1}}","label":"Abel Tuter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["approval_conditions"]}},{"name":"Created_1.current.asset_passport","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Asset Passport","reference":"x_1919710_refurt_0_asset_passport","reference_display":"Asset Passport","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"asset_passport","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["record"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["record"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["asset_passport"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["asset_passport"]}},{"name":"Created_1.current.requested_new_owner","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Requested New Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"requested_new_owner","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["assigned_to"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["current_owner"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["new_owner"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["new_owner"]}},{"name":"Created_1.current.current_owner","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Current Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"current_owner","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["previous_owner"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["previous_owner"]}},{"name":"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["approved_by"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Ownership Transfer Case Record","reference":"x_1919710_refurt_0_ownership_transfer_case","reference_display":"Ownership Transfer Case","type":"reference","base_type":"reference","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["record","assigned_to"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["current_owner","record"],"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["record"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["asset_passport","previous_owner","new_owner","transfer_case","remarks","approved_by"],"08564c15-46d2-4d0a-b498-d5cdd7f3340f":["record"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_case"],"7906db30-adb8-4cfb-8d73-2a1c90301c7d":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["transfer_date"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Ownership Transfer Case Table","reference":"x_1919710_refurt_0_ownership_transfer_case","reference_display":"Ownership Transfer Case","type":"table_name","base_type":"table_name","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["approved_by"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.run_start_time","label":"Trigger - Record Created➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_date"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>492cf1d28393b2902e8dc310feaad3b9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Ownership Transfer Approval Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>efc872c383af36102e8dc310feaad34c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>404c8596831f72902e8dc310feaad3cb</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_name>Ownership Transfer Approval Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_hub_flow_404c8596831f72902e8dc310feaad3cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>48d872c383af36102e8dc310feaad3b4</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_variable_value action="delete_multiple" query="document_key=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1919710_refurt_0_ownership_transfer_case">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:50:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>efc872c383af36102e8dc310feaad34c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <table>x_1919710_refurt_0_ownership_transfer_case</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>404c8596831f72902e8dc310feaad3cb</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:50:06</sys_created_on>
+        <sys_id>27c872c383af36102e8dc310feaad34e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <trigger display_value="">efc872c383af36102e8dc310feaad34c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN27c872c383af36102e8dc310feaad34e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN8c4c8596831f72902e8dc310feaad3cb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>404c8596831f72902e8dc310feaad3cb</id>
+        <name>Ownership Transfer Approval Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>8c4c8596831f72902e8dc310feaad3cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 11:44:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8c4c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN104c8596831f72902e8dc310feaad3db,884c8596831f72902e8dc310feaad3d5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</model>
+        <model_id>404c8596831f72902e8dc310feaad3cb</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_404c8596831f72902e8dc310feaad3cb</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>104c8596831f72902e8dc310feaad3db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 15:13:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=104c8596831f72902e8dc310feaad3db"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</model>
+        <model_id>404c8596831f72902e8dc310feaad3cb</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_404c8596831f72902e8dc310feaad3cb</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>884c8596831f72902e8dc310feaad3d5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 15:13:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=884c8596831f72902e8dc310feaad3d5"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN544cc596831f72902e8dc310feaad310"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>544cc596831f72902e8dc310feaad310</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-13 15:09:03</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY227jNhD9FUFPXSAFJMu2rLztOlk0wHbTOt72IUgJiiJtoTLlUpQSd5F/71C3yLr4EiddO3kxIJImZ86cOTPk7XddCn82o+KKRxJzQm9W0ZWnn+t46GAyHDm23bcM0zQsk1quRYZ9d4AdB1v6mR5glwawdIrdgMK3zyUVHAfT1ZLCsFTDiOOFmltg7mEZipV+LkVMz3QmwsWULpYBlrCY4SCCwVB4VOjn5pme/i3fA/6e4CBW3w/IdEzHNg0kKIuFRAYK7zkV0dxfIikwjxgViOBI/cnzI9h+9Uf+3+tioTbNF2rjbOESCzhOqqO/62TuB56gXD+/vQOfFBaEEez0qEEs0+r1DKM36pvu0HLNnmdhahgtWNTsly2QPDlLHyTlHvVKHBpoCYq9ax6syhVzABs2TJF9iPx/YfeRodaBWxTCmM2VnyjHIhsm89An9Hop/ZBnI5md2WQYxAv+NbNfoUgZjgNZoAgjcQT70aUyWRmRW8Ru5uH9pDjws89T7/LJICQ4KL+wBNK5saSRApz5AUCPMmyiMBap9ZPL8fXkAv35cTr+5XKCJpc308nVeHp5oT+mfqF/YrVjZmFuC8rceSxD/9mngQpgtIoQRPJMj4jwl/IjkX5SsO7x7CVyYBxyz0/xbOQBKaaiqq0VclSiXWC5KTkMo6QXqZxapMhfl783uZ8NbuP5cIixR3EHz13W4W+LMbLF9ar9mxifj+xC+b5h/CDS5yL2XM4vQo8GF1UuZAxEPl/GUqF1j7mMkAwR9jxUwVEtBZu2JUHm2+MrMl7EHI5CZSSbvE8BL5H/4kfg6C3ke4FqagzMsy/5lpOYayGEHH40EgsAVWpFkrCrBZ7lsWC/FUROwcz5l2CB0AKpXJ/HLlpDFNnOyDGHXdS2yRqCaSrB1re6fveookwDSmSFrexbVP361Y8in88q8JY+psFquFh6B6zXCgQzV6PT8vXuEPlqUiipUaMmY5sIsk3cTJMxl7KeYStMgNouMw3bGGDmWYZBehup3WmwrHH9VURuP4mL0iwLdsipOtqF8YrBwT6ETdbZnu/TU+zIlXR8hKbVKoK1V0koGZoNX+xO1Bdun7CXKAX3dq0Mr14UWBDegxI9oyC4mPw9E2HMvbpkqj01n2tPK7SfcuQ/nJZgVosDCwXd7O/6itPx8uCy8ESiIoExXzULQja4TfotZroO7VMDFN8CsXcHjuMS3GPMHtq0Z3YSuNWgk5D8LQmTtGVcl8a2kjFp4/Aewv/jDTxI/nM2top/NvfWZf5+TjkCJwUKlJA31H4W+B4t5g4Tg8ZRydO9rCYIO6gBGzlkYNo2sUEDQQ1Yn7rY7PfAS3tojQbb/NxkmGzx/X+59yrJV4Z0KMW3bOq4Hn6Ok9IRlVJVsv3bFw5Xg/Q/ODOvUtNVQLVUqkKhfQ35z1dP67QbCrUzfTY5oQpf7WN2cVoxUHtTXruhnDf6NvD0E4yveaouJh0xf2+3/VqGJetQttz2nwPo1pcA2h8NHGa1FwDmbFaFbm+OvjHcUYWSTj1ra8B2zfKkVSzKhqze0j0j7jU25VtbW5rR9wvKQQ1wkbKdzx/PMfZdNBhpv3hIl6GspShk1eJzEWowocEhms+03Frqae5Kk3MKwQjgjgQHaur0E6s61aLb9LxMtTftd3anbPQaMKzlbf8JOfYybUQtjza+E7Xgta1LoJ6NBwOr45ro1B+N2kzaYvHR9wt7i0rSplEb6+N++9b3bK2QlRivc2LHhuANe/1qT14tVhxpLb/7D53ZAj/zJAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN4163d516835f72902e8dc310feaad33b,552bb30283a332102e8dc310feaad363,87e23ac7836f36102e8dc310feaad3e0,965e2e8f832f36102e8dc310feaad32d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 12:15:53</sys_created_on>
+        <sys_id>4163d516835f72902e8dc310feaad33b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 11:09:25</sys_updated_on>
+        <ui_id>a13cccf9-5f15-4cb6-ae8e-9051b401aeb2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K8jPlHXIB6FvVVGlWe1OpbYzL6WKHNspXgUnEzvTshH/fW5ih2Sgw9AtldpVXxC+vrbPPT4H29xWSDB0irgXuD58TBIXO2MHhzwIQzrFhIZB4HsuGiJJlhwySZ4X2XeSRgUnKpPQAY2y7oGvTKg8JauvXYQuRMoKLtHp7d0Q5aSAWTQv0Gm11XUojJTEPIXUM4tjcNXi+CVAvcrrDqULIe9t+y87zXUbzApWwxoPEX/UXDIOeBKSKj5ESyIZ0Vmx2kRganYp0y6wEFKbgpfkUYl/YT0nwHViwqFEatnYNCPLlAknM6IJICmpLosNcZmgXBlyGE9ImerzfswkXOZaQJHNEE3itB2dpeVSfjaMoM0EvY0pFYDgeV1pDd3WkVwvsoerFuWFkA0ptjPNKEk3LaKBurjUNZ4KleJmi2UT2eGZp3wJK0ZL2CeIRPVmiWYVAL0c3afQGCVp9gDolLiXI0LrCkewA2R0AfFZE/5KClGX+zdMA4Pr5b5I8a3kn2odBeM4mOKQnbAExyde6PonhHJ8wgPH5z4LqO+4aD1EaqXOU6JURxTsUPStrMs0tFmCIsNxPYQWItdnAOo7t1ysh9ZF2EnGfDod49jB2MU49CkOXR67k2DiEhY+IdJE8JQd10QHoNgx0YWF8St41kJNM2qSfrZRM37w2XQc3Uohxu/JS7D4S6z0Og55vtoNBb+RPN0rNt47OP7JykK+juIPANEq/k+DYlvw2+D+i97dD73///U+CfdJjeJOUgWnIIye0KvqHDZfcxY5I1oWQJNer4+g/gMgteq/ajFtY7R6Zxktm70QbEvwM9sz+DTrFI/3K97o4hDBu+MPub9JuVN/n7aSaSclVgJJoO6+4OfIYJ+j0zmSmeRzNJyjOiuqtdWEIQMQbjqaWFWt1yZSFsRO4PSa3WhGVqrJVHTBWZma6E+RqBG/jR/Dbwdw0vptVvLBzJCyS1P7LGlxGl7EzllzbROamf64Ef0zxz/ameO9pxPnpa+V13uERO3VuXYY/FC8wivD26s/3hPb5hpPM8lEXYHq2dNc/rk6k6svt1WlNHiLjoLQCZLJlFJMQuwEHnaoT1w35tiLuec56/XdrodeMtXzzHdA8ZvDDjyjfkeGNWH3p4Ed1Ddg91eD7bTm8451/L2z+97bdN/xjRbTvRcr2mnLsNlZ6zFyps504uAIAJSFjnCUPUheqIXII10QqYC1iBLFd7102SYObmzi4NwkPs8pB6BvnXJj4W9VY73RNJ96BDXDth5BzjMPJGOSJz3x4Yg344i7H8ixWc4oFgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4163d516835f72902e8dc310feaad33b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-12 16:06:01</sys_created_on>
+        <sys_id>552bb30283a332102e8dc310feaad363</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 11:09:25</sys_updated_on>
+        <ui_id>31630a49-2880-4303-abd5-80c1637d9321</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0U7bMBT9lcrPUZS0pYO+ISqkSQwmQLwwZLnxTbHk2MGxKV2Vf9914qSl61DReBjSeCm+9x77nNN71Ps1EZxMyRh4kp6kk2yUjkbDJBkej9P5ZDRPh3zEAFISEcUKwEkDmTYcz89MOl9Yr88MMAucpnHmjAFlY1ZVYGmJH6U2tq5xnIuqlGx1F1BYyR6F5DhOpvcPESmZwQcsGDJd77QOZSjZHCSOXncUdynbVenPXGeuQJpUdMWLgJyFzuDrDDsI8nTSJCLwYkFxQCI5kxVEpGCKM6vNikytcVhAD/iVkqt+4lEo2wot2EslfuLL48TP5YDKsmBCf6TBoLacz5hlN3hzZp3p/dIig6r1hEPOnLRn27V24Kq0QqsWYtlcdmgtXaEuW0dIf8HW9+EqJAGl1+mZt7Lym0e9vO5IngvVWBIkSp0x2Z+YtUbMnfV01gQkNB4XrCyFWtDS6GfRgJFKES8kHuJc6iW+WYmFilnmecfoKovPsT5rynfMCC/iG16D4Doi1ao6k7hZGynoIX1ynkkrLEigjQuNBbTZBA/OjCjtKT71DD3xtuhJh03B/94cJA4fyIXCfajrOgoZSoZvbihsFrKJTrWVIZSDWjFCVv9wSTLi+0Jl4AlRvqZgSfVSgdmXrL+6632ZPEBxl8lzAZJXeywImbRQoAgLtLXkdSxvQ3NwF5p9Mj8smukkaf7+B/SfC2gfsPnRW+uWnWy2a+vOTcheKIJPvqQJRT7OWJrQ179Tv2fp1PcH3zf99+XjAMJdPm6bRdgvoIvIbu1iGzu4bBshGkcflozjz5SJIOPTh+JPUXj4BXUzCYyxCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=552bb30283a332102e8dc310feaad363"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>fe542fe6-a1f0-4d00-bdd4-ab22dddf77f7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:24:24</sys_created_on>
+        <sys_id>87e23ac7836f36102e8dc310feaad3e0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 11:09:25</sys_updated_on>
+        <ui_id>7906db30-adb8-4cfb-8d73-2a1c90301c7d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K5XPVZU0wEJvq1ZIK7EgAeLCImtqT6lXjpP1R0u36n/fSeKkVYugSFzQ9jZf9nsv8+rHNVOSjdgJyiS9SM9ElmbZMEmG5yfp9CybpkOZAWLK+sxAjtRpURRWUrwAHarEej22CB4lTwciWIvGbzZUl8qVGlYPsY0yYq60pDobPT71WQmWTvRo2Wi9VzoWkoYpamq9bTHtY/SrsoplIUJOuLhqk1dxchIrvR8TqtBQBSdN+gxfPBqJBGQG2mGf5WAk+MKu2MjbQAkiLW+MXnUdc2V8QzSHF6f+0s0nSdU3Q2ImoghdyKNATXo2AQ93dLLwwXZ6FUqgazSROIOg/Xg31zTclF4VphnxMNXtdKFDbq4bRVh3wM73CI5AYFnxrJA3tGZ382J524K8VKaWJFLUhQDdReC9VdPgKzhrhhprjXMoS2WeeWmLhaqHCUo+eNYUDGa6WNKdTj2bAYgK94BUhcEl5Sd1+gGsqkj8pGNoeNNnbuXGGpzbUiEN+Z9QIWmIRQq8VqGWgNebUA0Lq0r/na5aYAS+6celn56+tWHiYrtQO2duF/+F0/DFtzThhCdYzxNeLA1aN1cl9xaMIxG5AIeHbrhpG3v3sbE3bho/ZpIjKLQmua9X43VK0ScHuavd2d51U4guOf00l5x/JZdEGl/eJu+ZIxm++fe7s0m1H9yOMbrddx58cL9CkmS0t79R0Ctx6IX32j/miCNwt464VKile4VIawfMCadH3hDbs0Qs9h5isXs8Ps0X6VlS/76QO/6bN+TpH3Bis5c6CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=87e23ac7836f36102e8dc310feaad3e0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:04:24</sys_created_on>
+        <sys_id>965e2e8f832f36102e8dc310feaad32d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 11:09:25</sys_updated_on>
+        <ui_id>c42b67b1-8c7d-474f-9382-c0ed870eed75</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU8bMRD9K5HPq9UuoSnJDYFQDy1IpeJCwfKuZ4lVr9f4IyGN8t87XntDShPRSlyQmsvKM+/Z7409k9s1EZzMyKSE4sO0nNTjcjw+Koqjk+Oymoyr8oiPGcAxyYhiLSDSsUoC7RcZWTDpQ/CJltNy+rEsqIHGG0cL2i0VGDsXms6FdZ1ZIZwLqyVb3STW1QAZfdpC6rmQ3IAis9u7jGhm8CAHhszWL1J/K1uyCiRCvwXdB2y4ld4b+7zLHV3GRGd40FNkBJ4cKA4opGHSQkZapjjrjcyc8RgwwPiVkqstYi6Uww1JwD5Z8ROPPSkCrgF0VkPMbZc0VSyGm3Pm2DXuXDtvErSed6IGG2vCoWFeurPdWARcaSc6FSm9zcTupG/VZSwJ2W4wXBBGvEURoIPPoDzZaK7n3fLroPJCqL4kKSm7msntijlnROVd0LMmIKHFjWjLtBbqgWrTLURPRi1t/iBxkTeyW+KhVjyonNVBeI5lZfkFxs/78A0zIrj4gtsgeZMRu7Jnkln77AWLSB99UBKdJQ80liFQaiO0O8UDFpDkbrKhHzgU04MPq6yeH1LfAnanF1AEOKrxozvjvvuiGPP1+gyfggNOy7z2Bqvm8t9xm829NrAQnbexdQ4T0zfCkKdg+RrFwCOKDLEtGInOMGXxDilWF/4kG6+odQy7OeSpEy3skmpm95DSiQjEq8HLxWC1irB7Ay0zP2xcPTf/sKMBPrK+xpdrGy/lnoHxv7RvV9p/HLSv98MwaC8ESG73NMgwZaHFO0XXsWFeTNqUHN2kZJq25VtN23JS9L93NHOjuXc/cnf+XQ8M37tfaXdW1Y4IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=965e2e8f832f36102e8dc310feaad32d"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN5da27e87836f36102e8dc310feaad325,baf93f4e836332102e8dc310feaad3f9"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8fc8fe8383af36102e8dc310feaad368</block>
+        <comment/>
+        <connected_to>bfe99aa5-15bf-453f-b8ff-515b24ba661b</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:23:12</sys_created_on>
+        <sys_id>5da27e87836f36102e8dc310feaad325</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:04</sys_updated_on>
+        <ui_id>fe542fe6-a1f0-4d00-bdd4-ab22dddf77f7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bef93f4e836332102e8dc310feaad3f7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-12 16:00:56</sys_created_on>
+        <sys_id>baf93f4e836332102e8dc310feaad3f9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:04</sys_updated_on>
+        <ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XOieGPOGhyCzYUGLCtwFr0shUGLdGJMFnyJLlpFuS/j/JHGjQZNgw97mY9iuR75JP3zLS+ab27Nyvn5Fqz5dfHCZM6YPS9ZxpqZEvGjRbSS6PZhD2BagO230OScc6rxTSvknw64+V8CniN00WcJ+UsTgDLNIKmsYZyCufB4+HwrY3jTPQoCqonpGsU7B7euCzfSCUsDpIasKTEo2XL/auQ3zVYKChRUfc7b6VeU7oUdFpAXuVJnPMsnWdpHKfXs6ScZ2WSigxwNqd7Y+K7kwldGFpoQpAbyxsrApc0njB89qgFcV5WoBxOWA1agDd2x5betgRYBHGr1e54YyO1p2os3H128ieGSnEcblZIwjj20eOxGIbcw3xjJMfbpuPWIR5KNeRwo9paf+4lhPVgBa3y43oIaR3VwyaQDjQGTtXdxmy/jA1vpO4EDkFlOKjjCTyNoWw9urANVFhToaKm5dFwirBB2SUTlzpaKzpElTJbaho8GgEPxCOaEUQ3hL/v4AewMqj4RGUomTboCsetbEZtXXN26KZS/GgDn17foKToh0EX+rQVtXnCgfRhcv4Wig54eRCrwZJXnSXPnX0WfwuLVjFUyYInly0K2SWLXn3skHOjjop+49bkD24dkL+ya57/d+upWwPNEpzkRff3pXLh7f+zXR+DLfsWrveQQC4dMbkP2IfxDx8CO9q65KfQ1tjvQcMLdvgFUxLjeSsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=404c8596831f72902e8dc310feaad3cb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_404c8596831f72902e8dc310feaad3cb</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>544c8596831f72902e8dc310feaad3de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 11:44:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_404c8596831f72902e8dc310feaad3cb</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 11:44:41</sys_created_on>
+        <sys_id>584c8596831f72902e8dc310feaad3d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 11:44:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_404c8596831f72902e8dc310feaad3cb"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_404c8596831f72902e8dc310feaad3cb"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>049a0e497743011031e3b3c64b5a9996</copied_from>
+        <copied_from_name/>
+        <description>Approves ownership change before updating asset passport</description>
+        <flow_priority/>
+        <internal_name>ownership_transfer_approval_flow</internal_name>
+        <label_cache>[{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["approval_conditions"]}},{"name":"{{static.62826bf03710200044e0bfc8bcbe5df1}}","label":"Abel Tuter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["approval_conditions"]}},{"name":"Created_1.current.asset_passport","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Asset Passport","reference":"x_1919710_refurt_0_asset_passport","reference_display":"Asset Passport","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"asset_passport","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["record"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["record"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["asset_passport"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["asset_passport"]}},{"name":"Created_1.current.requested_new_owner","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Requested New Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"requested_new_owner","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["assigned_to"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["current_owner"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["new_owner"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["new_owner"]}},{"name":"Created_1.current.current_owner","label":"Trigger - Record Created➛Ownership Transfer Case Record➛Current Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1919710_refurt_0_ownership_transfer_case","column_name":"current_owner","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["previous_owner"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["previous_owner"]}},{"name":"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["approved_by"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Ownership Transfer Case Record","reference":"x_1919710_refurt_0_ownership_transfer_case","reference_display":"Ownership Transfer Case","type":"reference","base_type":"reference","usedInstances":{"31630a49-2880-4303-abd5-80c1637d9321":["record","assigned_to"],"1a4ce349-428e-4c14-ace8-19c350c49c85":["current_owner","record"],"a13cccf9-5f15-4cb6-ae8e-9051b401aeb2":["record"],"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["asset_passport","previous_owner","new_owner","transfer_case","remarks","approved_by"],"08564c15-46d2-4d0a-b498-d5cdd7f3340f":["record"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_case"],"7906db30-adb8-4cfb-8d73-2a1c90301c7d":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["transfer_date"],"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Ownership Transfer Case Table","reference":"x_1919710_refurt_0_ownership_transfer_case","reference_display":"Ownership Transfer Case","type":"table_name","base_type":"table_name","usedInstances":{"f3d8f4ce-6d0b-449a-a97e-a1ea3e6f5f93":["approved_by"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.run_start_time","label":"Trigger - Record Created➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"c42b67b1-8c7d-474f-9382-c0ed870eed75":["transfer_date"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Ownership Transfer Approval Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Ownership Transfer Approval Flow">404c8596831f72902e8dc310feaad3cb</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>492cf1d28393b2902e8dc310feaad3b9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=492cf1d28393b2902e8dc310feaad3b9^sys_idNOT INc52cf1d28393b2902e8dc310feaad3bb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>492cf1d28393b2902e8dc310feaad3b9</id>
+        <name>Ownership Transfer Approval Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>c52cf1d28393b2902e8dc310feaad3bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 15:13:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c52cf1d28393b2902e8dc310feaad3bb"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=492cf1d28393b2902e8dc310feaad3b9^sys_idNOT INcd2cf1d28393b2902e8dc310feaad3bd,cd2cf1d28393b2902e8dc310feaad3e1"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</model>
+        <model_id>492cf1d28393b2902e8dc310feaad3b9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_492cf1d28393b2902e8dc310feaad3b9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>cd2cf1d28393b2902e8dc310feaad3bd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cd2cf1d28393b2902e8dc310feaad3bd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</model>
+        <model_id>492cf1d28393b2902e8dc310feaad3b9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_492cf1d28393b2902e8dc310feaad3b9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>cd2cf1d28393b2902e8dc310feaad3e1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cd2cf1d28393b2902e8dc310feaad3e1"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=492cf1d28393b2902e8dc310feaad3b9^sys_idNOT IN052c35d28393b2902e8dc310feaad31e"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>052c35d28393b2902e8dc310feaad31e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-13 15:09:05</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY227jNhD9FUFPXSAFJMu2rLztOlk0wHbTOt72IUgJiiJtoTLlUpQSd5F/71C3yLr4EiddO3kxIJImZ86cOTPk7XddCn82o+KKRxJzQm9W0ZWnn+t46GAyHDm23bcM0zQsk1quRYZ9d4AdB1v6mR5glwawdIrdgMK3zyUVHAfT1ZLCsFTDiOOFmltg7mEZipV+LkVMz3QmwsWULpYBlrCY4SCCwVB4VOjn5pme/i3fA/6e4CBW3w/IdEzHNg0kKIuFRAYK7zkV0dxfIikwjxgViOBI/cnzI9h+9Uf+3+tioTbNF2rjbOESCzhOqqO/62TuB56gXD+/vQOfFBaEEez0qEEs0+r1DKM36pvu0HLNnmdhahgtWNTsly2QPDlLHyTlHvVKHBpoCYq9ax6syhVzABs2TJF9iPx/YfeRodaBWxTCmM2VnyjHIhsm89An9Hop/ZBnI5md2WQYxAv+NbNfoUgZjgNZoAgjcQT70aUyWRmRW8Ru5uH9pDjws89T7/LJICQ4KL+wBNK5saSRApz5AUCPMmyiMBap9ZPL8fXkAv35cTr+5XKCJpc308nVeHp5oT+mfqF/YrVjZmFuC8rceSxD/9mngQpgtIoQRPJMj4jwl/IjkX5SsO7x7CVyYBxyz0/xbOQBKaaiqq0VclSiXWC5KTkMo6QXqZxapMhfl783uZ8NbuP5cIixR3EHz13W4W+LMbLF9ar9mxifj+xC+b5h/CDS5yL2XM4vQo8GF1UuZAxEPl/GUqF1j7mMkAwR9jxUwVEtBZu2JUHm2+MrMl7EHI5CZSSbvE8BL5H/4kfg6C3ke4FqagzMsy/5lpOYayGEHH40EgsAVWpFkrCrBZ7lsWC/FUROwcz5l2CB0AKpXJ/HLlpDFNnOyDGHXdS2yRqCaSrB1re6fveookwDSmSFrexbVP361Y8in88q8JY+psFquFh6B6zXCgQzV6PT8vXuEPlqUiipUaMmY5sIsk3cTJMxl7KeYStMgNouMw3bGGDmWYZBehup3WmwrHH9VURuP4mL0iwLdsipOtqF8YrBwT6ETdbZnu/TU+zIlXR8hKbVKoK1V0koGZoNX+xO1Bdun7CXKAX3dq0Mr14UWBDegxI9oyC4mPw9E2HMvbpkqj01n2tPK7SfcuQ/nJZgVosDCwXd7O/6itPx8uCy8ESiIoExXzULQja4TfotZroO7VMDFN8CsXcHjuMS3GPMHtq0Z3YSuNWgk5D8LQmTtGVcl8a2kjFp4/Aewv/jDTxI/nM2top/NvfWZf5+TjkCJwUKlJA31H4W+B4t5g4Tg8ZRydO9rCYIO6gBGzlkYNo2sUEDQQ1Yn7rY7PfAS3tojQbb/NxkmGzx/X+59yrJV4Z0KMW3bOq4Hn6Ok9IRlVJVsv3bFw5Xg/Q/ODOvUtNVQLVUqkKhfQ35z1dP67QbCrUzfTY5oQpf7WN2cVoxUHtTXruhnDf6NvD0E4yveaouJh0xf2+3/VqGJetQttz2nwPo1pcA2h8NHGa1FwDmbFaFbm+OvjHcUYWSTj1ra8B2zfKkVSzKhqze0j0j7jU25VtbW5rR9wvKQQ1wkbKdzx/PMfZdNBhpv3hIl6GspShk1eJzEWowocEhms+03Frqae5Kk3MKwQjgjgQHaur0E6s61aLb9LxMtTftd3anbPQaMKzlbf8JOfYybUQtjza+E7Xgta1LoJ6NBwOr45ro1B+N2kzaYvHR9wt7i0rSplEb6+N++9b3bK2QlRivc2LHhuANe/1qT14tVhxpLb/7D53ZAj/zJAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=492cf1d28393b2902e8dc310feaad3b9^sys_idNOT IN17c832c383af36102e8dc310feaad3c2,53c832c383af36102e8dc310feaad3c4,852c35d28393b2902e8dc310feaad30d,cdb7fce6832332102e8dc310feaad3a5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:50:06</sys_created_on>
+        <sys_id>17c832c383af36102e8dc310feaad3c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <ui_id>c42b67b1-8c7d-474f-9382-c0ed870eed75</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU8bMRD9K5HPq9UuoSnJDYFQDy1IpeJCwfKuZ4lVr9f4IyGN8t87XntDShPRSlyQmsvKM+/Z7409k9s1EZzMyKSE4sO0nNTjcjw+Koqjk+Oymoyr8oiPGcAxyYhiLSDSsUoC7RcZWTDpQ/CJltNy+rEsqIHGG0cL2i0VGDsXms6FdZ1ZIZwLqyVb3STW1QAZfdpC6rmQ3IAis9u7jGhm8CAHhszWL1J/K1uyCiRCvwXdB2y4ld4b+7zLHV3GRGd40FNkBJ4cKA4opGHSQkZapjjrjcyc8RgwwPiVkqstYi6Uww1JwD5Z8ROPPSkCrgF0VkPMbZc0VSyGm3Pm2DXuXDtvErSed6IGG2vCoWFeurPdWARcaSc6FSm9zcTupG/VZSwJ2W4wXBBGvEURoIPPoDzZaK7n3fLroPJCqL4kKSm7msntijlnROVd0LMmIKHFjWjLtBbqgWrTLURPRi1t/iBxkTeyW+KhVjyonNVBeI5lZfkFxs/78A0zIrj4gtsgeZMRu7Jnkln77AWLSB99UBKdJQ80liFQaiO0O8UDFpDkbrKhHzgU04MPq6yeH1LfAnanF1AEOKrxozvjvvuiGPP1+gyfggNOy7z2Bqvm8t9xm829NrAQnbexdQ4T0zfCkKdg+RrFwCOKDLEtGInOMGXxDilWF/4kG6+odQy7OeSpEy3skmpm95DSiQjEq8HLxWC1irB7Ay0zP2xcPTf/sKMBPrK+xpdrGy/lnoHxv7RvV9p/HLSv98MwaC8ESG73NMgwZaHFO0XXsWFeTNqUHN2kZJq25VtN23JS9L93NHOjuXc/cnf+XQ8M37tfaXdW1Y4IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=17c832c383af36102e8dc310feaad3c2"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>fe542fe6-a1f0-4d00-bdd4-ab22dddf77f7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:50:06</sys_created_on>
+        <sys_id>53c832c383af36102e8dc310feaad3c4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <ui_id>7906db30-adb8-4cfb-8d73-2a1c90301c7d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K5XPVZU0wEJvq1ZIK7EgAeLCImtqT6lXjpP1R0u36n/fSeKkVYugSFzQ9jZf9nsv8+rHNVOSjdgJyiS9SM9ElmbZMEmG5yfp9CybpkOZAWLK+sxAjtRpURRWUrwAHarEej22CB4lTwciWIvGbzZUl8qVGlYPsY0yYq60pDobPT71WQmWTvRo2Wi9VzoWkoYpamq9bTHtY/SrsoplIUJOuLhqk1dxchIrvR8TqtBQBSdN+gxfPBqJBGQG2mGf5WAk+MKu2MjbQAkiLW+MXnUdc2V8QzSHF6f+0s0nSdU3Q2ImoghdyKNATXo2AQ93dLLwwXZ6FUqgazSROIOg/Xg31zTclF4VphnxMNXtdKFDbq4bRVh3wM73CI5AYFnxrJA3tGZ382J524K8VKaWJFLUhQDdReC9VdPgKzhrhhprjXMoS2WeeWmLhaqHCUo+eNYUDGa6WNKdTj2bAYgK94BUhcEl5Sd1+gGsqkj8pGNoeNNnbuXGGpzbUiEN+Z9QIWmIRQq8VqGWgNebUA0Lq0r/na5aYAS+6celn56+tWHiYrtQO2duF/+F0/DFtzThhCdYzxNeLA1aN1cl9xaMIxG5AIeHbrhpG3v3sbE3bho/ZpIjKLQmua9X43VK0ScHuavd2d51U4guOf00l5x/JZdEGl/eJu+ZIxm++fe7s0m1H9yOMbrddx58cL9CkmS0t79R0Ctx6IX32j/miCNwt464VKile4VIawfMCadH3hDbs0Qs9h5isXs8Ps0X6VlS/76QO/6bN+TpH3Bis5c6CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=53c832c383af36102e8dc310feaad3c4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>852c35d28393b2902e8dc310feaad30d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-14 16:27:04</sys_updated_on>
+        <ui_id>a13cccf9-5f15-4cb6-ae8e-9051b401aeb2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K8jPlHXIB6FvVVGlWe1OpbYzL6WKHNspXgUnEzvTshH/fW5ih2Sgw9AtldpVXxC+vrbPPT4H29xWSDB0irgXuD58TBIXO2MHhzwIQzrFhIZB4HsuGiJJlhwySZ4X2XeSRgUnKpPQAY2y7oGvTKg8JauvXYQuRMoKLtHp7d0Q5aSAWTQv0Gm11XUojJTEPIXUM4tjcNXi+CVAvcrrDqULIe9t+y87zXUbzApWwxoPEX/UXDIOeBKSKj5ESyIZ0Vmx2kRganYp0y6wEFKbgpfkUYl/YT0nwHViwqFEatnYNCPLlAknM6IJICmpLosNcZmgXBlyGE9ImerzfswkXOZaQJHNEE3itB2dpeVSfjaMoM0EvY0pFYDgeV1pDd3WkVwvsoerFuWFkA0ptjPNKEk3LaKBurjUNZ4KleJmi2UT2eGZp3wJK0ZL2CeIRPVmiWYVAL0c3afQGCVp9gDolLiXI0LrCkewA2R0AfFZE/5KClGX+zdMA4Pr5b5I8a3kn2odBeM4mOKQnbAExyde6PonhHJ8wgPH5z4LqO+4aD1EaqXOU6JURxTsUPStrMs0tFmCIsNxPYQWItdnAOo7t1ysh9ZF2EnGfDod49jB2MU49CkOXR67k2DiEhY+IdJE8JQd10QHoNgx0YWF8St41kJNM2qSfrZRM37w2XQc3Uohxu/JS7D4S6z0Og55vtoNBb+RPN0rNt47OP7JykK+juIPANEq/k+DYlvw2+D+i97dD73///U+CfdJjeJOUgWnIIye0KvqHDZfcxY5I1oWQJNer4+g/gMgteq/ajFtY7R6Zxktm70QbEvwM9sz+DTrFI/3K97o4hDBu+MPub9JuVN/n7aSaSclVgJJoO6+4OfIYJ+j0zmSmeRzNJyjOiuqtdWEIQMQbjqaWFWt1yZSFsRO4PSa3WhGVqrJVHTBWZma6E+RqBG/jR/Dbwdw0vptVvLBzJCyS1P7LGlxGl7EzllzbROamf64Ef0zxz/ameO9pxPnpa+V13uERO3VuXYY/FC8wivD26s/3hPb5hpPM8lEXYHq2dNc/rk6k6svt1WlNHiLjoLQCZLJlFJMQuwEHnaoT1w35tiLuec56/XdrodeMtXzzHdA8ZvDDjyjfkeGNWH3p4Ed1Ddg91eD7bTm8451/L2z+97bdN/xjRbTvRcr2mnLsNlZ6zFyps504uAIAJSFjnCUPUheqIXII10QqYC1iBLFd7102SYObmzi4NwkPs8pB6BvnXJj4W9VY73RNJ96BDXDth5BzjMPJGOSJz3x4Yg344i7H8ixWc4oFgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=852c35d28393b2902e8dc310feaad30d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-13 15:09:05</sys_created_on>
+        <sys_id>cdb7fce6832332102e8dc310feaad3a5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-13 15:09:05</sys_updated_on>
+        <ui_id>31630a49-2880-4303-abd5-80c1637d9321</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0U7bMBT9lcrPUZS0pYO+ISqkSQwmQLwwZLnxTbHk2MGxKV2Vf9914qSl61DReBjSeCm+9x77nNN71Ps1EZxMyRh4kp6kk2yUjkbDJBkej9P5ZDRPh3zEAFISEcUKwEkDmTYcz89MOl9Yr88MMAucpnHmjAFlY1ZVYGmJH6U2tq5xnIuqlGx1F1BYyR6F5DhOpvcPESmZwQcsGDJd77QOZSjZHCSOXncUdynbVenPXGeuQJpUdMWLgJyFzuDrDDsI8nTSJCLwYkFxQCI5kxVEpGCKM6vNikytcVhAD/iVkqt+4lEo2wot2EslfuLL48TP5YDKsmBCf6TBoLacz5hlN3hzZp3p/dIig6r1hEPOnLRn27V24Kq0QqsWYtlcdmgtXaEuW0dIf8HW9+EqJAGl1+mZt7Lym0e9vO5IngvVWBIkSp0x2Z+YtUbMnfV01gQkNB4XrCyFWtDS6GfRgJFKES8kHuJc6iW+WYmFilnmecfoKovPsT5rynfMCC/iG16D4Doi1ao6k7hZGynoIX1ynkkrLEigjQuNBbTZBA/OjCjtKT71DD3xtuhJh03B/94cJA4fyIXCfajrOgoZSoZvbihsFrKJTrWVIZSDWjFCVv9wSTLi+0Jl4AlRvqZgSfVSgdmXrL+6632ZPEBxl8lzAZJXeywImbRQoAgLtLXkdSxvQ3NwF5p9Mj8smukkaf7+B/SfC2gfsPnRW+uWnWy2a+vOTcheKIJPvqQJRT7OWJrQ179Tv2fp1PcH3zf99+XjAMJdPm6bRdgvoIvIbu1iGzu4bBshGkcflozjz5SJIOPTh+JPUXj4BXUzCYyxCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cdb7fce6832332102e8dc310feaad3a5"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=492cf1d28393b2902e8dc310feaad3b9^sys_idNOT IN49b7fce6832332102e8dc310feaad3a8,6bc832c383af36102e8dc310feaad3c9"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bef93f4e836332102e8dc310feaad3f7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-13 15:09:05</sys_created_on>
+        <sys_id>49b7fce6832332102e8dc310feaad3a8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <ui_id>bfe99aa5-15bf-453f-b8ff-515b24ba661b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0XPjvFHHJq8hZTCYFthLX3ZirmW5ERMljxJbuqZ/Pdd+SMNS2Ar6+PeoqN7r845OnI6ohtXN84+6LW1YqvI6utTQITyGP7uiIKKkxWhWjHhhFYkIM8gG491HcQppbRczrIyzmZzWixmwK/5bBllcTGPYuBFEkJdG409uXXg+OHwrYmilA0oZziPCVtLaB/feSzdCckMHyXVYFCJ44asut+2BMNTl5CVWRxlNE0WaRJFyfU8LhZpEScsBT5f4EAJBZdYujnx4oI9rq09ZJ0RajuuP46t9xOoDfNUkigg/MVxxZDyqgRpeUAqUAycNi1ZOdMgYDiwOyXbY8VOKIfTiK99seIn95OiyFeWHHVRPuwel/no8QCXN+AAqTTUNWYspTstKLeDI4yX0Ei3OcWGgru6V9m3OCjk1K1lU6nPgxnkOGC6UkQaiyR47ZV67qOQ8n6n918mlrdC9a6Mm1JTkMcVOPSuaJzn0xEueYWD8govHB3N/a2Lvhm5VOFW4iIspd7joT7XIVBPPERjIbxF/KaHH8EIr+ITjsFmzILNLTWinrT1h5NDQGxrNxKsfdWI5uY/Gs9wUDxqywd7fEs/aI0HP/NRxiE4f1F5D7w+q/UY7Ks+2Ofv42z/bUEvIyjjJY0vBx3SS0G/GvJ7HveJ+1syH/8h8yPyV6HPsv+Z/+fMe5oFWEHz/ruP4/xn5x1D/+TDPRx6NJsKi9wePPZh+rfxGy0mStBTaK/Nd6/qFTv8AkoAryG3BgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">8fc8fe8383af36102e8dc310feaad368</block>
+        <comment/>
+        <connected_to>bfe99aa5-15bf-453f-b8ff-515b24ba661b</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Ownership Transfer Approval Flow">492cf1d28393b2902e8dc310feaad3b9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-15 13:50:06</sys_created_on>
+        <sys_id>6bc832c383af36102e8dc310feaad3c9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <ui_id>fe542fe6-a1f0-4d00-bdd4-ab22dddf77f7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_492cf1d28393b2902e8dc310feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>092cf1d28393b2902e8dc310feaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 15:13:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_492cf1d28393b2902e8dc310feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_id>8d2cf1d28393b2902e8dc310feaad3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-28 15:13:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_492cf1d28393b2902e8dc310feaad3b9"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>404c8596831f72902e8dc310feaad3cb</sys_id>
+        <latest_snapshot>492cf1d28393b2902e8dc310feaad3b9</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch5-12-17-2025_01-05-2026_2218.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=404c8596831f72902e8dc310feaad3cb^sys_idNOT IN052c35d28393b2902e8dc310feaad336"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"052c35d28393b2902e8dc310feaad336","name":"plan","plan_signature":null}}</plan>
+        <plan_id>404c8596831f72902e8dc310feaad3cb</plan_id>
+        <snapshot>ab9d9f9b836332102e8dc310feaad3bd</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-28 15:13:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>052c35d28393b2902e8dc310feaad336</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-15 13:50:06</sys_updated_on>
+        <trigger display_value="">efc872c383af36102e8dc310feaad34c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=404c8596831f72902e8dc310feaad3cb"/>
+</record_update>

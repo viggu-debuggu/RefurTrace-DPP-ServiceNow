@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="current_status" label="Current Status" language="en" table="x_1919710_refurt_0_asset_passport">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>current_status</element>
+            <help/>
+            <hint/>
+            <label>Current Status</label>
+            <language>en</language>
+            <name>x_1919710_refurt_0_asset_passport</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-14 10:46:46</sys_created_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Current Status</sys_name>
+            <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+            <sys_update_name>sys_documentation_x_1919710_refurt_0_asset_passport_current_status_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-14 10:46:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

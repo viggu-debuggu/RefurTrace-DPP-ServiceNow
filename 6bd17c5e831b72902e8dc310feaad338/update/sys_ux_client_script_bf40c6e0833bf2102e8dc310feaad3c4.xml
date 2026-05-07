@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">e340c6e0833bf2102e8dc310feaad362</macroponent>
+        <name>On KnowledgeBase and Language modal load</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    // Find the default the knowledge base
+    let defaultKb = api.state.defaultSeletedKnowledgeBase;
+    const kbList = api.state.writableKnowledgeBaseList;
+    if (!defaultKb) {
+        defaultKb = kbList && kbList.length ? kbList[0].id : null;
+    }
+    
+    api.setState('defaultSeletedKnowledgeBase', [defaultKb]);
+    api.setState('selectedKnowledgeBase', defaultKb);
+
+    // Retrieve languages for the selected knowledge base
+    const kbLanguages = api.state.writableKnowledgeBaseData.kbIdToLanguageMap[defaultKb] || [];
+    api.setState('kbLanguages', kbLanguages);
+
+    let defaultLanguage = api.state.defaultSelectedLanguage;
+    if (!defaultLanguage.length) {
+        defaultLanguage = kbLanguages.length > 0 && kbLanguages[0].id ? [kbLanguages[0].id] : [];
+    }
+
+    api.setState('defaultSelectedLanguage', defaultLanguage);
+    api.setState('selectedLanguage', defaultLanguage.length > 0 ? defaultLanguage[0] : null);
+
+    // if both the language and the knowledge base values exist enable the continue button
+    if (kbList.length && kbLanguages.length) {
+       api.setState('languagePickerContinueButttonDisabed', false);
+    }
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-20 01:34:09</sys_created_on>
+        <sys_id>bf40c6e0833bf2102e8dc310feaad3c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On KnowledgeBase and Language modal load</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_client_script_bf40c6e0833bf2102e8dc310feaad3c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-20 01:34:09</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

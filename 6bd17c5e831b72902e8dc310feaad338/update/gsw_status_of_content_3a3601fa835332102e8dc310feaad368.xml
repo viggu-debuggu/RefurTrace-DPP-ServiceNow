@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_status_of_content">
+    <gsw_status_of_content action="INSERT_OR_UPDATE">
+        <best_practice_allowed_ever>0</best_practice_allowed_ever>
+        <checksum>+d8yFP183G0glqPS61VsdB++6z4=</checksum>
+        <content display_value="Application Intake Guided Setup">093fd817c7c90110408bc8d6f2c2603a</content>
+        <effective_weight>1</effective_weight>
+        <more_info_visited>false</more_info_visited>
+        <previous_status>0</previous_status>
+        <progress>0</progress>
+        <related_log_entry display_value="2026-03-01 16:35:20">3e3601fa835332102e8dc310feaad370</related_log_entry>
+        <status>0</status>
+        <sys_class_name>gsw_status_of_content</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-02 00:35:20</sys_created_on>
+        <sys_id>3a3601fa835332102e8dc310feaad368</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>0</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>gsw_status_of_content_3a3601fa835332102e8dc310feaad368</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-02 00:35:21</sys_updated_on>
+    </gsw_status_of_content>
+</record_update>

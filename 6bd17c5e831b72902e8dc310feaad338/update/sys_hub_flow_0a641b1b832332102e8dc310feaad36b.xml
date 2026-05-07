@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=807000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description>Handles fraud reports and notifies investigators</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>fraud_report_processing_flow</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>9b771f9f832332102e8dc310feaad39f</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Fraud Report Processing Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>e3775f9f832332102e8dc310feaad314</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:29:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a641b1b832332102e8dc310feaad36b</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Fraud Report Processing Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_hub_flow_0a641b1b832332102e8dc310feaad36b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>e7775f9f832332102e8dc310feaad36b</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1919710_refurt_0_fraud_report">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e3775f9f832332102e8dc310feaad314</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <table>x_1919710_refurt_0_fraud_report</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>0a641b1b832332102e8dc310feaad36b</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:39</sys_created_on>
+        <sys_id>af775f9f832332102e8dc310feaad315</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <trigger display_value="">e3775f9f832332102e8dc310feaad314</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0a641b1b832332102e8dc310feaad36b^sys_idNOT INaf775f9f832332102e8dc310feaad315"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN4e641b1b832332102e8dc310feaad36f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0a641b1b832332102e8dc310feaad36b</id>
+        <name>Fraud Report Processing Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:29:10</sys_created_on>
+        <sys_id>4e641b1b832332102e8dc310feaad36f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:29:10</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4e641b1b832332102e8dc310feaad36f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN4ea4935b832332102e8dc310feaad3b7,82a4935b832332102e8dc310feaad36c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</model>
+        <model_id>0a641b1b832332102e8dc310feaad36b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0a641b1b832332102e8dc310feaad36b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:16</sys_created_on>
+        <sys_id>4ea4935b832332102e8dc310feaad3b7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4ea4935b832332102e8dc310feaad3b7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</model>
+        <model_id>0a641b1b832332102e8dc310feaad36b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0a641b1b832332102e8dc310feaad36b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:15</sys_created_on>
+        <sys_id>82a4935b832332102e8dc310feaad36c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=82a4935b832332102e8dc310feaad36c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b^sys_idNOT INb9a4935b832332102e8dc310feaad362"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:14</sys_created_on>
+        <sys_id>b9a4935b832332102e8dc310feaad362</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:37</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLetk6AB0gR1vO1DkAqUSNpCadGlKGW9i/x7h7pZlmTHFzl1XgKIpDlnDs+cIfP8Q2fII0y/0ifIY0Tv6UEoiQgRmywXBIalGnZDNFdzcxRiJLlY6ldSxKSnU8HnEzJfMCRhMUUsgkEuMBH6ldnTE8Ri8rSM7jDsBL9Pt8n31PNp+P7mmo7pDE3DFYTGQrqGSwWKMXwuuJCwEgcRxFj+mf/gVs1q42LWnwUMCxLqV88vPX2BBISRCsKP2pSEnNy1hLWHLLNAIfSpjxyLGL5t2pZlGNZl3/QubM+0sI2IYcC6Olu1jGQLaSs6yDdJQkxwyVSDT0EQfgzZslwxg+PIuJujb1HwHXa/NNQ6SiArn2Rz5aebE5UN+zMe+ORxIQMeZiMZzmySs3gePmT4FcWEopjJgmIYiSPYjywUZAUiR0SfZvx1XAS8DcI0u3yScR+x8gtJKQIvliRSR0EDBofiZtxEPBYp+vHN6HF87f71ZTL67Wbsjm+eJuO70eTmWn9L83L/jdWOGcIci5ul81bq4jYgTB1gtIxcOMmeHvkiWMgvvgySQpdvvZXWRzzEQcpKQ+9+MRWt673IfpvgDWOj5P1KxEL2f9/80ZR2NniYokdV7KmiLy4QwgRtULRHK4quctICWrbQU817m7bzkV3E3TeM/0neuaEdqu45x4Rdr7bTYXI6Bb0H4SKWiq1XFMrIldxFGLsVHtVSwPSe3LPc3t7VtohD+IFbnkdT4SltJX/3QQRwn6E+C27SLWGe3udbjuNQ43Bw8EfzYwHUSK1wPHo3R9OcUfpEGPFlRQT0a1T9+j2IoiCcVlCXQVMOGjHLcCAmrUgpix0dGfyly/Jukp7UyKyV+eE1XpxeWt+mSalHqGUMVXWbhu1R0xgaA0SxbRi+VanvJsSN2GVNKCep8/2qPEolynYQZJ34HLxRrZGdxJWsK7MgQQknN5NRN9DMjqBZClrNFO29XLEUazZ8va7Zbal1fFdAOEHwC7yrOe7oi5TxVzDkAzzRQ/4/U8HjENdNSu2pBaG2WqH9lPP3c4f+SLkg2wGsrzgnZ1zRXggXhcuTeaJNTc8hfWKAFdrggt7AcTwfWZQOL4bEMmueuALXivhTeOE7GkzaRLzJF1vllLSpcA9HPAJgwx33Bni8L+ZybXXFbO5z+N/rjIQuQBUuUw7XsMEpCzAp5rr1gEboZFX1XfnAfZ6Uik4vHX9gDof+EF494AK0Tzxk9q0BcoYX9uWg5gINeNugyxa2PuQtpN63CsgGh/iaTZ3Xs/+UUo6IlKpx7d/PQ7jxpr9BWZBKT1XHoqVGw4X2wMNf7lbrtCcCrTJ9EHfV2HdBoQ5WOy0Mj8tZ42YBoX+F8bXQ6ka6gZWze5LVRJKs53qiJxnpXw4carcbD3XajGcFcTP4s7+I7Fg3ycYKbLuR7FoGSWs1bbxCHCDsmniqd4stl5+uSDE7J8U6HSn20ReuokI3vkMPAfuJGlt62zimu6mYxOW0aunXXIMJDYJoAdXy/08SrHlLTc4IUMrgZg0BNRX9WC+v9pYmlFLBHwsku6s3ehwMa/m16vzaV00KH/GCJniIBgN7w93Zqb+g22C+k8XZN7O9ayVpK72tHW2/fet7tva0ipDXdbJjt+o06/aWdVzWrU3rvayPb0fb3v8tKM600bz8B101NIjuHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN54d41b5b832332102e8dc310feaad3b3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:58</sys_created_on>
+        <sys_id>54d41b5b832332102e8dc310feaad3b3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:46:34</sys_updated_on>
+        <ui_id>fe9b89b8-1650-4b50-9221-2ec83bc3a95a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCVAWeFtAiFN6lqJTrx0nWXiG7DkOJk/+Bjiv+86cSCiqKNSX9B4u1/2OSf34Jc9EZyMSB94FA/jQdKLe71uFHXv+/Fi0FvEXd5jADFpE8UywE4NSa45xmsmnU/s92MNzAKncSdxWoOyhwPWuTCFZLt5aMNMshKSY52MXl7bpGAaT7SgyWh/VroWkmQLkNg6qzGdY7S7wsc8T1yGuKiokw9hchIqrW8TrOCQhxNHbQJbC4oDAkmZNNAmGVOc2VzvyMhqhwkkzZ+U3B07VkLZimjGtkb8wZv7ke9LAZklQYRjSINAVTqdMMue8eTEOn3UKxcJmEoTDilz0o6buarhqbAiV9WIZQtZT+fSZeqxUoQcD2h8D2cQBBSep0de0UqfV/lmVoOcClVKEijKPGHyGDFrtVg46+HsCUgoNc5YUQi1pIXO16IcRihZZykx6KQy3+CdRixVhyUedwdVZZ0p5idles608CS+4zE4fGgTszNjyYw5UUEN6W/nkVTEAgVaqlBKQMtN8MOJFoX9iletIQA/tMPSL+7e27BkeFqoxpmnxd9SHB5+iSOKeJy2NKKpZo5jWOTavrXA1Fdbs7r6MTtcAba2w49yCS6DD454k3tozrYeq0Lww92n+eH+lvwQaNy8If5lg6j77h9tY5PKzTcNCxjLrDM/XRT1uPPC4O6vBWx+VRbANyFXVbX5SminKE6iY5AqUCsyuPRifO7hH3PbFZrUbpsKkNxcEKm2GmTICqFUop3ZLRRb81A8PkGf5rl4EJW/G3Lef/MSvf4F18U3y4AJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=54d41b5b832332102e8dc310feaad3b3"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0a641b1b832332102e8dc310feaad36b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:16</sys_created_on>
+        <sys_id>82a4935b832332102e8dc310feaad3b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:30:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0a641b1b832332102e8dc310feaad36b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:30:16</sys_created_on>
+        <sys_id>c2a4935b832332102e8dc310feaad3cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:30:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0a641b1b832332102e8dc310feaad36b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description>Handles fraud reports and notifies investigators</description>
+        <flow_priority/>
+        <internal_name>fraud_report_processing_flow</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Fraud Report Processing Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b771f9f832332102e8dc310feaad39f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN9b771f9f832332102e8dc310feaad3a1"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9b771f9f832332102e8dc310feaad39f</id>
+        <name>Fraud Report Processing Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>9b771f9f832332102e8dc310feaad3a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=9b771f9f832332102e8dc310feaad3a1"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN9b771f9f832332102e8dc310feaad3a3,d7771f9f832332102e8dc310feaad3c0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</model>
+        <model_id>9b771f9f832332102e8dc310feaad39f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_9b771f9f832332102e8dc310feaad39f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>9b771f9f832332102e8dc310feaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9b771f9f832332102e8dc310feaad3a3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</model>
+        <model_id>9b771f9f832332102e8dc310feaad39f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_9b771f9f832332102e8dc310feaad39f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>d7771f9f832332102e8dc310feaad3c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <u_pilot>false</u_pilot>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d7771f9f832332102e8dc310feaad3c0"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN5b775f9f832332102e8dc310feaad307"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>5b775f9f832332102e8dc310feaad307</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLetk6AB0gR1vO1DkAqUSNpCadGlKGW9i/x7h7pZlmTHFzl1XgKIpDlnDs+cIfP8Q2fII0y/0ifIY0Tv6UEoiQgRmywXBIalGnZDNFdzcxRiJLlY6ldSxKSnU8HnEzJfMCRhMUUsgkEuMBH6ldnTE8Ri8rSM7jDsBL9Pt8n31PNp+P7mmo7pDE3DFYTGQrqGSwWKMXwuuJCwEgcRxFj+mf/gVs1q42LWnwUMCxLqV88vPX2BBISRCsKP2pSEnNy1hLWHLLNAIfSpjxyLGL5t2pZlGNZl3/QubM+0sI2IYcC6Olu1jGQLaSs6yDdJQkxwyVSDT0EQfgzZslwxg+PIuJujb1HwHXa/NNQ6SiArn2Rz5aebE5UN+zMe+ORxIQMeZiMZzmySs3gePmT4FcWEopjJgmIYiSPYjywUZAUiR0SfZvx1XAS8DcI0u3yScR+x8gtJKQIvliRSR0EDBofiZtxEPBYp+vHN6HF87f71ZTL67Wbsjm+eJuO70eTmWn9L83L/jdWOGcIci5ul81bq4jYgTB1gtIxcOMmeHvkiWMgvvgySQpdvvZXWRzzEQcpKQ+9+MRWt673IfpvgDWOj5P1KxEL2f9/80ZR2NniYokdV7KmiLy4QwgRtULRHK4quctICWrbQU817m7bzkV3E3TeM/0neuaEdqu45x4Rdr7bTYXI6Bb0H4SKWiq1XFMrIldxFGLsVHtVSwPSe3LPc3t7VtohD+IFbnkdT4SltJX/3QQRwn6E+C27SLWGe3udbjuNQ43Bw8EfzYwHUSK1wPHo3R9OcUfpEGPFlRQT0a1T9+j2IoiCcVlCXQVMOGjHLcCAmrUgpix0dGfyly/Jukp7UyKyV+eE1XpxeWt+mSalHqGUMVXWbhu1R0xgaA0SxbRi+VanvJsSN2GVNKCep8/2qPEolynYQZJ34HLxRrZGdxJWsK7MgQQknN5NRN9DMjqBZClrNFO29XLEUazZ8va7Zbal1fFdAOEHwC7yrOe7oi5TxVzDkAzzRQ/4/U8HjENdNSu2pBaG2WqH9lPP3c4f+SLkg2wGsrzgnZ1zRXggXhcuTeaJNTc8hfWKAFdrggt7AcTwfWZQOL4bEMmueuALXivhTeOE7GkzaRLzJF1vllLSpcA9HPAJgwx33Bni8L+ZybXXFbO5z+N/rjIQuQBUuUw7XsMEpCzAp5rr1gEboZFX1XfnAfZ6Uik4vHX9gDof+EF494AK0Tzxk9q0BcoYX9uWg5gINeNugyxa2PuQtpN63CsgGh/iaTZ3Xs/+UUo6IlKpx7d/PQ7jxpr9BWZBKT1XHoqVGw4X2wMNf7lbrtCcCrTJ9EHfV2HdBoQ5WOy0Mj8tZ42YBoX+F8bXQ6ka6gZWze5LVRJKs53qiJxnpXw4carcbD3XajGcFcTP4s7+I7Fg3ycYKbLuR7FoGSWs1bbxCHCDsmniqd4stl5+uSDE7J8U6HSn20ReuokI3vkMPAfuJGlt62zimu6mYxOW0aunXXIMJDYJoAdXy/08SrHlLTc4IUMrgZg0BNRX9WC+v9pYmlFLBHwsku6s3ehwMa/m16vzaV00KH/GCJniIBgN7w93Zqb+g22C+k8XZN7O9ayVpK72tHW2/fet7tva0ipDXdbJjt+o06/aWdVzWrU3rvayPb0fb3v8tKM600bz8B101NIjuHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN5f775f9f832332102e8dc310feaad304"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>5f775f9f832332102e8dc310feaad304</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <ui_id>fe9b89b8-1650-4b50-9221-2ec83bc3a95a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCVAWeFtAiFN6lqJTrx0nWXiG7DkOJk/+Bjiv+86cSCiqKNSX9B4u1/2OSf34Jc9EZyMSB94FA/jQdKLe71uFHXv+/Fi0FvEXd5jADFpE8UywE4NSa45xmsmnU/s92MNzAKncSdxWoOyhwPWuTCFZLt5aMNMshKSY52MXl7bpGAaT7SgyWh/VroWkmQLkNg6qzGdY7S7wsc8T1yGuKiokw9hchIqrW8TrOCQhxNHbQJbC4oDAkmZNNAmGVOc2VzvyMhqhwkkzZ+U3B07VkLZimjGtkb8wZv7ke9LAZklQYRjSINAVTqdMMue8eTEOn3UKxcJmEoTDilz0o6buarhqbAiV9WIZQtZT+fSZeqxUoQcD2h8D2cQBBSep0de0UqfV/lmVoOcClVKEijKPGHyGDFrtVg46+HsCUgoNc5YUQi1pIXO16IcRihZZykx6KQy3+CdRixVhyUedwdVZZ0p5idles608CS+4zE4fGgTszNjyYw5UUEN6W/nkVTEAgVaqlBKQMtN8MOJFoX9iletIQA/tMPSL+7e27BkeFqoxpmnxd9SHB5+iSOKeJy2NKKpZo5jWOTavrXA1Fdbs7r6MTtcAba2w49yCS6DD454k3tozrYeq0Lww92n+eH+lvwQaNy8If5lg6j77h9tY5PKzTcNCxjLrDM/XRT1uPPC4O6vBWx+VRbANyFXVbX5SminKE6iY5AqUCsyuPRifO7hH3PbFZrUbpsKkNxcEKm2GmTICqFUop3ZLRRb81A8PkGf5rl4EJW/G3Lef/MSvf4F18U3y4AJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5f775f9f832332102e8dc310feaad304"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9b771f9f832332102e8dc310feaad39f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>1b771f9f832332102e8dc310feaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9b771f9f832332102e8dc310feaad39f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:38</sys_created_on>
+        <sys_id>53771f9f832332102e8dc310feaad3b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9b771f9f832332102e8dc310feaad39f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0a641b1b832332102e8dc310feaad36b</sys_id>
+        <latest_snapshot>9b771f9f832332102e8dc310feaad39f</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch5-12-17-2025_01-05-2026_2218.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN6b775f9f832332102e8dc310feaad331"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"6b775f9f832332102e8dc310feaad331","name":"plan","plan_signature":null}}</plan>
+        <plan_id>0a641b1b832332102e8dc310feaad36b</plan_id>
+        <snapshot>c9685b13836332102e8dc310feaad382</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 10:42:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6b775f9f832332102e8dc310feaad331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <trigger display_value="">e3775f9f832332102e8dc310feaad314</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0a641b1b832332102e8dc310feaad36b"/>
+</record_update>

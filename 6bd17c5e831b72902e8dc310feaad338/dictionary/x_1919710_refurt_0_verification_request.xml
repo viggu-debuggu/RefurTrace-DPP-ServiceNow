@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5ab01347836376102e8dc310feaad34d" label="Verification Request" max_length="40" name="x_1919710_refurt_0_verification_request" type="collection">
+        <element label="Passport ID" max_length="40" name="passport_id" type="string"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element choice="3" label="Verification Status" max_length="40" name="verification_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Invalid" sequence="2" value="invalid"/>
+                <element inactive_on_update="false" label="Verified" sequence="1" value="verified"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
+            </choice>
+        </element>
+        <element label="Request Number" max_length="40" name="request_number" type="string"/>
+        <element label="Remarks" max_length="40" name="remarks" type="string"/>
+        <element label="Asset Tag" max_length="40" name="asset_tag" type="string"/>
+        <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element label="Verified On" max_length="40" name="verified_on" type="glide_date_time"/>
+        <element label="QR Code Value" max_length="40" name="qr_code_value" type="string"/>
+        <element label="Verified By" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="asset_passport"/>
+        </index>
+        <index name="index2">
+            <element name="owner"/>
+        </index>
+        <index name="index3">
+            <element name="verified_by"/>
+        </index>
+    </element>
+</database>

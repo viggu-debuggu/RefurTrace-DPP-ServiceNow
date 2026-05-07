@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.RemoteUpdateSetsDeploymentUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>RemoteUpdateSetsDeploymentUtil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var RemoteUpdateSetsDeploymentUtil = Class.create();
+RemoteUpdateSetsDeploymentUtil.prototype = {
+    initialize: function() {
+        this.answer = [];
+    },
+
+
+    /**
+     * @param {object} data in the below format
+     * {
+     *  "sourceInstance": sufffix for the source instance
+     * }
+     * 
+     */
+    getCompletedUpdateSetsFromSource: function(sourceInstance, updateSetIDs) {
+        var log1 = "RemoteUpdateSetsDeploymentUtil:: getCompletedUpdateSetsFromSource(), sourceInstance: " + sourceInstance + " updateSetIDs: " + updateSetIDs;
+        gs.log(log1);
+        this.answer.push(log1);
+        var id, gr = new GlideRecord('sys_update_set_source');
+        gr.addQuery('name', sourceInstance); //name of the source environment, where actual update sets are available
+        gr.query();
+        if (gr.next())
+            id = gr.getUniqueValue();
+        var worker = new GlideUpdateSetWorker();
+        worker.setBackground(true);
+        worker.setUpdateSourceSysId(id);
+        worker.setLimitSet(updateSetIDs.toString());
+        worker.start();
+        var progress_id = worker.getProgressID();
+        var progress = GlideRecord('sys_progress_worker');
+        for (var i = 0; i < 30; i++) {
+            gs.sleep(1000);
+            progress.get(progress_id);
+            log1 = "RemoteUpdateSetsDeploymentUtil:: getCompletedUpdateSetsFromSource() , state: " + progress.state + " , progress_id: " + progress_id + " Poll Number: " + i;
+            gs.info(log1);
+            this.answer.push(log1);
+            if (progress.state == 'complete')
+                break;
+        }
+        return progress_id;
+    },
+
+
+    //OPTIONAL if you have auto preview enabled
+    //Auto preview loaded update sets
+    AutoPreviewUpdateSets: function(updateSetNames, conflictsResolutionValue) {
+        //Query the remote update sets
+        if (gs.nil(updateSetNames))
+            return;
+
+        var remote_updateset = new GlideRecord('sys_remote_update_set');
+        remote_updateset.addQuery('sys_class_name=sys_remote_update_set^nameIN' + updateSetNames);
+        remote_updateset.query();
+        this.answer.push("Number of update sets found during AutoPreview:" + remote_updateset.getRowCount());
+        while (remote_updateset.next()) {
+            if (!remote_updateset.sys_id.nil()) {
+                //update state of selected update sets to preview
+                if (remote_updateset.state == 'loaded') { //eliminate invalid status
+                    remote_updateset.state = "previewed";
+                    remote_updateset.update();
+                    // run previwer job
+                    var t = new UpdateSetPreviewer();
+                    t.removePreviewRecords(remote_updateset.sys_id);
+                    t.generatePreviewRecords(remote_updateset.sys_id);
+                }
+            }
+
+            if ((conflictsResolutionValue == "ignored" || conflictsResolutionValue == "skipped") && GlidePreviewProblemHandler.hasUnresolvedProblems(remote_updateset.sys_id)) {
+                this.answer.push("Update sets conflicts found");
+                this.resolveConflicts(remote_updateset.sys_id, conflictsResolutionValue);
+            }
+        }
+    },
+
+
+    // Resolved the preview/conflict errors with given resolution value
+    resolveConflicts: function(remoteUpdateSetSysId, conflictsResolutionValue) {
+
+        var problemResolutionGr = new GlideRecord("sys_update_preview_problem");
+        problemResolutionGr.addEncodedQuery("remote_update_set=" + remoteUpdateSetSysId);
+        problemResolutionGr.query();
+
+        while (problemResolutionGr.next()) {
+            problemResolutionGr.setValue("status", conflictsResolutionValue); // ignored = "Accept remote update" & skipped = "Skip remote update"
+            problemResolutionGr.update();
+        }
+    },
+
+
+    //Commit previewed updates 
+    commitRemoteUpdateSets: function(updateSetNames) {
+        if (gs.nil(updateSetNames))
+            return;
+        var worker = new GlideUpdateSetWorker();
+        var remote_updateset = new GlideRecord('sys_remote_update_set');
+        remote_updateset.addQuery('sys_class_name=sys_remote_update_set^nameIN' + updateSetNames);
+        remote_updateset.query();
+        this.answer.push("Query for commitRemoteUpdateSets" + remote_updateset.getEncodedQuery() + " count " + remote_updateset.getRowCount());
+        while (remote_updateset.next()) {
+
+            if (!remote_updateset.sys_id.nil() && remote_updateset.state == 'previewed') {
+                var log2 = "commitRemoteUpdateSets count: " + remote_updateset.sys_id.nil() + "  issues: " + GlidePreviewProblemHandler.hasUnresolvedProblems(remote_updateset.sys_id);
+                gs.info(log2);
+                this.answer.push(log2);
+                //check updateset issues are fixed
+                if (!GlidePreviewProblemHandler.hasUnresolvedProblems(remote_updateset.sys_id)) {
+                    var sys_up_set = new GlideRecord('sys_update_set');
+                    var local_sys_id = worker.remoteUpdateSetCommit(sys_up_set, remote_updateset, remote_updateset.update_source.url);
+                    log2 = "commitRemoteUpdateSets , local_sys_id " + local_sys_id + " remote_updateset.sys_id: " + remote_updateset.sys_id;
+                    gs.info(log2);
+                    this.answer.push(log2);
+                    var xml_gr = new GlideRecord("sys_update_xml");
+                    xml_gr.addQuery("remote_update_set", remote_updateset.sys_id);
+                    xml_gr.query();
+                    this.answer.push("Query for commiting update sets (sys_update_xml): " + xml_gr.getEncodedQuery() + " , count: " + xml_gr.getRowCount());
+                    //execute commit and XML installtion
+                    while (xml_gr.next()) {
+                        var local_xml_gr = new GlideRecord("sys_update_xml");
+                        local_xml_gr.initialize();
+                        local_xml_gr.name = xml_gr.name;
+                        local_xml_gr.payload = xml_gr.payload;
+                        local_xml_gr.action = xml_gr.action;
+                        local_xml_gr.type = xml_gr.type;
+                        local_xml_gr.target_name = xml_gr.target_name;
+                        local_xml_gr.view = xml_gr.view;
+                        local_xml_gr.update_domain = xml_gr.update_domain;
+                        local_xml_gr.table = xml_gr.table;
+                        local_xml_gr.category = xml_gr.category;
+                        local_xml_gr.application = xml_gr.application;
+                        local_xml_gr.update_set = local_sys_id;
+                        if (local_xml_gr.isValidField('replace_on_upgrade'))
+                            local_xml_gr.replace_on_upgrade = xml_gr.replace_on_upgrade;
+                        local_xml_gr.insert();
+                    }
+                    remote_updateset.update();
+                    worker.setUpdateSetSysId(local_sys_id);
+                    worker.setBackground(false);
+                    gs.log("Worker ProgressID: " + worker.getProgressID());
+                    worker.start();
+                }
+            }
+        }
+
+        var progress_id = worker.getProgressID();
+        var progressGr = GlideRecord('sys_progress_worker');
+        for (var i = 0; i < 30; i++) {
+            gs.sleep(1000);
+            progressGr.get(progress_id);
+            log2 = "RemoteUpdateSetsDeploymentUtil:: commitRemoteUpdateSets() , state: " + progressGr.state + " , progress_id: " + progress_id;
+            gs.info(log2);
+            this.answer.push(log2);
+            if (!progress_id) {
+                log2 = "RemoteUpdateSetsDeploymentUtil:: commitRemoteUpdateSets() , No update set found to commit";
+                gs.info(log2);
+                this.answer.push(log2);
+				break;
+            }
+            if (progressGr.state == 'complete')
+                break;
+        }
+
+    },
+
+
+    cleanUpdateSets: function(updateSetNames) {
+
+        // remove the local update sets in PDI
+        var updateSetGr = new GlideRecord("sys_update_set");
+        updateSetGr.addEncodedQuery("nameIN" + updateSetNames);
+        updateSetGr.query();
+
+        if (updateSetGr.next())
+            updateSetGr.deleteMultiple();
+
+        // remove the retrieved update sets in PDI
+        var remoteUpdateSetGr = new GlideRecord("sys_remote_update_set");
+        remoteUpdateSetGr.addQuery("nameIN" + updateSetNames);
+        remoteUpdateSetGr.query();
+        this.answer.push("Update sets to be cleaned:" + remoteUpdateSetGr.getRowCount());
+
+        if (remoteUpdateSetGr.next())
+            recordsDeleted = remoteUpdateSetGr.deleteMultiple();
+    },
+    getAuditLogs: function() {
+        return this.answer;
+    },
+    type: 'RemoteUpdateSetsDeploymentUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>developer.program.hop@snc</sys_created_by>
+        <sys_created_on>2026-03-07 00:53:58</sys_created_on>
+        <sys_id>607a3654832332102e8dc310feaad301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RemoteUpdateSetsDeploymentUtil</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_607a3654832332102e8dc310feaad301</sys_update_name>
+        <sys_updated_by>developer.program.hop@snc</sys_updated_by>
+        <sys_updated_on>2026-03-07 00:53:58</sys_updated_on>
+    </sys_script_include>
+</record_update>

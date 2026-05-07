@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="RefurTrace QR Viewer">ebd775a083f7f2102e8dc310feaad30d</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId</fields>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>Asset Passport QR</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>asset-passport-qr</route_type>
+        <screen_type display_value="Asset Passport QR">db40c6e0833bf2102e8dc310feaad350</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-20 01:34:07</sys_created_on>
+        <sys_id>9340c6e0833bf2102e8dc310feaad355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Passport QR</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_app_route_9340c6e0833bf2102e8dc310feaad355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-20 01:34:07</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=9340c6e0833bf2102e8dc310feaad355"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>6261d6d8eb41ae54c040fddacad0cdd2</instance_id>
+        <instance_name>dev331255</instance_name>
+        <name>sys_ux_app_route_9340c6e0833bf2102e8dc310feaad355</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="RefurTrace QR Viewer">ebd775a083f7f2102e8dc310feaad30d</app_config><description/><extension_point/><fields>table,sysId</fields><icon/><interoperable>false</interoperable><name>Asset Passport QR</name><optional_parameters/><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>asset-passport-qr</route_type><screen_type display_value="Asset Passport QR">db40c6e0833bf2102e8dc310feaad350</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-03-20 01:34:07</sys_created_on><sys_id>9340c6e0833bf2102e8dc310feaad355</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Asset Passport QR</sys_name><sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package><sys_policy/><sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope><sys_update_name>sys_ux_app_route_9340c6e0833bf2102e8dc310feaad355</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-03-20 01:34:07</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=9340c6e0833bf2102e8dc310feaad355"/></record_update>]]></payload>
+        <payload_hash>84545562</payload_hash>
+        <record_name>Asset Passport QR</record_name>
+        <reverted_from/>
+        <source>efd17c5e831b72902e8dc310feaad372</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-20 01:34:07</sys_created_on>
+        <sys_id>df40c6e0833bf2102e8dc310feaad359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19d08e0de0a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-20 01:34:07</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>9f40c6e03a3bf210790773985dc45e58</update_guid>
+        <update_guid_history>9f40c6e03a3bf210790773985dc45e58:84545562</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-20 06:56:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>3372834a2bf94c1c99e775d867311c41</sys_id>
+        <sys_metadata>9340c6e0833bf2102e8dc310feaad355</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Passport QR</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_9340c6e0833bf2102e8dc310feaad355</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_9340c6e0833bf2102e8dc310feaad355">df40c6e0833bf2102e8dc310feaad359</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-20 06:56:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

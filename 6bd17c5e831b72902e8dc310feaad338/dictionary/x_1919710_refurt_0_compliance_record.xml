@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b40434cb836ff2102e8dc310feaad313" label="Compliance Record" max_length="40" name="x_1919710_refurt_0_compliance_record" type="collection">
+        <element label="Expiry Date" max_length="40" name="expiry_date" type="glide_date"/>
+        <element display="true" label="Certificate Number" max_length="40" name="certificate_number" type="string"/>
+        <element choice="3" label="Compliance Status" max_length="40" name="compliance_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Verified" sequence="1" value="verified"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
+            </choice>
+        </element>
+        <element label="Issue Date" max_length="40" name="issue_date" type="glide_date"/>
+        <element label="Verified By" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
+        <element label="EU DPP Reference" max_length="40" name="eu_dpp_reference" type="string"/>
+        <element choice="3" label="Compliance Type" max_length="40" name="compliance_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Warranty" sequence="4" value="warranty"/>
+                <element inactive_on_update="false" label="CDSCO" sequence="0" value="cdsco"/>
+                <element inactive_on_update="false" label="BPAN" sequence="1" value="bpan"/>
+                <element inactive_on_update="false" label="Other" sequence="5" value="other"/>
+                <element inactive_on_update="false" label="Safety" sequence="3" value="safety"/>
+            </choice>
+        </element>
+        <element label="Remarks" max_length="40" name="remarks" type="journal_input"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element label="Issued By" max_length="40" name="issued_by" type="string"/>
+        <element label="CDSCO Reference" max_length="40" name="cdsco_reference" type="string"/>
+        <index name="index">
+            <element name="asset_passport"/>
+        </index>
+        <index name="index2">
+            <element name="verified_by"/>
+        </index>
+    </element>
+</database>

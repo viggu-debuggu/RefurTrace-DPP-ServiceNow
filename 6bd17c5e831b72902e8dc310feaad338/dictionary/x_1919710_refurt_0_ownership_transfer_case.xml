@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0fe201d283db72902e8dc310feaad3d3" label="Ownership Transfer Case" max_length="40" name="x_1919710_refurt_0_ownership_transfer_case" type="collection">
+        <element label="Current Owner" max_length="32" name="current_owner" reference="sys_user" type="reference"/>
+        <element choice="3" label="Owner Consent Status" max_length="40" name="owner_consent_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+            </choice>
+        </element>
+        <element label="Requested New Owner" max_length="32" name="requested_new_owner" reference="sys_user" type="reference"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element choice="3" label="Transfer Status" max_length="40" name="transfer_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="completed"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="In Review" sequence="1" value="in_review"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
+        <element choice="3" label="Buyer Consent Status" max_length="40" name="buyer_consent_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+            </choice>
+        </element>
+        <element label="Transfer Request Date" max_length="40" name="transfer_request_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="asset_passport"/>
+        </index>
+        <index name="index2">
+            <element name="current_owner"/>
+        </index>
+        <index name="index3">
+            <element name="requested_new_owner"/>
+        </index>
+    </element>
+</database>

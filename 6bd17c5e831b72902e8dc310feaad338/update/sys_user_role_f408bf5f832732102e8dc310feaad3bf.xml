@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Compliance officer role for managing compliance records and approvals</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>8/M/DEs5HHmd/oo6m7fBONT7b45wVWlAaKNwdAyYXhE=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1919710_refurt_0.compliance_officer</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>compliance_officer</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-16 13:04:43</sys_created_on>
+        <sys_id>f408bf5f832732102e8dc310feaad3bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1919710_refurt_0.compliance_officer</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_user_role_f408bf5f832732102e8dc310feaad3bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-16 13:04:43</sys_updated_on>
+    </sys_user_role>
+</record_update>

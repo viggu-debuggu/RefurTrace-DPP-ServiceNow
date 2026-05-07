@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">8cc74a4d83f7f6102e8dc310feaad38c</macroponent>
+        <name>On Editor Type Check</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const table = api.context.props.table;
+    const sysId = api.context.props.sysId;
+
+    const output = api.data.check_editor_type_1.output;
+   if (!output) {
+        return;
+    }
+
+    if (!output.showNotification) {
+        return;
+    }
+
+    const item = {
+        "id": "editor_type_mismatch_notification",
+        "status": "warning",
+        "content": "This article was created using a newer article editor which may display this article in a better format. Edit this article using the new knowledge center editor application.",
+        "expanded": true,
+        "enableFocus": true,
+        "action": {
+            "type": "dismiss"
+        },
+        "autoDismiss": {
+            "enabled": false
+        },
+    };
+
+    if (output.shouldRedirect) {
+        item.textLinkProps = {
+            "label": "Knowledge Center",
+            "href": `now/knowledge-center/record/${table}/${sysId}`,
+            "variant": "primary",
+            "iconEnd": "open-link-right-outline",
+            "opensWindow": true
+        };
+    }
+
+    api.emit('NOW_UXF_PAGE#ADD_NOTIFICATIONS', {
+        items: [item]
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:23:39</sys_created_on>
+        <sys_id>a4c78a4d83f7f6102e8dc310feaad311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Editor Type Check</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_client_script_a4c78a4d83f7f6102e8dc310feaad311</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:23:39</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

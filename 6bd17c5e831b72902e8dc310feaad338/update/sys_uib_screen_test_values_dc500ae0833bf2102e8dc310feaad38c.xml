@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent/>
+        <macroponent_config>{
+    "table": "task",
+    "sysId": "edc1ec9179d672108bb291bde809c9c2"
+}</macroponent_config>
+        <screen display_value="Default">14500ae0833bf2102e8dc310feaad387</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-20 01:34:11</sys_created_on>
+        <sys_id>dc500ae0833bf2102e8dc310feaad38c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_dc500ae0833bf2102e8dc310feaad38c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-20 01:34:11</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>
