@@ -13,6 +13,7 @@
         <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
         <element label="verification_link" max_length="40" name="verification_link" type="string"/>
         <element label="Inspection Date" max_length="40" name="inspection_date" type="glide_date_time"/>
+        <element label="test_field" max_length="40" name="test_field" type="string"/>
         <element display="true" label="Passport ID" max_length="40" name="passport_id" type="string"/>
         <element label="Last Service Date" max_length="40" name="last_service_date" type="glide_date"/>
         <element choice="3" label="Verification Status" max_length="40" name="status" type="choice">
