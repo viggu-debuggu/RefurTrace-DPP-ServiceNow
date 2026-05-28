@@ -3,137 +3,152 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>14a0aa90837f72102e8dc310feaad3da</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>09dd8bf683c903902e8dc310feaad3b0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>manufacturer</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>asset_ta0</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>90a0aa90837f72102e8dc310feaad3db</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>09dd8bf683c903902e8dc310feaad3b1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>location</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>manufacturer</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>18a0aa90837f72102e8dc310feaad3db</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>8ddd8bf683c903902e8dc310feaad3b1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>short_description</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>location</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>9ca0aa90837f72102e8dc310feaad3db</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>05dd8bf683c903902e8dc310feaad3b2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sys_class_name</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>short_description</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>14a0aa90837f72102e8dc310feaad3dc</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>89dd8bf683c903902e8dc310feaad3b2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sys_updated_on</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>sys_class_name</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>98a0aa90837f72102e8dc310feaad3dc</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>01dd8bf683c903902e8dc310feaad3b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>maintenance_schedule</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>10a0aa90837f72102e8dc310feaad3dd</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>85dd8bf683c903902e8dc310feaad3b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>verification_link</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>maintenance_schedule</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>94a0aa90837f72102e8dc310feaad3dd</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>0ddd8bf683c903902e8dc310feaad3b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>qr_code_value</element>
-            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">58a0aa90837f72102e8dc310feaad3d8</list_id>
+            <element>verification_link</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
-            <sys_id>1ca0aa90837f72102e8dc310feaad3dd</sys_id>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>81dd8bf683c903902e8dc310feaad3b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>qr_code_value</element>
+            <list_id display_value="x_1919710_refurt_0_asset_passport" element="NULL" name="x_1919710_refurt_0_asset_passport" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">c9dd8bf683c903902e8dc310feaad3ad</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
+            <sys_id>09dd8bf683c903902e8dc310feaad3b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -147,10 +162,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-19 09:16:53</sys_created_on>
+            <sys_created_on>2026-05-28 10:17:39</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>58a0aa90837f72102e8dc310feaad3d8</sys_id>
+            <sys_id>c9dd8bf683c903902e8dc310feaad3ad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_1919710_refurt_0_asset_passport</sys_name>
             <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
@@ -158,7 +173,7 @@
             <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
             <sys_update_name>sys_ui_list_x_1919710_refurt_0_asset_passport_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-19 09:16:53</sys_updated_on>
+            <sys_updated_on>2026-05-28 10:17:39</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

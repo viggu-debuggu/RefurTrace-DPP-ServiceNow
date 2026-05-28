@@ -11,11 +11,11 @@
         <element label="Risk Score" max_length="40" name="risk_score" type="integer"/>
         <element label="Current Owner" max_length="32" name="current_owner" reference="alm_asset" type="reference"/>
         <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
-        <element label="verification_link" max_length="40" name="verification_link" type="string"/>
+        <element label="verification_link" max_length="100" name="verification_link" type="string"/>
         <element label="Inspection Date" max_length="40" name="inspection_date" type="glide_date_time"/>
-        <element label="test_field" max_length="40" name="test_field" type="string"/>
         <element display="true" label="Passport ID" max_length="40" name="passport_id" type="string"/>
         <element label="Last Service Date" max_length="40" name="last_service_date" type="glide_date"/>
+        <element label="test_field" max_length="40" name="test_field" type="string"/>
         <element choice="3" label="Verification Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
@@ -24,11 +24,11 @@
                 <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
             </choice>
         </element>
-        <element label="Asset Tag" max_length="50" name="asset_ta0" type="string"/>
+        <element label="Asset Id" max_length="50" name="asset_ta0" type="string"/>
         <element label="Hardware Asset" max_length="32" name="hardware_asset" reference="alm_asset" type="reference"/>
-        <element label="QR Code" max_length="40" name="qr_code_value" type="string"/>
+        <element label="QR Code" max_length="200" name="qr_code_value" type="string"/>
         <element label="Manufacture Batch Code" max_length="32" name="manufacture_batch_code" reference="core_company" type="reference"/>
-        <element attributes="readonly=true,html=true,html_sanitize=false" label="qr display" max_length="40" name="qr_display" read_only="true" type="html"/>
+        <element attributes="readonly=true,html=true,html_sanitize=false" label="qr display" max_length="100" name="qr_display" read_only="true" type="html"/>
         <element label="MAC Address" max_length="40" name="mac_addres0" type="string"/>
         <element label="Next Service Date" max_length="40" name="next_service_date" type="glide_date"/>
         <element label="Verification URL" max_length="40" name="verification_url" type="string"/>

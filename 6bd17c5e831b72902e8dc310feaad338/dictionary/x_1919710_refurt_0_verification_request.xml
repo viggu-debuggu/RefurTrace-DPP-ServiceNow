@@ -4,10 +4,10 @@
         <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
         <element choice="3" label="Verification Status" max_length="40" name="verification_status" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
                 <element inactive_on_update="false" label="Invalid" sequence="2" value="invalid"/>
                 <element inactive_on_update="false" label="Verified" sequence="1" value="verified"/>
                 <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
-                <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
             </choice>
         </element>
         <element label="Request Number" max_length="40" name="request_number" type="string"/>
