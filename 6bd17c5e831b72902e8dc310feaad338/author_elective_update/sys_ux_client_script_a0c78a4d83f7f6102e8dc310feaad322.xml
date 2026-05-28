@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">8cc74a4d83f7f6102e8dc310feaad38c</macroponent>
+        <name>viewport_gph/initiallyCollapsed</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+	return api.context.props.userPrefs['workspace.showAgentAssist'] != 'true';
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:23:40</sys_created_on>
+        <sys_id>a0c78a4d83f7f6102e8dc310feaad322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>viewport_gph/initiallyCollapsed</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_client_script_a0c78a4d83f7f6102e8dc310feaad322</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:23:40</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>6261d6d8eb41ae54c040fddacad0cdd2</instance_id>
+        <instance_name>dev331255</instance_name>
+        <name>sys_ux_client_script_a0c78a4d83f7f6102e8dc310feaad322</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;
+    &lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;
+        &lt;controller_preset/&gt;
+        &lt;includes/&gt;
+        &lt;macroponent display_value="Default"&gt;8cc74a4d83f7f6102e8dc310feaad38c&lt;/macroponent&gt;
+        &lt;name&gt;viewport_gph/initiallyCollapsed&lt;/name&gt;
+        &lt;preset/&gt;
+        &lt;required_translations&gt;[]&lt;/required_translations&gt;
+        &lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+	return api.context.props.userPrefs['workspace.showAgentAssist'] != 'true';
+}]]&gt;&lt;/script&gt;
+        &lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;
+        &lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2026-03-21 15:23:40&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a0c78a4d83f7f6102e8dc310feaad322&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;viewport_gph/initiallyCollapsed&lt;/sys_name&gt;
+        &lt;sys_package display_value="RefurTrace" source="x_1919710_refurt_0"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="RefurTrace"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ux_client_script_a0c78a4d83f7f6102e8dc310feaad322&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2026-03-21 15:23:40&lt;/sys_updated_on&gt;
+        &lt;target&gt;macroponent&lt;/target&gt;
+        &lt;type&gt;transform&lt;/type&gt;
+    &lt;/sys_ux_client_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-857452769</payload_hash>
+        <record_name>viewport_gph/initiallyCollapsed</record_name>
+        <reverted_from/>
+        <source>8c641a57837847102e8dc310feaad3c3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-17 09:08:15</sys_created_on>
+        <sys_id>1174d297837847102e8dc310feaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e35317ae20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-17 09:08:15</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>5974d297e1784710d5f4d9d017ea4d18</update_guid>
+        <update_guid_history>5974d297e1784710d5f4d9d017ea4d18:0,27d05b882ffc0310037e78ba75f0ef08:1102602655,a8c78a4d13f7f610dace7c9402665724:-165600787</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 11:03:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>615cf6b235a54172a92be3aef8d22604</sys_id>
+        <sys_metadata>a0c78a4d83f7f6102e8dc310feaad322</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>viewport_gph/initiallyCollapsed</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_a0c78a4d83f7f6102e8dc310feaad322</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_a0c78a4d83f7f6102e8dc310feaad322">1174d297837847102e8dc310feaad319</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 11:03:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

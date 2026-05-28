@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">8cc74a4d83f7f6102e8dc310feaad38c</macroponent>
+        <name>presentational_list_main/columnDefinitions</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "Number"
+    },
+    {
+        "message": "Short Description"
+    },
+    {
+        "message": "Description"
+    },
+    {
+        "message": "Resolution Notes"
+    }
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var numberLabel = helpers.translateSync("Number");
+    var shortDescLabel = helpers.translateSync("Short Description");
+    var descLabel = helpers.translateSync("Description");
+    var closeNoteLabel = helpers.translateSync("Resolution Notes");
+    return {
+        "columns": [{
+            "headerTextDisabled": true,
+            "key": "number",
+            "label": numberLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isDescending": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": true,
+                "isSortable": true,
+                "isSorted": true,
+                "referenceDisplayName": null
+            },
+            "type": "link"
+        }, {
+            "headerTextDisabled": true,
+            "key": "short_description",
+            "label": shortDescLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": true,
+                "isSortable": true,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }, {
+            "headerTextDisabled": true,
+            "key": "description",
+            "label": descLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": false,
+                "isSortable": true,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }, {
+            "headerTextDisabled": true,
+            "key": "close_notes",
+            "label": closeNoteLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": false,
+                "isSortable": false,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }]
+    };
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:23:39</sys_created_on>
+        <sys_id>18c74a4d83f7f6102e8dc310feaad3d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>presentational_list_main/columnDefinitions</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ux_client_script_18c74a4d83f7f6102e8dc310feaad3d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:23:39</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>6261d6d8eb41ae54c040fddacad0cdd2</instance_id>
+        <instance_name>dev331255</instance_name>
+        <name>sys_ux_client_script_18c74a4d83f7f6102e8dc310feaad3d2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;
+    &lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;
+        &lt;controller_preset/&gt;
+        &lt;includes/&gt;
+        &lt;macroponent display_value="Default"&gt;8cc74a4d83f7f6102e8dc310feaad38c&lt;/macroponent&gt;
+        &lt;name&gt;presentational_list_main/columnDefinitions&lt;/name&gt;
+        &lt;preset/&gt;
+        &lt;required_translations&gt;[
+    {
+        "message": "Number"
+    },
+    {
+        "message": "Short Description"
+    },
+    {
+        "message": "Description"
+    },
+    {
+        "message": "Resolution Notes"
+    }
+]&lt;/required_translations&gt;
+        &lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var numberLabel = helpers.translateSync("Number");
+    var shortDescLabel = helpers.translateSync("Short Description");
+    var descLabel = helpers.translateSync("Description");
+    var closeNoteLabel = helpers.translateSync("Resolution Notes");
+    return {
+        "columns": [{
+            "headerTextDisabled": true,
+            "key": "number",
+            "label": numberLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isDescending": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": true,
+                "isSortable": true,
+                "isSorted": true,
+                "referenceDisplayName": null
+            },
+            "type": "link"
+        }, {
+            "headerTextDisabled": true,
+            "key": "short_description",
+            "label": shortDescLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": true,
+                "isSortable": true,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }, {
+            "headerTextDisabled": true,
+            "key": "description",
+            "label": descLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": false,
+                "isSortable": true,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }, {
+            "headerTextDisabled": true,
+            "key": "close_notes",
+            "label": closeNoteLabel,
+            "metadata": {
+                "excludedOperators": [],
+                "internalType": "string",
+                "isChoice": false,
+                "isFilterable": true,
+                "isFiltered": false,
+                "isGroupable": false,
+                "isSortable": false,
+                "referenceDisplayName": null
+            },
+            "type": "string"
+        }]
+    };
+}]]&gt;&lt;/script&gt;
+        &lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;
+        &lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2026-03-21 15:23:39&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;18c74a4d83f7f6102e8dc310feaad3d2&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;presentational_list_main/columnDefinitions&lt;/sys_name&gt;
+        &lt;sys_package display_value="RefurTrace" source="x_1919710_refurt_0"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="RefurTrace"&gt;6bd17c5e831b72902e8dc310feaad338&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ux_client_script_18c74a4d83f7f6102e8dc310feaad3d2&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2026-03-21 15:23:39&lt;/sys_updated_on&gt;
+        &lt;target&gt;macroponent&lt;/target&gt;
+        &lt;type&gt;transform&lt;/type&gt;
+    &lt;/sys_ux_client_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>606884507</payload_hash>
+        <record_name>presentational_list_main/columnDefinitions</record_name>
+        <reverted_from/>
+        <source>8c641a57837847102e8dc310feaad3c3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-17 09:08:15</sys_created_on>
+        <sys_id>d9749297837847102e8dc310feaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e35317a280000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-17 09:08:15</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>157492979a784710022a38e6b73008ec</update_guid>
+        <update_guid_history>157492979a784710022a38e6b73008ec:0,2bd01b880cfc03100f59eb587534e3c2:-1808693502,10c74a4d46f7f6107fa197354045cfd5:-518843671</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-28 11:03:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>00afa304cb024276812192931704bb69</sys_id>
+        <sys_metadata>18c74a4d83f7f6102e8dc310feaad3d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>presentational_list_main/columnDefinitions</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_18c74a4d83f7f6102e8dc310feaad3d2</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_18c74a4d83f7f6102e8dc310feaad3d2">d9749297837847102e8dc310feaad3ec</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-28 11:03:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
