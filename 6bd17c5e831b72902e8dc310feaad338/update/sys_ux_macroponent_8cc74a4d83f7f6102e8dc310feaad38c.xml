@@ -222,7 +222,54 @@
                                 },
                                 "elementId": "input_1",
                                 "elementLabel": "Input 1",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "UbtZRvNrBaafAjjysKggQWTojbbV",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_input.NOW_INPUT#INPUT",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_input.NOW_INPUT#INPUT",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "clientTransformScript": "",
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "assetSearchId"
+                                                            },
+                                                            "value": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "fieldValue"
+                                                                    ]
+                                                                },
+                                                                "type": "EVENT_PAYLOAD_BINDING"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "DffeeggyeehhPZAaaiTeeddDAEeeEFaaCqFR",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -313,7 +360,7 @@
                                     },
                                     "name": {
                                         "type": "JSON_LITERAL",
-                                        "value": null
+                                        "value": "assetInput"
                                     },
                                     "optional": {
                                         "type": "JSON_LITERAL",
@@ -348,8 +395,12 @@
                                         "value": "text"
                                     },
                                     "value": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
+                                        "binding": {
+                                            "address": [
+                                                "assetSearchId"
+                                            ]
+                                        },
+                                        "type": "STATE_BINDING"
                                     },
                                     "wrapLabel": {
                                         "type": "JSON_LITERAL",
@@ -509,7 +560,9 @@
                                     },
                                     {
                                         "element_id": "button_1",
-                                        "styles": {}
+                                        "styles": {
+                                            "align-self": "center"
+                                        }
                                     },
                                     {
                                         "element_id": "image_1",
@@ -696,32 +749,6 @@
                             },
                             {
                                 "definition": {
-                                    "id": "4335ba6dca80378f7ba7a67cd6667bec",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "stylized_text_1",
-                                "elementLabel": "Stylized text 1",
-                                "eventMappings": [],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
-                                },
-                                "preset": {
-                                    "controllerElementId": "record",
-                                    "disabledEventTargetIds": [],
-                                    "id": "9586ab8504f82b150ece43f8152c4f25"
-                                },
-                                "propertyValues": {
-                                    "configAria": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {}
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
                                     "id": "bb63b710d208796b7ceaab7812bddef1",
                                     "type": "MACROPONENT"
                                 },
@@ -739,7 +766,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Asset ID"
+                                            "message": "Asset  Name"
                                         }
                                     },
                                     "reversed": {
@@ -751,12 +778,20 @@
                                         "value": false
                                     },
                                     "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": " RFTR-0001"
-                                        }
+                                        "binding": {
+                                            "address": [
+                                                "gliderecord_query_1",
+                                                "output",
+                                                "data",
+                                                "GlideRecord_Query",
+                                                "x_1919710_refurt_0_asset_passport",
+                                                "_results",
+                                                "0",
+                                                "name",
+                                                "displayValue"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
                                     }
                                 },
                                 "slot": null,
@@ -781,7 +816,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Verification Status:"
+                                            "message": "Status:"
                                         }
                                     },
                                     "reversed": {
@@ -793,12 +828,20 @@
                                         "value": false
                                     },
                                     "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "VERIFIED"
-                                        }
+                                        "binding": {
+                                            "address": [
+                                                "gliderecord_query_1",
+                                                "output",
+                                                "data",
+                                                "GlideRecord_Query",
+                                                "x_1919710_refurt_0_asset_passport",
+                                                "_results",
+                                                "0",
+                                                "statu0",
+                                                "displayValue"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
                                     }
                                 },
                                 "slot": null,
@@ -835,12 +878,20 @@
                                         "value": false
                                     },
                                     "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Philips"
-                                        }
+                                        "binding": {
+                                            "address": [
+                                                "gliderecord_query_1",
+                                                "output",
+                                                "data",
+                                                "GlideRecord_Query",
+                                                "x_1919710_refurt_0_asset_passport",
+                                                "_results",
+                                                "0",
+                                                "manufacturer",
+                                                "displayValue"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
                                     }
                                 },
                                 "slot": null,
@@ -865,7 +916,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Trust Score:"
+                                            "message": "Risk score:"
                                         }
                                     },
                                     "reversed": {
@@ -877,96 +928,20 @@
                                         "value": false
                                     },
                                     "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": " 92%"
-                                        }
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
-                                    "id": "bb63b710d208796b7ceaab7812bddef1",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "label_value_5",
-                                "elementLabel": "Label value 5",
-                                "eventMappings": [],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Last Service Date:"
-                                        }
-                                    },
-                                    "reversed": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "truncated": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "15-Mar-2026"
-                                        }
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
-                                    "id": "bb63b710d208796b7ceaab7812bddef1",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "label_value_6",
-                                "elementLabel": "Label value 6",
-                                "eventMappings": [],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Fraud Status"
-                                        }
-                                    },
-                                    "reversed": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "truncated": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "value": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": " No Fraud Detected"
-                                        }
+                                        "binding": {
+                                            "address": [
+                                                "gliderecord_query_1",
+                                                "output",
+                                                "data",
+                                                "GlideRecord_Query",
+                                                "x_1919710_refurt_0_asset_passport",
+                                                "_results",
+                                                "0",
+                                                "risk_score",
+                                                "displayValue"
+                                            ]
+                                        },
+                                        "type": "DATA_OUTPUT_BINDING"
                                     }
                                 },
                                 "slot": null,
@@ -979,10 +954,6 @@
                                 "items": [
                                     {
                                         "element_id": "card_base_container_1",
-                                        "styles": {}
-                                    },
-                                    {
-                                        "element_id": "stylized_text_1",
                                         "styles": {}
                                     },
                                     {
@@ -1012,19 +983,6 @@
                                         "styles": {
                                             "margin-bottom": "var(--now-scalable-space--lg)",
                                             "margin-top": "var(--now-scalable-space--lg)"
-                                        }
-                                    },
-                                    {
-                                        "element_id": "label_value_5",
-                                        "styles": {
-                                            "margin-bottom": "var(--now-scalable-space--lg)",
-                                            "margin-top": "var(--now-scalable-space--lg)"
-                                        }
-                                    },
-                                    {
-                                        "element_id": "label_value_6",
-                                        "styles": {
-                                            "background": "rgb(var(--now-color_selection--primary-3))"
                                         }
                                     }
                                 ],
@@ -2872,8 +2830,12 @@
         "eventMappings": [],
         "inputValues": {
             "recordId": {
-                "type": "JSON_LITERAL",
-                "value": null
+                "binding": {
+                    "address": [
+                        "assetSearchId"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "returnFieldMetadata": {
                 "type": "JSON_LITERAL",
@@ -2881,7 +2843,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": ""
+                "value": "name,statu0,manufacturer,risk_score"
             },
             "returnTableMetadata": {
                 "type": "JSON_LITERAL",
@@ -3271,22 +3233,6 @@
     }
 ]</props>
         <required_translations>[ {
-  "message" : " 92%",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : " No Fraud Detected",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : " RFTR-0001",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "15-Mar-2026",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "4000 Series Router",
   "code" : "",
   "comment" : ""
@@ -3299,7 +3245,7 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Asset ID",
+  "message" : "Asset  Name",
   "code" : "",
   "comment" : ""
 }, {
@@ -3311,23 +3257,11 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Fraud Status",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Last Service Date:",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "Manufacturer",
   "code" : "",
   "comment" : ""
 }, {
   "message" : "Open",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Philips",
   "code" : "",
   "comment" : ""
 }, {
@@ -3339,15 +3273,11 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Trust Score:",
+  "message" : "Risk score:",
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "VERIFIED",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Verification Status:",
+  "message" : "Status:",
   "code" : "",
   "comment" : ""
 }, {
@@ -3713,14 +3643,14 @@
     },
     {
         "description": null,
-        "fieldType": "json",
+        "fieldType": "string",
         "initialValue": {
             "type": "JSON_LITERAL",
             "value": []
         },
-        "name": "defaultSelectedLanguage",
+        "name": "assetSearchId",
         "shape": "",
-        "valueType": "json"
+        "valueType": "string"
     },
     {
         "description": null,
@@ -3740,14 +3670,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-21 15:23:38</sys_created_on>
         <sys_id>8cc74a4d83f7f6102e8dc310feaad38c</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_ux_macroponent_8cc74a4d83f7f6102e8dc310feaad38c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-28 15:35:41</sys_updated_on>
+        <sys_updated_on>2026-06-02 09:44:27</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=8cc74a4d83f7f6102e8dc310feaad38c"/>
 </record_update>
