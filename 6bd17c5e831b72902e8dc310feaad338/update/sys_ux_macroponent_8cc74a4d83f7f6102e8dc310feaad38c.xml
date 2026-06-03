@@ -117,16 +117,7 @@
                                         }
                                     },
                                     "caption": {
-                                        "container": {
-                                            "label": {
-                                                "type": "TRANSLATION_LITERAL",
-                                                "value": {
-                                                    "code": null,
-                                                    "comment": "",
-                                                    "message": "4000 Series Router"
-                                                }
-                                            }
-                                        },
+                                        "container": {},
                                         "type": "MAP_CONTAINER"
                                     },
                                     "dropdowns": {
@@ -195,20 +186,7 @@
                                         "type": "MAP_CONTAINER"
                                     },
                                     "tagline": {
-                                        "container": {
-                                            "icon": {
-                                                "type": "JSON_LITERAL",
-                                                "value": "document-outline"
-                                            },
-                                            "label": {
-                                                "type": "TRANSLATION_LITERAL",
-                                                "value": {
-                                                    "code": null,
-                                                    "comment": "",
-                                                    "message": "Article"
-                                                }
-                                            }
-                                        },
+                                        "container": {},
                                         "type": "MAP_CONTAINER"
                                     }
                                 },
@@ -828,7 +806,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Status:"
+                                            "message": "Status :"
                                         }
                                     },
                                     "reversed": {
@@ -958,6 +936,376 @@
                                 },
                                 "slot": null,
                                 "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "e772e788e32ce32b8daa2ac7b092d2c6",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "card_base_container_2",
+                                "elementLabel": "Card Base Container 2",
+                                "eventMappings": [],
+                                "isHidden": {
+                                    "type": "JSON_LITERAL",
+                                    "value": null
+                                },
+                                "overrides": {
+                                    "composition": [
+                                        {
+                                            "definition": {
+                                                "id": "e772e788e32ce32b8daa2ac7b092d2c6",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "card_base_container_3",
+                                            "elementLabel": "Card Base Container 3",
+                                            "eventMappings": [],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "overrides": {
+                                                "composition": [
+                                                    {
+                                                        "definition": {
+                                                            "id": "1f6e0643eca7a637e36bd7833549ec9e",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "heading_3",
+                                                        "elementLabel": "Heading 3",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "align": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "start"
+                                                            },
+                                                            "hasNoMargin": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Refurbishment Certificate"
+                                                                }
+                                                            },
+                                                            "level": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "1"
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "header-secondary"
+                                                            },
+                                                            "wontWrap": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "bb63b710d208796b7ceaab7812bddef1",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "label_value_5",
+                                                        "elementLabel": "Label value 5",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Certificate Number :"
+                                                                }
+                                                            },
+                                                            "reversed": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "truncated": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "value": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "This is the value"
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "bb63b710d208796b7ceaab7812bddef1",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "label_value_6",
+                                                        "elementLabel": "Label value 6",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Pass/Fail          :"
+                                                                }
+                                                            },
+                                                            "reversed": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "truncated": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "value": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "This is the value"
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "bb63b710d208796b7ceaab7812bddef1",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "label_value_7",
+                                                        "elementLabel": "Label value 7",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Inspection Date  :"
+                                                                }
+                                                            },
+                                                            "reversed": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "truncated": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "value": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "This is the value"
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "bb63b710d208796b7ceaab7812bddef1",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "label_value_8",
+                                                        "elementLabel": "Label value 8",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Inspection Date    : "
+                                                                }
+                                                            },
+                                                            "reversed": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "truncated": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "value": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "This is the value"
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    }
+                                                ],
+                                                "layout": {
+                                                    "default": {
+                                                        "children": null,
+                                                        "items": [
+                                                            {
+                                                                "element_id": "heading_3",
+                                                                "styles": {}
+                                                            },
+                                                            {
+                                                                "element_id": "label_value_5",
+                                                                "styles": {}
+                                                            },
+                                                            {
+                                                                "element_id": "label_value_6",
+                                                                "styles": {}
+                                                            },
+                                                            {
+                                                                "element_id": "label_value_7",
+                                                                "styles": {}
+                                                            },
+                                                            {
+                                                                "element_id": "label_value_8",
+                                                                "styles": {}
+                                                            }
+                                                        ],
+                                                        "root": null,
+                                                        "rules": null,
+                                                        "styles": {
+                                                            "display": "flex",
+                                                            "flex-direction": "column"
+                                                        },
+                                                        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                        "type": "flex"
+                                                    },
+                                                    "version": "3.0.0"
+                                                }
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideShadow": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "interaction": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "none"
+                                                },
+                                                "manageSelected": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "selected": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "sidebar": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": {}
+                                                },
+                                                "size": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "lg"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
+                                        }
+                                    ],
+                                    "layout": {
+                                        "default": {
+                                            "children": null,
+                                            "items": [
+                                                {
+                                                    "element_id": "card_base_container_3",
+                                                    "styles": {}
+                                                }
+                                            ],
+                                            "root": null,
+                                            "rules": null,
+                                            "styles": {
+                                                "display": "flex",
+                                                "flex-direction": "column"
+                                            },
+                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                            "type": "flex"
+                                        },
+                                        "version": "3.0.0"
+                                    }
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "configAria": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "hideShadow": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "interaction": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "none"
+                                    },
+                                    "manageSelected": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "selected": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "sidebar": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
+                                    },
+                                    "size": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "lg"
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
                             }
                         ],
                         "layout": {
@@ -978,7 +1326,7 @@
                                     {
                                         "element_id": "label_value_2",
                                         "styles": {
-                                            "background": "rgb(var(--now-color_selection--primary-2))",
+                                            "background": "rgb(var(--now-color--neutral-0))",
                                             "margin-bottom": "var(--now-scalable-space--lg)",
                                             "margin-top": "var(--now-scalable-space--lg)"
                                         }
@@ -996,6 +1344,10 @@
                                             "margin-bottom": "var(--now-scalable-space--lg)",
                                             "margin-top": "var(--now-scalable-space--lg)"
                                         }
+                                    },
+                                    {
+                                        "element_id": "card_base_container_2",
+                                        "styles": {}
                                     }
                                 ],
                                 "root": null,
@@ -2867,6 +3219,38 @@
             }
         },
         "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "54e9c8d25310101024e5ddeeff7b12db",
+            "type": "GRAPHQL"
+        },
+        "elementId": "gliderecord_query_2",
+        "elementLabel": "GlideRecord Query 2",
+        "eventMappings": [],
+        "inputValues": {
+            "recordId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "returnFieldMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "returnFields": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "returnTableMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": null
+            }
+        },
+        "readEvaluationMode": "EAGER"
     }
 ]</data>
         <description/>
@@ -3245,15 +3629,7 @@
     }
 ]</props>
         <required_translations>[ {
-  "message" : "4000 Series Router",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "Actions",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "Article",
   "code" : "",
   "comment" : ""
 }, {
@@ -3265,7 +3641,19 @@
   "code" : "",
   "comment" : ""
 }, {
+  "message" : "Certificate Number :",
+  "code" : "",
+  "comment" : ""
+}, {
   "message" : "Enter Asset ID",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Inspection Date    : ",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Inspection Date  :",
   "code" : "",
   "comment" : ""
 }, {
@@ -3277,6 +3665,10 @@
   "code" : "",
   "comment" : ""
 }, {
+  "message" : "Pass/Fail          :",
+  "code" : "",
+  "comment" : ""
+}, {
   "message" : "Product Details of the pirctular product",
   "code" : "",
   "comment" : ""
@@ -3285,11 +3677,19 @@
   "code" : "",
   "comment" : ""
 }, {
+  "message" : "Refurbishment Certificate",
+  "code" : "",
+  "comment" : ""
+}, {
   "message" : "Risk score:",
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Status:",
+  "message" : "Status :",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "This is the value",
   "code" : "",
   "comment" : ""
 }, {
@@ -3682,14 +4082,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-21 15:23:38</sys_created_on>
         <sys_id>8cc74a4d83f7f6102e8dc310feaad38c</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_ux_macroponent_8cc74a4d83f7f6102e8dc310feaad38c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-02 14:54:37</sys_updated_on>
+        <sys_updated_on>2026-06-03 10:37:46</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=8cc74a4d83f7f6102e8dc310feaad38c"/>
 </record_update>
