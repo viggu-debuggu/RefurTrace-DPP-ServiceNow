@@ -10,7 +10,7 @@
         <element label="Certificate Verification Code" max_length="40" name="certificate_verification_code" type="string"/>
         <element label="Valid Until" max_length="40" name="valid_until" type="glide_date"/>
         <element label="Inspector" max_length="32" name="inspector" reference="sys_user" type="reference"/>
-        <element label="Certificate File" max_length="40" name="certificate_file" type="file_attachment"/>
+        <element label="Certificat File" max_length="40" name="certificate_file" type="file_attachment"/>
         <element label="Refurbishment Company" max_length="40" name="refurbishment_company" type="string"/>
         <element label="Inspection Date" max_length="40" name="inspection_date" type="glide_date_time"/>
         <element choice="1" label="Pass/Fail" max_length="40" name="pass_fail" type="choice">
