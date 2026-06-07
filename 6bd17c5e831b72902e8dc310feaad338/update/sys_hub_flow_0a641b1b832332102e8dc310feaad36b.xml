@@ -4,7 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=807000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=7063448000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>28100</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -15,14 +15,14 @@
         <flow_priority/>
         <generation_source/>
         <internal_name>fraud_report_processing_flow</internal_name>
-        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current.issue_type","label":"Trigger - Record Created➛Fraud Report Record➛Issue Type","reference":"","reference_display":"Issue Type","type":"choice","base_type":"choice","parent_table_name":"x_1919710_refurt_0_fraud_report","column_name":"issue_type","choices":[{"image":"","used":false,"label":"Counterfeit Suspected","rawLabel":"Counterfeit Suspected","selected":false,"missing":false,"reference":false,"value":"counterfeit_suspected","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Invalid QR","rawLabel":"Invalid QR","selected":false,"missing":false,"reference":false,"value":"invalid_qr","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Ownership Mismatch","rawLabel":"Ownership Mismatch","selected":false,"missing":false,"reference":false,"value":"ownership_mismatch","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Expired Compliance","rawLabel":"Expired Compliance","selected":false,"missing":false,"reference":false,"value":"expired_compliance","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Other","rawLabel":"Other","selected":false,"missing":false,"reference":false,"value":"other","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}}],"usedInstances":{"ee58eba9-1bd6-4516-ac66-55132ae1028e":["condition"]}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Fraud Report Table","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"table_name","base_type":"table_name","choices":[{"order":0.0}],"usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"b8583f9e-f69c-460a-a4f4-7c984d2c5df1":["record"],"75432347-9167-42a4-a81d-f0f15beaa988":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
         <master_snapshot>9b771f9f832332102e8dc310feaad39f</master_snapshot>
         <master_snapshot_digest/>
         <name>Fraud Report Processing Flow</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id>e3775f9f832332102e8dc310feaad314</remote_trigger_id>
+        <remote_trigger_id>99555079835987d02e8dc310feaad38f</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a641b1b832332102e8dc310feaad36b</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Fraud Report Processing Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
@@ -44,11 +44,11 @@
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_hub_flow_0a641b1b832332102e8dc310feaad36b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <sys_updated_on>2026-06-06 04:33:27</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>e7775f9f832332102e8dc310feaad36b</version_record>
+        <version_record>7d559079835987d02e8dc310feaad319</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=0a641b1b832332102e8dc310feaad36b"/>
     <sys_variable_value action="delete_multiple" query="document_key=0a641b1b832332102e8dc310feaad36b"/>
@@ -68,15 +68,15 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-16 10:42:39</sys_created_on>
+        <sys_created_on>2026-06-06 04:33:21</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>e3775f9f832332102e8dc310feaad314</sys_id>
+        <sys_id>99555079835987d02e8dc310feaad38f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
+        <sys_updated_on>2026-06-06 04:33:21</sys_updated_on>
         <table>x_1919710_refurt_0_fraud_report</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
@@ -86,14 +86,14 @@
         <identifier>0a641b1b832332102e8dc310feaad36b</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-16 10:42:39</sys_created_on>
-        <sys_id>af775f9f832332102e8dc310feaad315</sys_id>
+        <sys_created_on>2026-06-06 04:33:21</sys_created_on>
+        <sys_id>95555079835987d02e8dc310feaad390</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
-        <trigger display_value="">e3775f9f832332102e8dc310feaad314</trigger>
+        <sys_updated_on>2026-06-06 04:33:21</sys_updated_on>
+        <trigger display_value="">99555079835987d02e8dc310feaad38f</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0a641b1b832332102e8dc310feaad36b^sys_idNOT INaf775f9f832332102e8dc310feaad315"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN95555079835987d02e8dc310feaad390"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN4e641b1b832332102e8dc310feaad36f"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -293,17 +293,41 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:30:14</sys_created_on>
         <sys_id>b9a4935b832332102e8dc310feaad362</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:37</sys_updated_on>
+        <sys_updated_on>2026-06-05 04:12:24</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
-        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLetk6AB0gR1vO1DkAqUSNpCadGlKGW9i/x7h7pZlmTHFzl1XgKIpDlnDs+cIfP8Q2fII0y/0ifIY0Tv6UEoiQgRmywXBIalGnZDNFdzcxRiJLlY6ldSxKSnU8HnEzJfMCRhMUUsgkEuMBH6ldnTE8Ri8rSM7jDsBL9Pt8n31PNp+P7mmo7pDE3DFYTGQrqGSwWKMXwuuJCwEgcRxFj+mf/gVs1q42LWnwUMCxLqV88vPX2BBISRCsKP2pSEnNy1hLWHLLNAIfSpjxyLGL5t2pZlGNZl3/QubM+0sI2IYcC6Olu1jGQLaSs6yDdJQkxwyVSDT0EQfgzZslwxg+PIuJujb1HwHXa/NNQ6SiArn2Rz5aebE5UN+zMe+ORxIQMeZiMZzmySs3gePmT4FcWEopjJgmIYiSPYjywUZAUiR0SfZvx1XAS8DcI0u3yScR+x8gtJKQIvliRSR0EDBofiZtxEPBYp+vHN6HF87f71ZTL67Wbsjm+eJuO70eTmWn9L83L/jdWOGcIci5ul81bq4jYgTB1gtIxcOMmeHvkiWMgvvgySQpdvvZXWRzzEQcpKQ+9+MRWt673IfpvgDWOj5P1KxEL2f9/80ZR2NniYokdV7KmiLy4QwgRtULRHK4quctICWrbQU817m7bzkV3E3TeM/0neuaEdqu45x4Rdr7bTYXI6Bb0H4SKWiq1XFMrIldxFGLsVHtVSwPSe3LPc3t7VtohD+IFbnkdT4SltJX/3QQRwn6E+C27SLWGe3udbjuNQ43Bw8EfzYwHUSK1wPHo3R9OcUfpEGPFlRQT0a1T9+j2IoiCcVlCXQVMOGjHLcCAmrUgpix0dGfyly/Jukp7UyKyV+eE1XpxeWt+mSalHqGUMVXWbhu1R0xgaA0SxbRi+VanvJsSN2GVNKCep8/2qPEolynYQZJ34HLxRrZGdxJWsK7MgQQknN5NRN9DMjqBZClrNFO29XLEUazZ8va7Zbal1fFdAOEHwC7yrOe7oi5TxVzDkAzzRQ/4/U8HjENdNSu2pBaG2WqH9lPP3c4f+SLkg2wGsrzgnZ1zRXggXhcuTeaJNTc8hfWKAFdrggt7AcTwfWZQOL4bEMmueuALXivhTeOE7GkzaRLzJF1vllLSpcA9HPAJgwx33Bni8L+ZybXXFbO5z+N/rjIQuQBUuUw7XsMEpCzAp5rr1gEboZFX1XfnAfZ6Uik4vHX9gDof+EF494AK0Tzxk9q0BcoYX9uWg5gINeNugyxa2PuQtpN63CsgGh/iaTZ3Xs/+UUo6IlKpx7d/PQ7jxpr9BWZBKT1XHoqVGw4X2wMNf7lbrtCcCrTJ9EHfV2HdBoQ5WOy0Mj8tZ42YBoX+F8bXQ6ka6gZWze5LVRJKs53qiJxnpXw4carcbD3XajGcFcTP4s7+I7Fg3ycYKbLuR7FoGSWs1bbxCHCDsmniqd4stl5+uSDE7J8U6HSn20ReuokI3vkMPAfuJGlt62zimu6mYxOW0aunXXIMJDYJoAdXy/08SrHlLTc4IUMrgZg0BNRX9WC+v9pYmlFLBHwsku6s3ehwMa/m16vzaV00KH/GCJniIBgN7w93Zqb+g22C+k8XZN7O9ayVpK72tHW2/fet7tva0ipDXdbJjt+o06/aWdVzWrU3rvayPb0fb3v8tKM600bz8B101NIjuHwAA</trigger_inputs>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLdtLmiA7QZ1vO1DkAqUSNpCadKlKCXeRf69Q11sWRfHjpWt82JAHIpzeHTmDOmH7yZDAWHmhTlFASPmwIy4IpIjNl0tCQwrPexztNCxBeIYKSFX5oWSCRmYVIrFlCyWDCmYTBGLYVBITKR5YQ/MFLGE3K/iWwwrwfvZMsWaZhGG52ff9mxvbFu+JDSRyrd8KlGC4XEppIKZOIohx+rP4oUbHTUmZTScRwxLws2Lh8eBuUQS0igN4XstFGkcIQ2R5xArdG3XcSzLOR/awZkb2A52EbEsWLDOSQ23aqFms2nyrAjHBK/5aLAmCcJ3nK3WM+ZAes7QAj3H0TdY/dzS8ygB7CHJY+tHv6AjHw7nIgrJ3VJFgucjOc48KFiy4F9y/JpIQlHCVEkkjCQxrEeWGrIGUSCi93PxNCkT3kQ8210RZCJEbP2ElJJRkCgSa8JpxIB6P+cmFonM0E+uL+8mV/5fn6aXv11P/Mn1/XRyezm9vjJfsn35/yZ6xRxhgcXPt/Oy/vo3EWH6A8ar2IcvOTDjUEZL9SlUUVqq72WwUfSl4DjKWGmoOixD8baqy93vkrVldQo7rGQsxf339R9NAeeDh+n27AwhTFCHbgNa0W115y3QVAsJ1d3tUnAxso+Eh5b1P4m4MKe3anghMGFXm+VMCM5moOqILxOl2XpCXMW+Ej7C2K/wqKcCptdEne/t5VUFy4TDC/76ezR1nNG25u9zFAPcB6jCkptsSYjTz8WSk4QbAj4c/BhhIoEaZZS+Rm8XaFYwSu8JI6GqiIB+jatPv0dxHPFZBfU6acZBI+c6HYjJKLeU546PTP7YZxE3SU9rZNaK+eBKtm1KA0Ida6zr2LbcgNrW2Bohil3LCp1KJTfBdKJUNUm8S0UfVs9xJka2h/TqFBfgrWo17CWjdFuDJQlaIoVtXPYDze4JmqOh1ezPPcj/1rLMh6+21blraz33foRTBG/gfW1wTwekTDyB9b7B/QIU/jOTIuG4bkd6TSPixmaG8VPB3889OiEVkuwGsD3jlDxwQ3spXMRXPbifS+3AI0Nigem54HfByPOCEDmUjs/GxLFr7reB0YrtQ7jeK2pL2+Ta5YCtwknb9HaA9x0BsOGDBwM83gELYbb6Xx77GE73NCfcB6jSZ9rLGoY3YxEmZazfam+kTjf1fWzF03MvHNnjcTiGWwtUPB2SANlDZ4S88Zl7PqpVfAPKLpiqhZkfcpfRt1ANpMMNvuah07qcv6dsY6KUbkeHd2kO59jsHZQnqXRK/VmMzFSENL4I/svtZp5xT6ABZhfavtr1Pij0hzXeF0Yg1LxxXoDUv8L4Vmp9zuxg5eSuVDWRpNt7PfpKRYbnI4+67RZDvTaL2YDphnnyx4s9KyTtrLW2c8a+gk9b66bzYPAGCddkUj0x7DjS9EWK3TspzvuR4h59jCprsfMe+RawH6iFZeeKY/qYzkl8QavmfSUMCBiQxIioUfyTSLARrAw1J0Apg/MyJDR09mNdu9pFmlDWCv6xQPITeKObwbBRHKBOr1HVpNDvDZjgMRqN3I7zsFe/AbcBegXvybetg6sibSuynb3rsHXra7Z2r4pktxWxZ1/qddftzem4Xbe2p9d2fXzj2XV/b0Fxoi3l8T/8JynYTh8AAA==</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_create</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN54d41b5b832332102e8dc310feaad3b3"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN328b2f59835507d02e8dc310feaad3b3,54d41b5b832332102e8dc310feaad3b3,a2bc2b91839507d02e8dc310feaad3be"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>ee58eba9-1bd6-4516-ac66-55132ae1028e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-05 06:52:17</sys_created_on>
+        <sys_id>328b2f59835507d02e8dc310feaad3b3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:33:18</sys_updated_on>
+        <ui_id>b8583f9e-f69c-460a-a4f4-7c984d2c5df1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TTW/bMAz9K4bPgWHHadbmNiwI1sNaIBt66TpBtuhEmCx7+kiTBfnvo2Q5ydq1CIoWw4D5Rop8fI9+vN3GnMWTeAQszS6ycZlneT5M0+H5KCvGeZENWU4BsngQS1oDViooG8UwXlFhXWK7/aCAGmAkS0qrFEiz2+E747oVdHMTyjBTLrlg+B5Pbu8GcUsVIhpQ8WT74MlsWiCCFiCwcdqUtkbQ6HKKGKey7bvnPd2H9N0MjFlAJ9wl8cnxydJBDGsDkgGOq6jQMIhrKhk1jdrEE6MsJlA1u5Zis69Ycmk6pTVda/4T8Uepq6sApZVhC/uQhA31y2l4Cdet4Y3sMoYWot9cI2wtrzoJbrdQUSvM0W6tRjxoHWVHomNYfV429/N+3oxLry6wFU1JxT6ixiheWAPa/Q4Q4JdS07blckFa1ay4b0YqdbIQGCSVaO5xpuYLmdDS8U5wQTSZYX7q0zdUcSfiE8Jg886LJz+sm9vJCISJ1+wFE/+jsFSXirfmPQKvINDcDYJd0+GzBoDD//Yu1Ud21YYaq7/aNM0ZlyvQhi+oQZHfFGhcs9NBZIOL6Go+8sUyUlx/jypFLYsYWrZEtyfRZV0D4+j8yOE8dvwbTnrZJX2BGvkhSsdwcPIue4AZB8H0H5YbjsmEAWQVBuzv6dUOKhun/vt/Vm9wVsXZc1YoLw5//gjzcFprgs0X77KUIB+rDEmJdzKGbaPM4wuZeZ/P+9cXutpRia46KqfK+K35CVm9qY9zwdBnr+bn87/k5MDoH7PyUwa++wVcUUF6yAgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=328b2f59835507d02e8dc310feaad3b3"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
@@ -319,17 +343,95 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:30:58</sys_created_on>
         <sys_id>54d41b5b832332102e8dc310feaad3b3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-05 04:12:24</sys_updated_on>
+        <ui_id>fe9b89b8-1650-4b50-9221-2ec83bc3a95a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8HPxthxmjV5GwuBPayFbPSl64QsXScCWfJkKR8L+e+7suU07boulMAYzG/3+5yr43u/jwSPptEIeJpNsjHLszwfpunwepQV47zIhjynAFkUR4pWgJkGmDYc7TWVzjv2+w8GqAVOsoQ5Y0DZwwHjXDS1pLu7kIYethKSYzya3j/EUU0NdrRgoun+WcjuaiCSFiCxcKaZq7Dp4OMMe5yLtq9e9HCfw/cz0OahOxHeiSGPJ0vjCLYWFAccV1LZQBxVVHFqtdlFU2scOpA1v1Vyd8xYCWU7phXdNuIH9h+lPq8EpMbCFo4mCRvql6MFg9vaCq06j6WF7DenpavUTUfB7xZK6qQ92a1rsB/UHrIH0SEsP6/0ZtHPmwvVsgtopWZUHi1qrRGFs9D45wAJ7VIqWtdCLUlt9Fq0xQilSpYSjaSUeoMzG7FUCWUed4ILoskc/bPWfUeN8CQ+YRssPrTkyXfn53Y0AmDScm4Jk/ahMLVhRtT2PTZeQ4B5iINci6vXBMAmj+990vNRsluCxZN3WUoQjzOWpKQ01HE0a23sr+Kd++hg0UffJuQvHsrgpoNyLo0nxb+hFaT8xBeUfHUxJV//JSUHRP+YlP8k4HT46gU7eelWs82JeBtLrWu+ujTNufNrQNWuBWy+deLFO6xVFz29zMYpgpWodSQGxIoKXrrSl23+xv8EKoRkYdCBis/eWN9gLkDy5oUV9j9KGEDWYcDx7F/sb8nGafv9v/4XvP4PPwF4uJB1rggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=54d41b5b832332102e8dc310feaad3b3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>eae5b1ad-03da-4040-9202-70b96899168c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-05 06:57:27</sys_created_on>
+        <sys_id>a2bc2b91839507d02e8dc310feaad3be</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:27:10</sys_updated_on>
+        <ui_id>75432347-9167-42a4-a81d-f0f15beaa988</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1T32vbMBD+V4KfjbHjNGvyNhYCfVgL6ehL1wnZOicCWfb0w0kW8r/vZMtJ1q4llIwxmN50d7r7vk/fPe4CzoJpMAIWJ5NknKdJmg7jeHg9SrJxmiVDllKAJAgDSUvASgV5pRjeGyqsC+x2nxRQA4wkUW6VAmn2e8wzrmtBtw++DCP5iguG+WD6+BQGNVXY0YAKprtnKbOtgQiagcCHsyq3JTYd3Mywx7lo+9eLHu5z+G4G3pnvTrgLYsrhSeIwgI0ByQDHFVRoCIOSSkZNpbbB1CiLAWTN7qTYHipWXJqOaUk3mv/A/qPY1RWA1HKvwuFKvEK9OBXP4a42vJJdxNBM9MpVwpbytqPgtIWCWmFOtLUa+0HtIDsQHcLiflWtF/28OZctO49WVDkVhxs1RvHMGtDuO0BAK0pJ65rLJalV1fD2MUIpo6XAS1SIao0zNV/KiOYOd4QC0WiO8VkbfqCKOxKfsQ0+3rfkyXfr5nY0PGDScm4Jk/ajsFTnitfmIzZuwMPch96u8fBNA8Dxv1uX6hO7akON1V9tHKfMOkGIgobD+psCjSo7GkRWqENXcm/ctys2uJENaMOX1FUMMKzQ8i9tfun279uZL1AiKAODDlZ4tmp9gzkHwfRvZPRrY/wA0vgBh8252Ook47g9/xfoDyxQdvWWFfLJ8edPeh6XaEPw8eRDEqO7C6sMiUmhqGV4rStlXq7F3GUHiz77Tlc7KIPbDsq5NH55/Aqt3tSnMW/oq4v5+fovOdkj+ses/JqBn34CAQVxzrIIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a2bc2b91839507d02e8dc310feaad3be"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b^sys_idNOT IN82ac2791839507d02e8dc310feaad316,91292bd9835507d02e8dc310feaad3c3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c6ac2791839507d02e8dc310feaad315</block>
+        <comment/>
+        <connected_to>ee58eba9-1bd6-4516-ac66-55132ae1028e</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-05 06:57:09</sys_created_on>
+        <sys_id>82ac2791839507d02e8dc310feaad316</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:33:18</sys_updated_on>
+        <ui_id>eae5b1ad-03da-4040-9202-70b96899168c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d129e7d9835507d02e8dc310feaad3f9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">0a641b1b832332102e8dc310feaad36b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-05 06:41:48</sys_created_on>
+        <sys_id>91292bd9835507d02e8dc310feaad3c3</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:46:34</sys_updated_on>
-        <ui_id>fe9b89b8-1650-4b50-9221-2ec83bc3a95a</ui_id>
+        <sys_updated_on>2026-06-06 04:33:18</sys_updated_on>
+        <ui_id>ee58eba9-1bd6-4516-ac66-55132ae1028e</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCVAWeFtAiFN6lqJTrx0nWXiG7DkOJk/+Bjiv+86cSCiqKNSX9B4u1/2OSf34Jc9EZyMSB94FA/jQdKLe71uFHXv+/Fi0FvEXd5jADFpE8UywE4NSa45xmsmnU/s92MNzAKncSdxWoOyhwPWuTCFZLt5aMNMshKSY52MXl7bpGAaT7SgyWh/VroWkmQLkNg6qzGdY7S7wsc8T1yGuKiokw9hchIqrW8TrOCQhxNHbQJbC4oDAkmZNNAmGVOc2VzvyMhqhwkkzZ+U3B07VkLZimjGtkb8wZv7ke9LAZklQYRjSINAVTqdMMue8eTEOn3UKxcJmEoTDilz0o6buarhqbAiV9WIZQtZT+fSZeqxUoQcD2h8D2cQBBSep0de0UqfV/lmVoOcClVKEijKPGHyGDFrtVg46+HsCUgoNc5YUQi1pIXO16IcRihZZykx6KQy3+CdRixVhyUedwdVZZ0p5idles608CS+4zE4fGgTszNjyYw5UUEN6W/nkVTEAgVaqlBKQMtN8MOJFoX9iletIQA/tMPSL+7e27BkeFqoxpmnxd9SHB5+iSOKeJy2NKKpZo5jWOTavrXA1Fdbs7r6MTtcAba2w49yCS6DD454k3tozrYeq0Lww92n+eH+lvwQaNy8If5lg6j77h9tY5PKzTcNCxjLrDM/XRT1uPPC4O6vBWx+VRbANyFXVbX5SminKE6iY5AqUCsyuPRifO7hH3PbFZrUbpsKkNxcEKm2GmTICqFUop3ZLRRb81A8PkGf5rl4EJW/G3Lef/MSvf4F18U3y4AJAAA=</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=54d41b5b832332102e8dc310feaad3b3"/>
-    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0a641b1b832332102e8dc310feaad36b"/>
+        <values>H4sIAAAAAAAA/+1UTWsbMRD9K0Zns+x6Y9P4FlxMC20DScilDUIrzXqFtdJWH3Zc4//e0X44JnZoKTn2Jj3NvHkz89CemOCb4N2DuXFOrjSZf38aE6kjhuc90awGMifcaCG9NJqMyYapELH9fmGBeRA0S3iwFrRPpHMBqN81cDj8CGmaC26C9mBLkJ664BrgmIEsQrpGsd3ju5DxSiqBOZ38hllUjXFkvn/1FMmoYgUorHnvrdQrTJcCb9dsWk6zdMrzySyfpOnkw1VWzPIim4icwdUM44bExck0LgwoFkHIDfTGiqhlko4JPHvQAjXPS6YcjEnNtGDe2B2ZexsQwCmIW612x4hKao9sJMY+O/kLIlOaxsgSsDEO3evxSvvRdjCvjORw27TaWsSzQvU53KhQ629dC3EpULKg/LAURIJDPmii6Cij11TeV2Z7NxRcSt022D8qw5k63pjHMRTBg4vbAAU1EtGaNQ0OhzbWbGSbjFrqZKXwkpTKbLFo9GPCeBSe4IxYskT8Yws/MitjF1+RBpNxg446bmUz9NYWJ4d2KvRniHq6/vpOaDcMDOjSbrDMBnrRh/G572kLvJj/k1xVozvp1qOlZUGMFhXw9bmt3wp7D8OWKSuza55dNizLLxl29KVFzm079PeGd7M/eLdH/sq80+l/7556N8osmJOctv8u0sWf4J/N+xRN2pVwnYcEcOlQyUPEPg9/e3zY4dYlP4W2xq5jDy/Y4TfSLKD6JQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=0a641b1b832332102e8dc310feaad36b"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=0a641b1b832332102e8dc310feaad36b"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -394,7 +496,7 @@
         <description>Handles fraud reports and notifies investigators</description>
         <flow_priority/>
         <internal_name>fraud_report_processing_flow</internal_name>
-        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current.issue_type","label":"Trigger - Record Created➛Fraud Report Record➛Issue Type","reference":"","reference_display":"Issue Type","type":"choice","base_type":"choice","parent_table_name":"x_1919710_refurt_0_fraud_report","column_name":"issue_type","choices":[{"image":"","used":false,"label":"Counterfeit Suspected","rawLabel":"Counterfeit Suspected","selected":false,"missing":false,"reference":false,"value":"counterfeit_suspected","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Invalid QR","rawLabel":"Invalid QR","selected":false,"missing":false,"reference":false,"value":"invalid_qr","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Ownership Mismatch","rawLabel":"Ownership Mismatch","selected":false,"missing":false,"reference":false,"value":"ownership_mismatch","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Expired Compliance","rawLabel":"Expired Compliance","selected":false,"missing":false,"reference":false,"value":"expired_compliance","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}},{"image":"","used":false,"label":"Other","rawLabel":"Other","selected":false,"missing":false,"reference":false,"value":"other","parameters":{"name":"x_1919710_refurt_0_fraud_report","dependent_values":[""]}}],"usedInstances":{"ee58eba9-1bd6-4516-ac66-55132ae1028e":["condition"]}},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Fraud Report Table","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"table_name","base_type":"table_name","choices":[{"order":0.0}],"usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Fraud Report Record","reference":"x_1919710_refurt_0_fraud_report","reference_display":"Fraud Report","type":"reference","base_type":"reference","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["record"],"b8583f9e-f69c-460a-a4f4-7c984d2c5df1":["record"],"75432347-9167-42a4-a81d-f0f15beaa988":["record"],"54b31f50-ad1b-41c9-af7c-d5c025030e0c":["record"]},"attributes":{}},{"name":"Created_1.run_start_date_time","label":"Trigger - Record Created➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fe9b89b8-1650-4b50-9221-2ec83bc3a95a":["reported_on"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
         <master>true</master>
         <name>Fraud Report Processing Flow</name>
         <natlang/>
@@ -411,7 +513,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9b771f9f832332102e8dc310feaad39f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -419,7 +521,7 @@
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <sys_updated_on>2026-06-06 04:33:20</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -444,7 +546,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -503,14 +605,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:42:38</sys_created_on>
         <sys_id>9b771f9f832332102e8dc310feaad3a3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <sys_updated_on>2026-06-06 04:33:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_pilot>false</u_pilot>
@@ -529,7 +631,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -588,14 +690,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:42:38</sys_created_on>
         <sys_id>d7771f9f832332102e8dc310feaad3c0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <sys_updated_on>2026-06-06 04:33:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <u_pilot>false</u_pilot>
@@ -624,17 +726,41 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:42:38</sys_created_on>
         <sys_id>5b775f9f832332102e8dc310feaad307</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:38</sys_updated_on>
+        <sys_updated_on>2026-06-05 04:12:25</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
-        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLetk6AB0gR1vO1DkAqUSNpCadGlKGW9i/x7h7pZlmTHFzl1XgKIpDlnDs+cIfP8Q2fII0y/0ifIY0Tv6UEoiQgRmywXBIalGnZDNFdzcxRiJLlY6ldSxKSnU8HnEzJfMCRhMUUsgkEuMBH6ldnTE8Ri8rSM7jDsBL9Pt8n31PNp+P7mmo7pDE3DFYTGQrqGSwWKMXwuuJCwEgcRxFj+mf/gVs1q42LWnwUMCxLqV88vPX2BBISRCsKP2pSEnNy1hLWHLLNAIfSpjxyLGL5t2pZlGNZl3/QubM+0sI2IYcC6Olu1jGQLaSs6yDdJQkxwyVSDT0EQfgzZslwxg+PIuJujb1HwHXa/NNQ6SiArn2Rz5aebE5UN+zMe+ORxIQMeZiMZzmySs3gePmT4FcWEopjJgmIYiSPYjywUZAUiR0SfZvx1XAS8DcI0u3yScR+x8gtJKQIvliRSR0EDBofiZtxEPBYp+vHN6HF87f71ZTL67Wbsjm+eJuO70eTmWn9L83L/jdWOGcIci5ul81bq4jYgTB1gtIxcOMmeHvkiWMgvvgySQpdvvZXWRzzEQcpKQ+9+MRWt673IfpvgDWOj5P1KxEL2f9/80ZR2NniYokdV7KmiLy4QwgRtULRHK4quctICWrbQU817m7bzkV3E3TeM/0neuaEdqu45x4Rdr7bTYXI6Bb0H4SKWiq1XFMrIldxFGLsVHtVSwPSe3LPc3t7VtohD+IFbnkdT4SltJX/3QQRwn6E+C27SLWGe3udbjuNQ43Bw8EfzYwHUSK1wPHo3R9OcUfpEGPFlRQT0a1T9+j2IoiCcVlCXQVMOGjHLcCAmrUgpix0dGfyly/Jukp7UyKyV+eE1XpxeWt+mSalHqGUMVXWbhu1R0xgaA0SxbRi+VanvJsSN2GVNKCep8/2qPEolynYQZJ34HLxRrZGdxJWsK7MgQQknN5NRN9DMjqBZClrNFO29XLEUazZ8va7Zbal1fFdAOEHwC7yrOe7oi5TxVzDkAzzRQ/4/U8HjENdNSu2pBaG2WqH9lPP3c4f+SLkg2wGsrzgnZ1zRXggXhcuTeaJNTc8hfWKAFdrggt7AcTwfWZQOL4bEMmueuALXivhTeOE7GkzaRLzJF1vllLSpcA9HPAJgwx33Bni8L+ZybXXFbO5z+N/rjIQuQBUuUw7XsMEpCzAp5rr1gEboZFX1XfnAfZ6Uik4vHX9gDof+EF494AK0Tzxk9q0BcoYX9uWg5gINeNugyxa2PuQtpN63CsgGh/iaTZ3Xs/+UUo6IlKpx7d/PQ7jxpr9BWZBKT1XHoqVGw4X2wMNf7lbrtCcCrTJ9EHfV2HdBoQ5WOy0Mj8tZ42YBoX+F8bXQ6ka6gZWze5LVRJKs53qiJxnpXw4carcbD3XajGcFcTP4s7+I7Fg3ycYKbLuR7FoGSWs1bbxCHCDsmniqd4stl5+uSDE7J8U6HSn20ReuokI3vkMPAfuJGlt62zimu6mYxOW0aunXXIMJDYJoAdXy/08SrHlLTc4IUMrgZg0BNRX9WC+v9pYmlFLBHwsku6s3ehwMa/m16vzaV00KH/GCJniIBgN7w93Zqb+g22C+k8XZN7O9ayVpK72tHW2/fet7tva0ipDXdbJjt+o06/aWdVzWrU3rvayPb0fb3v8tKM600bz8B101NIjuHwAA</trigger_inputs>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxlLdtLmiA7QZ1vO1DkAqUSNpCadKlKCXeRf69Q11sWRfHjpWt82JAHIpzeHTmDOmH7yZDAWHmhTlFASPmwIy4IpIjNl0tCQwrPexztNCxBeIYKSFX5oWSCRmYVIrFlCyWDCmYTBGLYVBITKR5YQ/MFLGE3K/iWwwrwfvZMsWaZhGG52ff9mxvbFu+JDSRyrd8KlGC4XEppIKZOIohx+rP4oUbHTUmZTScRwxLws2Lh8eBuUQS0igN4XstFGkcIQ2R5xArdG3XcSzLOR/awZkb2A52EbEsWLDOSQ23aqFms2nyrAjHBK/5aLAmCcJ3nK3WM+ZAes7QAj3H0TdY/dzS8ygB7CHJY+tHv6AjHw7nIgrJ3VJFgucjOc48KFiy4F9y/JpIQlHCVEkkjCQxrEeWGrIGUSCi93PxNCkT3kQ8210RZCJEbP2ElJJRkCgSa8JpxIB6P+cmFonM0E+uL+8mV/5fn6aXv11P/Mn1/XRyezm9vjJfsn35/yZ6xRxhgcXPt/Oy/vo3EWH6A8ar2IcvOTDjUEZL9SlUUVqq72WwUfSl4DjKWGmoOixD8baqy93vkrVldQo7rGQsxf339R9NAeeDh+n27AwhTFCHbgNa0W115y3QVAsJ1d3tUnAxso+Eh5b1P4m4MKe3anghMGFXm+VMCM5moOqILxOl2XpCXMW+Ej7C2K/wqKcCptdEne/t5VUFy4TDC/76ezR1nNG25u9zFAPcB6jCkptsSYjTz8WSk4QbAj4c/BhhIoEaZZS+Rm8XaFYwSu8JI6GqiIB+jatPv0dxHPFZBfU6acZBI+c6HYjJKLeU546PTP7YZxE3SU9rZNaK+eBKtm1KA0Ida6zr2LbcgNrW2Bohil3LCp1KJTfBdKJUNUm8S0UfVs9xJka2h/TqFBfgrWo17CWjdFuDJQlaIoVtXPYDze4JmqOh1ezPPcj/1rLMh6+21blraz33foRTBG/gfW1wTwekTDyB9b7B/QIU/jOTIuG4bkd6TSPixmaG8VPB3889OiEVkuwGsD3jlDxwQ3spXMRXPbifS+3AI0Nigem54HfByPOCEDmUjs/GxLFr7reB0YrtQ7jeK2pL2+Ta5YCtwknb9HaA9x0BsOGDBwM83gELYbb6Xx77GE73NCfcB6jSZ9rLGoY3YxEmZazfam+kTjf1fWzF03MvHNnjcTiGWwtUPB2SANlDZ4S88Zl7PqpVfAPKLpiqhZkfcpfRt1ANpMMNvuah07qcv6dsY6KUbkeHd2kO59jsHZQnqXRK/VmMzFSENL4I/svtZp5xT6ABZhfavtr1Pij0hzXeF0Yg1LxxXoDUv8L4Vmp9zuxg5eSuVDWRpNt7PfpKRYbnI4+67RZDvTaL2YDphnnyx4s9KyTtrLW2c8a+gk9b66bzYPAGCddkUj0x7DjS9EWK3TspzvuR4h59jCprsfMe+RawH6iFZeeKY/qYzkl8QavmfSUMCBiQxIioUfyTSLARrAw1J0Apg/MyJDR09mNdu9pFmlDWCv6xQPITeKObwbBRHKBOr1HVpNDvDZjgMRqN3I7zsFe/AbcBegXvybetg6sibSuynb3rsHXra7Z2r4pktxWxZ1/qddftzem4Xbe2p9d2fXzj2XV/b0Fxoi3l8T/8JynYTh8AAA==</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_create</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN5f775f9f832332102e8dc310feaad304"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN13e314b5835987d02e8dc310feaad34c,5f775f9f832332102e8dc310feaad304,9be314b5835987d02e8dc310feaad34d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>ee58eba9-1bd6-4516-ac66-55132ae1028e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 04:27:12</sys_created_on>
+        <sys_id>13e314b5835987d02e8dc310feaad34c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:27:12</sys_updated_on>
+        <ui_id>b8583f9e-f69c-460a-a4f4-7c984d2c5df1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5GfqyhpC4O+TVTVkBhIgHhhYLn2TWvNcTJ/FLqq/33XidN2wFCRmDSk5e1++pyTe25XRAoyIkMQWX6cH/JBPhj0s6x/NMynh4Np3hcDBpCTHtGsBOw0wCsjMF4w5UNitToxwBwImqfcGwParddYF9LWii1vYhtm+FwqgXUyur3rkZoZ3OjAkNHqSWlfSIpNQWHrZYfpKUa3rEMsKu5LxEVllzyLk+NYSU7HWMGhACfPegQeHWgBCKRgykKPlEwL5iqzJCNnPCaQtLjQarnpmEvtWqIle7TyJ748zEJfAciMRxE2IY0CtelizBy7ws3cebPRq5IcbKuJgIJ55U52c23DRe1kpdsRx6aqm66UL/V5qwjZLNj5H94iCKgDz4C8pVVczauHyw7kROpGkkhRVZypTcScM3LqXYCzIqCg0bhkdS31jNamWshmGKGU6UxhkBaqesA3rZzplPGAO0VVWTrB/LhJ3zAjA4mvuAaH1z1il/ZEMWu3VFBD+sMHJC2xSIE2KjQS0OYSwjA3snaf8akFRODrXjz6rP/qhcH2oJpbtztHbx1z3n7zWTYQUi/AOjljDmnfG7AofGBGdYXStD1f5GyeGGm/J4VhXiQCD5+jZ9LktCxBSPRPEvY8981ffOltftxDrc6PEwlK2Bfki350UCJFB7SV83dLXsdichOLG1e+my3zw6z5/pvz3zXn9OC1c+PH2+va2bk16CPF4eNPeUYRjzeOZrTxA4Z1Zdxzn00at1x21bd5Yw+wnTeumyN4GXxnj6e5s93Z5LwtRFscvJsrjj6SHyKND2+IP9ng7heyVBtumgkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=13e314b5835987d02e8dc310feaad34c"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
@@ -659,8 +785,86 @@
         <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCVAWeFtAiFN6lqJTrx0nWXiG7DkOJk/+Bjiv+86cSCiqKNSX9B4u1/2OSf34Jc9EZyMSB94FA/jQdKLe71uFHXv+/Fi0FvEXd5jADFpE8UywE4NSa45xmsmnU/s92MNzAKncSdxWoOyhwPWuTCFZLt5aMNMshKSY52MXl7bpGAaT7SgyWh/VroWkmQLkNg6qzGdY7S7wsc8T1yGuKiokw9hchIqrW8TrOCQhxNHbQJbC4oDAkmZNNAmGVOc2VzvyMhqhwkkzZ+U3B07VkLZimjGtkb8wZv7ke9LAZklQYRjSINAVTqdMMue8eTEOn3UKxcJmEoTDilz0o6buarhqbAiV9WIZQtZT+fSZeqxUoQcD2h8D2cQBBSep0de0UqfV/lmVoOcClVKEijKPGHyGDFrtVg46+HsCUgoNc5YUQi1pIXO16IcRihZZykx6KQy3+CdRixVhyUedwdVZZ0p5idles608CS+4zE4fGgTszNjyYw5UUEN6W/nkVTEAgVaqlBKQMtN8MOJFoX9iletIQA/tMPSL+7e27BkeFqoxpmnxd9SHB5+iSOKeJy2NKKpZo5jWOTavrXA1Fdbs7r6MTtcAba2w49yCS6DD454k3tozrYeq0Lww92n+eH+lvwQaNy8If5lg6j77h9tY5PKzTcNCxjLrDM/XRT1uPPC4O6vBWx+VRbANyFXVbX5SminKE6iY5AqUCsyuPRifO7hH3PbFZrUbpsKkNxcEKm2GmTICqFUop3ZLRRb81A8PkGf5rl4EJW/G3Lef/MSvf4F18U3y4AJAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=5f775f9f832332102e8dc310feaad304"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>eae5b1ad-03da-4040-9202-70b96899168c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 04:27:12</sys_created_on>
+        <sys_id>9be314b5835987d02e8dc310feaad34d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:27:12</sys_updated_on>
+        <ui_id>75432347-9167-42a4-a81d-f0f15beaa988</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5WfqyppgdG+TVSVkBhIgPrCmOXGN8WS42T2dT9W9b/vOnHarjAEEg9DWt7up885uedhw5RkI3YCMkmH6Vk2SAeDfpL0z0/S2dlglvblQACkrMuMKIA6LWSllRQvhPYhsdlcWBAIkqe9zFsLBrdbqkvlKi3W09hGmexJaUl1Nnp47LJKWNqIYNloc1R6KyQtZqCp9bbFdIwR11WIZZn5gnBx1Sav4uQ4VjqXY6rQUICTJl0GKwQjgYDkQjvoskIYKbC0azZC6ylBpOWN0etdx5My2BAtxMqpX/TySRL6ciBmWRRhF/IoUJPOxwLFHW3O0NudXqXKwDWaSMiF13hxmGsabipUpWlGUMx0O11qX5jrRhG2W3DwP7wjEFAFngF5Qyu/eyqXty3IiTK1JJGiLjOhd5FAtGrmMcDZMNBQa1yIqlJmzitbLlQ9TFCK3lxT0Mt1uaQ3nZqbnsgC7h6pKnoTyo/r9FRYFUh8ozU0vO0yt3YXWji3p0Ia8p8+IGmIRQq8VqGWgNeXEIYzqyr8Sk8tIALfduPRJ/1XLwz2B1Xfujs4eocCvfvuk2QgfZCIW1goWP6w4Ej3QIybkpRpWu4wXI+VnUuzAIdqLkJHh9KWjPPcLB+9/n3Oe4MurfMmCrR0LwgVnYdQEC8E3gj3p/nuY7EzjcWd/z7MgOlZUn//bfjv2nB2+tq5ZcP9dR3s3FtxxWl4+CVNyCO5t8gTnlvhJYVVafG5uSah2rltq+/zxhvAtt64r4/gZfCtPY5zV4ezneumEG1x+mGuOP9Mfog0Pr0h/maDx98yjvOQhAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9be314b5835987d02e8dc310feaad34d"/>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9b771f9f832332102e8dc310feaad39f^sys_idNOT IN13e314b5835987d02e8dc310feaad35c,5be314b5835987d02e8dc310feaad35e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d129e7d9835507d02e8dc310feaad3f9</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 04:27:12</sys_created_on>
+        <sys_id>13e314b5835987d02e8dc310feaad35c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:33:20</sys_updated_on>
+        <ui_id>ee58eba9-1bd6-4516-ac66-55132ae1028e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQ5Cs2Gh8CxwYLdA2QBLk0gbCiqQswhSp8mHHFfzvXephG7GLNmiOvYnDfcyMdqWGaO9q7+yjvrFWrBSZf3seE6EChs8NUVBxMidUKyac0IqMyQakD1jTLAwHx1mWRNQbw5WLhLWeZ25X8/3+u4/jlFHtleOm4MJl1tuaU8zAKkzYWsLu6V2K0VJIhjkd/RoMssY4Mm9eXQmGva5hWkyTeErTySydxPHkw1WSz9I8mbAU+NUMC0rIucTQxYnuC1YEbghZZ4Ra9efPferDAGrDApVJPCb8xXHFkPK8AGn5mFSgGDhtdmTujEcATWB3Su4OEaVQDquREPtixU8eKsVxiCw46qK8uz0cs97ZDi5uwQFS8dR504fSUgvKbecI4wV46RanWBdwV7cq2xQHuRyytfSV+tqZQQ4FhheJiLdIgtdBaeDeCykeSr29H1guhWpd6S+lpiAPJ3DoXe5d4NMQLnmFhbIK6hodzWqjN6JNRi5VtJJ4iAqpt9g0zHAENBCP0FiIlojftvATGBFUfMEymIyzYDNLjagHbW1zsh8Tu7MLCdYeNaK52Q8fGHaKe21ZZ09IaQvdYOMN72Xsx+fbk7XAcYU+ilU5uhd2PVoa8Gy0KDldny/H78LeNvZFDEVyTZPLYw/ppbEfddN8PvyDkrdsQPKHDeiRv1qB6fT/BvzzBgSaOVhBs/aLj+XCR+gdV+A5jHrX9GA2FRa5PQbs0/CfCRc7nChBT6GtNuug6ojtfwGV34/isQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c6ac2791839507d02e8dc310feaad315</block>
+        <comment/>
+        <connected_to>ee58eba9-1bd6-4516-ac66-55132ae1028e</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fraud Report Processing Flow">9b771f9f832332102e8dc310feaad39f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-06 04:27:12</sys_created_on>
+        <sys_id>5be314b5835987d02e8dc310feaad35e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-06 04:33:20</sys_updated_on>
+        <ui_id>eae5b1ad-03da-4040-9202-70b96899168c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=9b771f9f832332102e8dc310feaad39f"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=9b771f9f832332102e8dc310feaad39f"/>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -722,18 +926,18 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"6b775f9f832332102e8dc310feaad331","name":"plan","plan_signature":null}}</plan>
         <plan_id>0a641b1b832332102e8dc310feaad36b</plan_id>
-        <snapshot>c9685b13836332102e8dc310feaad382</snapshot>
+        <snapshot>9b771f9f832332102e8dc310feaad39f</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-16 10:42:39</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6b775f9f832332102e8dc310feaad331</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-16 10:42:39</sys_updated_on>
-        <trigger display_value="">e3775f9f832332102e8dc310feaad314</trigger>
+        <sys_updated_on>2026-06-06 04:33:21</sys_updated_on>
+        <trigger display_value="">99555079835987d02e8dc310feaad38f</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0a641b1b832332102e8dc310feaad36b"/>
 </record_update>

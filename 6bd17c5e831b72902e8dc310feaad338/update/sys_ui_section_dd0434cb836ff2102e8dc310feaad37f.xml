@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>c949f44783aff2102e8dc310feaad320</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>3c1b3e41835183d02e8dc310feaad337</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>expiry_date</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>0149f44783aff2102e8dc310feaad322</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>f01b3e41835183d02e8dc310feaad339</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>certificate_number</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>c949f44783aff2102e8dc310feaad322</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>701b3e41835183d02e8dc310feaad33a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>compliance_status</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>8549f44783aff2102e8dc310feaad323</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>fc1b3e41835183d02e8dc310feaad33a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>issue_date</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>4149f44783aff2102e8dc310feaad324</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>7c1b3e41835183d02e8dc310feaad33b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>verified_by</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>0d49f44783aff2102e8dc310feaad324</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>f81b3e41835183d02e8dc310feaad33c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>c549f44783aff2102e8dc310feaad325</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>781b3e41835183d02e8dc310feaad33d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>compliance_type</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>8149f44783aff2102e8dc310feaad326</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>f41b3e41835183d02e8dc310feaad33e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>remarks</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>4d49f44783aff2102e8dc310feaad326</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>741b3e41835183d02e8dc310feaad33f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,41 +130,69 @@
             <element>asset_passport</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>0949f44783aff2102e8dc310feaad327</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>f01b3e41835183d02e8dc310feaad340</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pass_fail</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>701b3e41835183d02e8dc310feaad341</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>issued_by</element>
-            <position>10</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>c149f44783aff2102e8dc310feaad328</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>fc1b3e41835183d02e8dc310feaad341</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inspection_date</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>7c1b3e41835183d02e8dc310feaad342</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>11</position>
+            <position>13</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-15 04:32:52</sys_created_on>
-            <sys_id>8d49f44783aff2102e8dc310feaad328</sys_id>
+            <sys_created_on>2026-06-04 08:42:03</sys_created_on>
+            <sys_id>f81b3e41835183d02e8dc310feaad343</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1919710_refurt_0_compliance_record" sys_domain="global" view="Default view">dd0434cb836ff2102e8dc310feaad37f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-15 04:32:52</sys_updated_on>
+            <sys_updated_on>2026-06-04 08:42:03</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

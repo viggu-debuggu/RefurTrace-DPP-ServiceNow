@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_canvas">
+    <par_dashboard_canvas action="DELETE">
+        <dashboard display_value="RefurTrace Asset Intelligence Dashboard">f5cbb14683154bd02e8dc310feaad3bc</dashboard>
+        <dashboard_tab/>
+        <layout>[]</layout>
+        <sys_class_name>par_dashboard_canvas</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 06:39:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bdcbb14683154bd02e8dc310feaad3d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>par_dashboard_canvas_bdcbb14683154bd02e8dc310feaad3d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 06:39:25</sys_updated_on>
+    </par_dashboard_canvas>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>6261d6d8eb41ae54c040fddacad0cdd2</instance_id>
+        <instance_name>dev331255</instance_name>
+        <name>par_dashboard_canvas_bdcbb14683154bd02e8dc310feaad3d3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_canvas"><par_dashboard_canvas action="INSERT_OR_UPDATE"><dashboard display_value="RefurTrace Asset Intelligence Dashboard">f5cbb14683154bd02e8dc310feaad3bc</dashboard><dashboard_tab/><layout>[]</layout><sys_class_name>par_dashboard_canvas</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-06-07 06:39:25</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bdcbb14683154bd02e8dc310feaad3d3</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package><sys_policy/><sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope><sys_update_name>par_dashboard_canvas_bdcbb14683154bd02e8dc310feaad3d3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-07 06:39:25</sys_updated_on></par_dashboard_canvas></record_update>]]></payload>
+        <payload_hash>-501484672</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>baec864083f403102e8dc310feaad3b5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 06:39:25</sys_created_on>
+        <sys_id>31cbb14683154bd02e8dc310feaad3d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ea0cec43d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 06:39:25</sys_updated_on>
+        <type>PAR Dashboard Page Canvas</type>
+        <update_guid>bdcbb14645154bd0963e9f067175aed6</update_guid>
+        <update_guid_history>bdcbb14645154bd0963e9f067175aed6:-501484672</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">dc7eb58a83154bd02e8dc310feaad3c0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-07 06:51:03</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_canvas">par_dashboard_canvas</sys_db_object>
+        <sys_id>2ca2f707b0174dc0a6831bbf8e2bb084</sys_id>
+        <sys_metadata>bdcbb14683154bd02e8dc310feaad3d3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>par_dashboard_canvas_bdcbb14683154bd02e8dc310feaad3d3</sys_update_name>
+        <sys_update_version display_value="par_dashboard_canvas_bdcbb14683154bd02e8dc310feaad3d3">31cbb14683154bd02e8dc310feaad3d8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-07 06:51:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

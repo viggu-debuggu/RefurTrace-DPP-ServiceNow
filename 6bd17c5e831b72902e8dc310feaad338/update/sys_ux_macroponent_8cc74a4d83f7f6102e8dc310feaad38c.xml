@@ -1042,12 +1042,20 @@
                                                                 "value": false
                                                             },
                                                             "value": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "This is the value"
-                                                                }
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "gliderecord_query_2",
+                                                                        "output",
+                                                                        "data",
+                                                                        "GlideRecord_Query",
+                                                                        "x_1919710_refurt_0_compliance_record",
+                                                                        "_results",
+                                                                        "0",
+                                                                        "certificate_number",
+                                                                        "displayValue"
+                                                                    ]
+                                                                },
+                                                                "type": "DATA_OUTPUT_BINDING"
                                                             }
                                                         },
                                                         "slot": null,
@@ -1084,12 +1092,20 @@
                                                                 "value": false
                                                             },
                                                             "value": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "This is the value"
-                                                                }
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "gliderecord_query_2",
+                                                                        "output",
+                                                                        "data",
+                                                                        "GlideRecord_Query",
+                                                                        "x_1919710_refurt_0_compliance_record",
+                                                                        "_results",
+                                                                        "0",
+                                                                        "pass_fail",
+                                                                        "displayValue"
+                                                                    ]
+                                                                },
+                                                                "type": "DATA_OUTPUT_BINDING"
                                                             }
                                                         },
                                                         "slot": null,
@@ -1126,12 +1142,20 @@
                                                                 "value": false
                                                             },
                                                             "value": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "This is the value"
-                                                                }
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "gliderecord_query_2",
+                                                                        "output",
+                                                                        "data",
+                                                                        "GlideRecord_Query",
+                                                                        "x_1919710_refurt_0_compliance_record",
+                                                                        "_results",
+                                                                        "0",
+                                                                        "issue_date",
+                                                                        "displayValue"
+                                                                    ]
+                                                                },
+                                                                "type": "DATA_OUTPUT_BINDING"
                                                             }
                                                         },
                                                         "slot": null,
@@ -1156,7 +1180,7 @@
                                                                 "value": {
                                                                     "code": null,
                                                                     "comment": "",
-                                                                    "message": "Inspection Date    : "
+                                                                    "message": "Inspection  BY  : "
                                                                 }
                                                             },
                                                             "reversed": {
@@ -1168,12 +1192,20 @@
                                                                 "value": false
                                                             },
                                                             "value": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "This is the value"
-                                                                }
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "gliderecord_query_2",
+                                                                        "output",
+                                                                        "data",
+                                                                        "GlideRecord_Query",
+                                                                        "x_1919710_refurt_0_compliance_record",
+                                                                        "_results",
+                                                                        "0",
+                                                                        "verified_by",
+                                                                        "displayValue"
+                                                                    ]
+                                                                },
+                                                                "type": "DATA_OUTPUT_BINDING"
                                                             }
                                                         },
                                                         "slot": null,
@@ -1250,6 +1282,168 @@
                                             },
                                             "slot": null,
                                             "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "e772e788e32ce32b8daa2ac7b092d2c6",
+                                                "type": "MACROPONENT"
+                                            },
+                                            "elementId": "card_base_container_4",
+                                            "elementLabel": "Card Base Container 4",
+                                            "eventMappings": [],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "overrides": {
+                                                "composition": [
+                                                    {
+                                                        "definition": {
+                                                            "id": "1f6e0643eca7a637e36bd7833549ec9e",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "heading_4",
+                                                        "elementLabel": "Heading 4",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "align": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "start"
+                                                            },
+                                                            "hasNoMargin": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "AI Summary"
+                                                                }
+                                                            },
+                                                            "level": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "1"
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "header-secondary"
+                                                            },
+                                                            "wontWrap": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "bb63b710d208796b7ceaab7812bddef1",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "label_value_9",
+                                                        "elementLabel": "Label value 9",
+                                                        "eventMappings": [],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": ""
+                                                                }
+                                                            },
+                                                            "reversed": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "truncated": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "value": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": " This Apple Watch was refurbished and inspected on 2026-06-04.  Certificate Number: 1111 Verification Status: Suspended Risk Score: 21  Based on the inspection data, the device may require additional review before deployment."
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    }
+                                                ],
+                                                "layout": {
+                                                    "default": {
+                                                        "children": null,
+                                                        "items": [
+                                                            {
+                                                                "element_id": "heading_4",
+                                                                "styles": {}
+                                                            },
+                                                            {
+                                                                "element_id": "label_value_9",
+                                                                "styles": {}
+                                                            }
+                                                        ],
+                                                        "root": null,
+                                                        "rules": null,
+                                                        "styles": {
+                                                            "display": "flex",
+                                                            "flex-direction": "column"
+                                                        },
+                                                        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                        "type": "flex"
+                                                    },
+                                                    "version": "3.0.0"
+                                                }
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "hideShadow": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "interaction": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "none"
+                                                },
+                                                "manageSelected": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "selected": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "sidebar": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": {}
+                                                },
+                                                "size": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "lg"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
                                         }
                                     ],
                                     "layout": {
@@ -1258,6 +1452,10 @@
                                             "items": [
                                                 {
                                                     "element_id": "card_base_container_3",
+                                                    "styles": {}
+                                                },
+                                                {
+                                                    "element_id": "card_base_container_4",
                                                     "styles": {}
                                                 }
                                             ],
@@ -3230,8 +3428,12 @@
         "eventMappings": [],
         "inputValues": {
             "recordId": {
-                "type": "JSON_LITERAL",
-                "value": ""
+                "binding": {
+                    "address": [
+                        "assetSearchId"
+                    ]
+                },
+                "type": "STATE_BINDING"
             },
             "returnFieldMetadata": {
                 "type": "JSON_LITERAL",
@@ -3239,7 +3441,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": ""
+                "value": "asset_passport,pass_fail,verified_by,issue_date"
             },
             "returnTableMetadata": {
                 "type": "JSON_LITERAL",
@@ -3247,7 +3449,7 @@
             },
             "table": {
                 "type": "JSON_LITERAL",
-                "value": null
+                "value": "x_1919710_refurt_0_compliance_record"
             }
         },
         "readEvaluationMode": "EAGER"
@@ -3629,6 +3831,14 @@
     }
 ]</props>
         <required_translations>[ {
+  "message" : " This Apple Watch was refurbished and inspected on 2026-06-04.  Certificate Number: 1111 Verification Status: Suspended Risk Score: 21  Based on the inspection data, the device may require additional review before deployment.",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "AI Summary",
+  "code" : "",
+  "comment" : ""
+}, {
   "message" : "Actions",
   "code" : "",
   "comment" : ""
@@ -3649,7 +3859,7 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Inspection Date    : ",
+  "message" : "Inspection  BY  : ",
   "code" : "",
   "comment" : ""
 }, {
@@ -3686,10 +3896,6 @@
   "comment" : ""
 }, {
   "message" : "Status :",
-  "code" : "",
-  "comment" : ""
-}, {
-  "message" : "This is the value",
   "code" : "",
   "comment" : ""
 }, {
@@ -4082,14 +4288,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-21 15:23:38</sys_created_on>
         <sys_id>8cc74a4d83f7f6102e8dc310feaad38c</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_ux_macroponent_8cc74a4d83f7f6102e8dc310feaad38c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-03 10:37:46</sys_updated_on>
+        <sys_updated_on>2026-06-05 03:41:07</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=8cc74a4d83f7f6102e8dc310feaad38c"/>
 </record_update>

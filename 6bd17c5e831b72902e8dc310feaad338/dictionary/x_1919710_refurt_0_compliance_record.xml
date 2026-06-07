@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="b40434cb836ff2102e8dc310feaad313" label="Compliance Record" max_length="40" name="x_1919710_refurt_0_compliance_record" type="collection">
+    <element db_object_id="b40434cb836ff2102e8dc310feaad313" label="Refurbishment Certificate" max_length="40" name="x_1919710_refurt_0_compliance_record" type="collection">
+        <element label="Certificate Number" max_length="40" name="certificate_numbe0" type="string"/>
         <element label="Expiry Date" max_length="40" name="expiry_date" type="glide_date"/>
         <element display="true" label="Certificate Number" max_length="40" name="certificate_number" type="string"/>
         <element choice="3" label="Compliance Status" max_length="40" name="compliance_status" type="choice">
@@ -10,7 +11,9 @@
                 <element inactive_on_update="false" label="Expired" sequence="3" value="expired"/>
             </choice>
         </element>
+        <element label="Inspection Date" max_length="40" name="inspection_date" type="string"/>
         <element label="Issue Date" max_length="40" name="issue_date" type="glide_date"/>
+        <element label="Inspector" max_length="32" name="inspector" reference="sys_user" type="reference"/>
         <element label="Verified By" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
         <element label="EU DPP Reference" max_length="40" name="eu_dpp_reference" type="string"/>
         <element choice="3" label="Compliance Type" max_length="40" name="compliance_type" type="choice">
@@ -25,6 +28,12 @@
         <element label="Remarks" max_length="40" name="remarks" type="journal_input"/>
         <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
         <element label="Issued By" max_length="40" name="issued_by" type="string"/>
+        <element choice="1" label="Pass/Fail" max_length="40" name="pass_fail" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="pass" sequence="0" value="pass"/>
+                <element inactive_on_update="false" label="fail" sequence="1" value="fail"/>
+            </choice>
+        </element>
         <element label="CDSCO Reference" max_length="40" name="cdsco_reference" type="string"/>
         <index name="index">
             <element name="asset_passport"/>
