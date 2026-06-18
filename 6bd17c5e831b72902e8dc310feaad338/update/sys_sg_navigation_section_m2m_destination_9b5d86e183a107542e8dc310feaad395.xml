@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_navigation_section_m2m_destination">
+    <sys_sg_navigation_section_m2m_destination action="INSERT_OR_UPDATE">
+        <navigation_section display_value="RefurTrace Services">525a0a2d836107542e8dc310feaad3de</navigation_section>
+        <navigation_section_destination display_value="Verify Device">535d86e183a107542e8dc310feaad390</navigation_section_destination>
+        <order/>
+        <sys_class_name>sys_sg_navigation_section_m2m_destination</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 04:54:59</sys_created_on>
+        <sys_id>9b5d86e183a107542e8dc310feaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_sg_navigation_section_m2m_destination_9b5d86e183a107542e8dc310feaad395</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 04:54:59</sys_updated_on>
+    </sys_sg_navigation_section_m2m_destination>
+</record_update>

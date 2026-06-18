@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+    <sys_sg_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <autofill_variable/>
+        <category/>
+        <description>Enter the RefurTrace Passport ID</description>
+        <label>Passport ID</label>
+        <mandatory>true</mandatory>
+        <name>passport_id</name>
+        <order>1</order>
+        <page/>
+        <parameter_screen display_value="Verify Device">99094d5983e943542e8dc310feaad3d6</parameter_screen>
+        <parameter_section/>
+        <placeholder>RT-PASSPORT-001</placeholder>
+        <readonly>false</readonly>
+        <sys_class_name>sys_sg_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 05:57:24</sys_created_on>
+        <sys_id>69abd66d83e107542e8dc310feaad3c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Passport ID</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_sg_input_69abd66d83e107542e8dc310feaad3c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 05:57:24</sys_updated_on>
+        <type display_value="String">7debec1517021010f2b43b9fadb959e3</type>
+    </sys_sg_input>
+</record_update>

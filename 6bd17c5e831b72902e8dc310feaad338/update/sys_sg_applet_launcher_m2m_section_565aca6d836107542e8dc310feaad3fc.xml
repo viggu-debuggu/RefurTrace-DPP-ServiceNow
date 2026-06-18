@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_m2m_section">
+    <sys_sg_applet_launcher_m2m_section action="INSERT_OR_UPDATE">
+        <applet_launcher display_value="RefurTrace Mobile">4758c91983e943542e8dc310feaad350</applet_launcher>
+        <order/>
+        <section display_value="RefurTrace Services">525a0a2d836107542e8dc310feaad3de</section>
+        <sys_class_name>sys_sg_applet_launcher_m2m_section</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 04:41:49</sys_created_on>
+        <sys_id>565aca6d836107542e8dc310feaad3fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_m2m_section_565aca6d836107542e8dc310feaad3fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 04:41:49</sys_updated_on>
+    </sys_sg_applet_launcher_m2m_section>
+</record_update>
