@@ -25,19 +25,19 @@
         <resume>false</resume>
         <roles_override/>
         <show_unsaved_changes_confirmation_message>false</show_unsaved_changes_confirmation_message>
-        <submit_label>Submit</submit_label>
+        <submit_label>Verify Device</submit_label>
         <sys_class_name>sys_sg_parameter_screen</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-17 05:17:55</sys_created_on>
         <sys_id>99094d5983e943542e8dc310feaad3d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Verify Device</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_sg_parameter_screen_99094d5983e943542e8dc310feaad3d6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-17 05:17:55</sys_updated_on>
+        <sys_updated_on>2026-06-19 06:00:14</sys_updated_on>
         <track_input_updates_timestamps>false</track_input_updates_timestamps>
         <type display_value="">string</type>
         <unsaved_changes_cancel_button_label>Stay</unsaved_changes_cancel_button_label>
