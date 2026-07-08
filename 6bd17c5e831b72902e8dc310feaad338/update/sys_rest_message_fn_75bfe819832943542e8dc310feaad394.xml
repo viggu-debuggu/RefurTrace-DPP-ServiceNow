@@ -4,27 +4,35 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content/>
-        <function_name>Default GET</function_name>
-        <http_method>get</http_method>
+        <content>{&#13;
+  "asset_id":"${asset_id}",&#13;
+  "passport_id":"${passport_id}",&#13;
+  "qr_code":"${qr_code}",&#13;
+  "device_name":"${device_name}",&#13;
+  "status":"${status}",&#13;
+  "verified_by":"${verified_by}",&#13;
+  "date":"${date}"&#13;
+}</content>
+        <function_name>Send Verification</function_name>
+        <http_method>post</http_method>
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>RefurTrace Device Verification API [ Default GET ]</qualified_name>
-        <rest_endpoint>https://jsonplaceholder.typicode.com/posts/1</rest_endpoint>
+        <qualified_name>RefurTrace Device Verification API [ Send Verification ]</qualified_name>
+        <rest_endpoint>https://script.google.com/macros/s/AKfycbwYqly2P9P2sNmuh39joxtz3pf532FwM-l_KNSSo44fIxmW-h6yd0V-62nx2PLHV9ZYjA/exec</rest_endpoint>
         <rest_message display_value="RefurTrace Device Verification API">cdde20d5832943542e8dc310feaad3d7</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-17 03:27:20</sys_created_on>
         <sys_id>75bfe819832943542e8dc310feaad394</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Default GET</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Send Verification</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_rest_message_fn_75bfe819832943542e8dc310feaad394</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-17 03:27:20</sys_updated_on>
+        <sys_updated_on>2026-06-28 11:40:34</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
