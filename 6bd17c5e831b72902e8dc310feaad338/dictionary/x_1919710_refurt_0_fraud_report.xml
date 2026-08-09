@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="b82a1fc783a376102e8dc310feaad348" label="Fraud Report" max_length="40" name="x_1919710_refurt_0_fraud_report" type="collection">
-        <element label="Resolution Notes" max_length="40" name="resolution_notes" type="journal_input"/>
         <element label="Reported On" max_length="40" name="reported_on" type="glide_date_time"/>
-        <element label="Description" max_length="40" name="description" type="string"/>
-        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element label="Verification Request" max_length="32" name="verification_request" reference="x_1919710_refurt_0_verification_request" type="reference"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Under Review" sequence="1" value="under_review"/>
-                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
-                <element inactive_on_update="false" label="Resolved" sequence="3" value="resolved"/>
-                <element inactive_on_update="false" label="Closed" sequence="4" value="closed"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="3" value="confirmed"/>
                 <element inactive_on_update="false" label="Investigating" sequence="2" value="investigating"/>
+                <element inactive_on_update="false" label="Under Review" sequence="1" value="under_review"/>
+                <element inactive_on_update="false" label="Closed" sequence="5" value="closed"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Resolved" sequence="4" value="resolved"/>
             </choice>
         </element>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element display="true" label="Report Number" max_length="40" name="report_number" type="string"/>
+        <element label="Resolution Notes" max_length="40" name="resolution_notes" type="journal_input"/>
         <element label="Reported By" max_length="32" name="reported_by" reference="sys_user" type="reference"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element default="0" label="Risk Score" max_length="40" name="risk_score" read_only="true" read_only_option="instance_configured" type="integer"/>
         <element choice="3" label="Issue Type" max_length="40" name="issue_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Other" sequence="4" value="other"/>
-                <element inactive_on_update="false" label="Ownership Mismatch" sequence="2" value="ownership_mismatch"/>
-                <element inactive_on_update="false" label="Expired Compliance" sequence="3" value="expired_compliance"/>
-                <element inactive_on_update="false" label="Invalid QR" sequence="1" value="invalid_qr"/>
                 <element inactive_on_update="false" label="Counterfeit Suspected" sequence="0" value="counterfeit_suspected"/>
+                <element inactive_on_update="false" label="Expired Compliance" sequence="3" value="expired_compliance"/>
+                <element inactive_on_update="false" label="Ownership Mismatch" sequence="2" value="ownership_mismatch"/>
+                <element inactive_on_update="false" label="Invalid QR" sequence="1" value="invalid_qr"/>
             </choice>
         </element>
-        <element label="Verification Request" max_length="32" name="verification_request" reference="x_1919710_refurt_0_verification_request" type="reference"/>
-        <element label="Report Number" max_length="40" name="report_number" type="string"/>
         <index name="index">
             <element name="asset_passport"/>
         </index>

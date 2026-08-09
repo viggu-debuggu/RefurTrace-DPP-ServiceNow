@@ -7,6 +7,7 @@
         <experience/>
         <grid>48</grid>
         <name>RefurTrace Asset Intelligence Dashboard</name>
+        <ready_to_migrate/>
         <sys_class_name>par_dashboard</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-07 06:52:55</sys_created_on>

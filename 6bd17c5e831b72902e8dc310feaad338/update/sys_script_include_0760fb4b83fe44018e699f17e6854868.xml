@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.OTPUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Generates and validates one-time passwords for Service Log records</description>
+        <mobile_callable>false</mobile_callable>
+        <name>OTPUtil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var OTPUtil = Class.create()
+OTPUtil.prototype = {
+    initialize: function () {},
+
+    /**
+     * Generates a random 6-digit numeric OTP and stores it directly
+     * on the service_log record (NOT on asset_passport).
+     *
+     * @param {string} serviceLogSysId - sys_id of the service_log record
+     * @returns {string} the generated 6-digit OTP code
+     */
+    generateOTP: function (serviceLogSysId) {
+        var code = '' + Math.floor(100000 + Math.random() * 900000);
+
+        var gr = new GlideRecord('x_1919710_refurt_0_service_log');
+        if (gr.get(serviceLogSysId)) {
+            gr.setValue('otp_code', code);
+            gr.setWorkflow(false);
+            gr.update();
+        }
+
+        return code;
+    },
+
+    /**
+     * Validates the entered OTP against the stored otp_code on the
+     * service_log record. On success, clears otp_code to empty so it
+     * cannot be replayed (single-use).
+     *
+     * @param {string} serviceLogSysId - sys_id of the service_log record
+     * @param {string} enteredOtp - the OTP the user entered
+     * @returns {boolean} true if match, false otherwise
+     */
+    validateOTP: function (serviceLogSysId, enteredOtp) {
+        var gr = new GlideRecord('x_1919710_refurt_0_service_log');
+        if (!gr.get(serviceLogSysId)) {
+            return false;
+        }
+
+        var storedCode = gr.getValue('otp_code');
+        if (!storedCode || storedCode.toString() !== enteredOtp.toString()) {
+            return false;
+        }
+
+        // Match! Clear otp_code so it can't be reused
+        gr.setValue('otp_code', '');
+        gr.setWorkflow(false);
+        gr.update();
+
+        return true;
+    },
+
+    type: 'OTPUtil',
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-09 05:21:50</sys_created_on>
+        <sys_id>0760fb4b83fe44018e699f17e6854868</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OTPUtil</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_0760fb4b83fe44018e699f17e6854868</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-09 05:21:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

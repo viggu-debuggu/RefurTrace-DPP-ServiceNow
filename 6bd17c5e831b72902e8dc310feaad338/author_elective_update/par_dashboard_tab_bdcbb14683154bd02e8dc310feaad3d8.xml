@@ -47,7 +47,7 @@
         <update_guid_history>35cbb1463c154bd02228c7d411b197dc:-1487591037</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="New Tab 4">587eb58a83154bd02e8dc310feaad3d7</sys_audit_delete>
+        <sys_audit_delete display_value="">587eb58a83154bd02e8dc310feaad3d7</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-07 06:51:04</sys_created_on>

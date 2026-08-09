@@ -41,7 +41,7 @@
         <update_guid_history>f5ecbd340799cf90092c07624e82aa43:-1438524941</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_1919710_refurt_0_refurbishment_certificate.x_1919710_refurt_0.engineer">15c6f245831183d02e8dc310feaad37f</sys_audit_delete>
+        <sys_audit_delete display_value="">15c6f245831183d02e8dc310feaad37f</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-04 08:23:14</sys_created_on>

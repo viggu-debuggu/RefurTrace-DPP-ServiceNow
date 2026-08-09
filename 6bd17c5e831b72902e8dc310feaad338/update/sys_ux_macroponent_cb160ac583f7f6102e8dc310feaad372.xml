@@ -10733,6 +10733,7 @@
         }
     ]
 }</internal_event_mappings>
+        <keyboard_shortcuts/>
         <layout>{
     "default": {
         "children": null,
@@ -10921,6 +10922,7 @@
         "valueType": "number"
     }
 ]</props>
+        <required_sys_props/>
         <required_translations>[ {
   "message" : "&lt;div&gt;&lt;span style=\"font-size: 14pt;\"&gt;Search for tasks to draft this article - Select up to 5 to help in the creation of article&lt;/span&gt;&lt;/div&gt;",
   "code" : "",

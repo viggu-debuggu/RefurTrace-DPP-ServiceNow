@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="c99c347e83ef72102e8dc310feaad333" label="Ownership History" max_length="40" name="x_1919710_refurt_0_ownership_history" type="collection">
-        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
         <element label="Transfer Date" max_length="40" name="transfer_date" type="glide_date_time"/>
+        <element label="New Owner" max_length="40" name="new_owner" type="string"/>
         <element label="Approved By" max_length="40" name="approved_by" type="string"/>
         <element label="Remarks" max_length="40" name="remarks" type="string"/>
-        <element label="Transfer Case" max_length="32" name="transfer_case" reference="x_1919710_refurt_0_ownership_transfer_case" type="reference"/>
-        <element label="New Owner" max_length="40" name="new_owner" type="string"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
         <element label="Previous Owner" max_length="40" name="previous_owner" type="string"/>
+        <element label="Transfer Case" max_length="32" name="transfer_case" reference="x_1919710_refurt_0_ownership_transfer_case" type="reference"/>
         <index name="index">
             <element name="asset_passport"/>
         </index>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1919710_refurt_0_fraud_report</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1919710_refurt_0_fraud_report">statusCHANGESTOunder_review^ORstatusCHANGESTOinvestigating^EQ<item display_value="Under Review" endquery="false" field="status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="under_review"/>
+            <item display_value="Investigating" endquery="false" field="status" goto="false" newquery="false" operator="CHANGESTO" or="true" value="investigating"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calculate Fraud Risk Score</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    var POINTS_PER_PRIOR_REPORT = 15;
+    var POINTS_CONFIRMED_HISTORY = 40;
+    var SCORE_CAP = 100;
+    var FLAG_THRESHOLD = 70;
+
+    var assetPassportId = current.getValue('asset_passport');
+    if (!assetPassportId) {
+        // No linked asset passport — can't score
+        current.setValue('risk_score', 0);
+        return;
+    }
+
+    // Factor 1: Count prior fraud reports against the same asset_passport
+    // (exclude the current record to avoid self-counting)
+    var priorCount = 0;
+    var gr = new GlideRecord('x_1919710_refurt_0_fraud_report');
+    gr.addQuery('asset_passport', assetPassportId);
+    gr.addQuery('sys_id', '!=', current.getUniqueValue());
+    gr.query();
+    priorCount = gr.getRowCount();
+
+    // Factor 2: Check if any prior report has status = 'confirmed'
+    var hasConfirmedPrior = false;
+    var grConfirmed = new GlideRecord('x_1919710_refurt_0_fraud_report');
+    grConfirmed.addQuery('asset_passport', assetPassportId);
+    grConfirmed.addQuery('sys_id', '!=', current.getUniqueValue());
+    grConfirmed.addQuery('status', 'confirmed');
+    grConfirmed.setLimit(1);
+    grConfirmed.query();
+    hasConfirmedPrior = grConfirmed.hasNext();
+
+    // Calculate score: (prior_count * 15) + (has_confirmed * 40), capped at 100
+    var score = (priorCount * POINTS_PER_PRIOR_REPORT) +
+                (hasConfirmedPrior ? POINTS_CONFIRMED_HISTORY : 0);
+    if (score > SCORE_CAP) {
+        score = SCORE_CAP;
+    }
+
+    // Store risk_score on the fraud_report record (per-report history)
+    current.setValue('risk_score', score);
+
+    // Update risk_score on the linked asset_passport (latest score for quick lookup)
+    var apGr = new GlideRecord('x_1919710_refurt_0_asset_passport');
+    if (apGr.get(assetPassportId)) {
+        apGr.setValue('risk_score', score);
+
+        // If score crosses the threshold, flag the asset_passport
+        if (score >= FLAG_THRESHOLD) {
+            apGr.setValue('passport_status', 'flagged');
+        }
+
+        apGr.update();
+    }
+
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-09 05:21:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>89d46861c3f04ffd9ffb4fd582bff3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Calculate Fraud Risk Score</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_89d46861c3f04ffd9ffb4fd582bff3e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-09 05:21:50</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=89d46861c3f04ffd9ffb4fd582bff3e4"/>
+</record_update>

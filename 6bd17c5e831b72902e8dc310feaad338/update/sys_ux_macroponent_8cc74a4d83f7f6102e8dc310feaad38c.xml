@@ -3717,6 +3717,7 @@
         }
     ]
 }</internal_event_mappings>
+        <keyboard_shortcuts/>
         <layout>{
     "default": {
         "children": null,
@@ -3899,6 +3900,7 @@
         "valueType": "number"
     }
 ]</props>
+        <required_sys_props/>
         <required_translations>[ {
   "message" : " This Apple Watch was refurbished and inspected on 2026-06-04.  Certificate Number: 1111 Verification Status: Suspended Risk Score: 21  Based on the inspection data, the device may require additional review before deployment.",
   "code" : "",

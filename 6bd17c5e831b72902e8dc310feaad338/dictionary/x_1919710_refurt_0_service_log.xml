@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="632cb43e83ef72102e8dc310feaad37d" label="Service Log" max_length="40" name="x_1919710_refurt_0_service_log" type="collection">
-        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
-        <element label="Cost" max_length="40" name="cost" type="currency"/>
-        <element label="Service Notes" max_length="40" name="service_notes" type="string"/>
+        <element label="OTP Verified" max_length="40" name="otp_verified" read_only="true" read_only_option="instance_configured" type="boolean"/>
+        <element label="Next Service Date" max_length="40" name="next_service_date" type="glide_date"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
-                <element inactive_on_update="false" label="Open" sequence="0" value="open"/>
                 <element inactive_on_update="false" label="In Progress" sequence="1" value="in_progress"/>
+                <element inactive_on_update="false" label="Open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
             </choice>
         </element>
-        <element label="Next Service Date" max_length="40" name="next_service_date" type="glide_date"/>
-        <element label="Technician Name" max_length="40" name="technician_name" type="string"/>
+        <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element display="true" label="Technician Name" max_length="40" name="technician_name" type="string"/>
+        <element label="OTP Code" max_length="6" name="otp_code" type="string"/>
+        <element label="Cost" max_length="40" name="cost" type="currency"/>
         <element choice="3" label="Service Type" max_length="40" name="service_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Maintenance" sequence="2" value="maintenance"/>
                 <element inactive_on_update="false" label="Part Replacement" sequence="3" value="part_replacement"/>
+                <element inactive_on_update="false" label="Maintenance" sequence="2" value="maintenance"/>
                 <element inactive_on_update="false" label="Inspection" sequence="1" value="inspection"/>
                 <element inactive_on_update="false" label="Repair" sequence="0" value="repair"/>
             </choice>
         </element>
+        <element label="Service Notes" max_length="40" name="service_notes" type="string"/>
         <element label="Service Date" max_length="40" name="service_date" type="glide_date"/>
         <index name="index">
             <element name="asset_passport"/>

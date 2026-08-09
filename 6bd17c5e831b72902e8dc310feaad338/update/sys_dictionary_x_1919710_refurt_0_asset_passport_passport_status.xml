@@ -34,6 +34,7 @@
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -56,7 +57,6 @@
         <sys_updated_on>2026-02-28 10:46:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <u_pilot>false</u_pilot>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>

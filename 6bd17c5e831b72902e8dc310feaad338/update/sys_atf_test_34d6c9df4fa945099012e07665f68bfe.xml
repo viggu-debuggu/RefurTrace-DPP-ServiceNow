@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Creates a test user with the engineer role, then attempts to insert a Service Log record with an empty otp_code field. Asserts the insert is blocked by the Enforce OTP business rule, which aborts the action when no OTP is provided.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>Service Log OTP Validation - Empty OTP Blocked</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-09 05:21:42</sys_created_on>
+        <sys_id>34d6c9df4fa945099012e07665f68bfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Log OTP Validation - Empty OTP Blocked</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_test_34d6c9df4fa945099012e07665f68bfe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-09 05:21:42</sys_updated_on>
+        <test_origin/>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=34d6c9df4fa945099012e07665f68bfe"/>
+</record_update>

@@ -54,7 +54,7 @@
         <update_guid_history>bdcbb1460c154bd0253ed77e1f8ef2be:-1234667923</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="RefurTrace Asset Intelligence Dashboard">d47ef18a83154bd02e8dc310feaad3cf</sys_audit_delete>
+        <sys_audit_delete display_value="">d47ef18a83154bd02e8dc310feaad3cf</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-07 06:51:04</sys_created_on>

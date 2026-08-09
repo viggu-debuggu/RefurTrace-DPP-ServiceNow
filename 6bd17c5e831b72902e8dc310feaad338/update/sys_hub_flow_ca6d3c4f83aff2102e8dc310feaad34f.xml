@@ -3,6 +3,7 @@
         <access>public</access>
         <acls/>
         <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=20969000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>28100</authored_on_release_version>
@@ -36,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca6d3c4f83aff2102e8dc310feaad34f</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Compliance Verification Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
@@ -44,11 +45,11 @@
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
         <sys_update_name>sys_hub_flow_ca6d3c4f83aff2102e8dc310feaad34f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-15 10:40:30</sys_updated_on>
+        <sys_updated_on>2026-07-29 05:07:57</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>126d8a8f832b36102e8dc310feaad3f3</version_record>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=ca6d3c4f83aff2102e8dc310feaad34f"/>
     <sys_variable_value action="delete_multiple" query="document_key=ca6d3c4f83aff2102e8dc310feaad34f"/>
@@ -84,6 +85,7 @@
         <active>true</active>
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>ca6d3c4f83aff2102e8dc310feaad34f</identifier>
+        <identifier_type/>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-15 10:40:29</sys_created_on>
@@ -157,6 +159,7 @@
         <order>101</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -182,7 +185,6 @@
         <sys_updated_on>2026-03-15 06:08:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <u_pilot>false</u_pilot>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
@@ -242,6 +244,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -267,7 +270,6 @@
         <sys_updated_on>2026-03-15 06:08:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <u_pilot>false</u_pilot>
         <unique>false</unique>
         <use_dependent_field>true</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
@@ -495,11 +497,11 @@
         <sys_created_on>2026-03-15 04:53:17</sys_created_on>
         <sys_id>80fd7c8f83aff2102e8dc310feaad3c3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ca6d3c4f83aff2102e8dc310feaad34f_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-15 04:53:17</sys_updated_on>
         <url/>
@@ -518,11 +520,11 @@
         <sys_created_on>2026-03-15 04:53:17</sys_created_on>
         <sys_id>ccfd7c8f83aff2102e8dc310feaad3cd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ca6d3c4f83aff2102e8dc310feaad34f_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-15 04:53:17</sys_updated_on>
         <url/>
@@ -534,6 +536,7 @@
         <access>public</access>
         <acls/>
         <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>28100</authored_on_release_version>
@@ -638,6 +641,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -663,7 +667,6 @@
         <sys_updated_on>2026-03-15 10:40:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <u_pilot>false</u_pilot>
         <unique>false</unique>
         <use_dependent_field>true</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
@@ -723,6 +726,7 @@
         <order>101</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -748,7 +752,6 @@
         <sys_updated_on>2026-03-15 10:40:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <u_pilot>false</u_pilot>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
@@ -976,11 +979,11 @@
         <sys_created_on>2026-03-15 06:10:20</sys_created_on>
         <sys_id>a09f0543836336102e8dc310feaad331</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6c9f0543836336102e8dc310feaad31f_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-15 06:10:20</sys_updated_on>
         <url/>
@@ -999,11 +1002,11 @@
         <sys_created_on>2026-03-15 06:10:20</sys_created_on>
         <sys_id>ac9f0543836336102e8dc310feaad33b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6c9f0543836336102e8dc310feaad31f_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-15 06:10:20</sys_updated_on>
         <url/>
