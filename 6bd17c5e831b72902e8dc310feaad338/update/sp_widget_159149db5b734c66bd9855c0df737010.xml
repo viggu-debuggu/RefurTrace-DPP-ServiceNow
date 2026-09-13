@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+    var c = this;
+    c.year = new Date().getFullYear();
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.dpp-verify-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: 60vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.dpp-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  border: 1px solid #e8ecf0;
+}
+
+.dpp-card-warning {
+  border-color: #d4380d;
+  box-shadow: 0 4px 24px rgba(212, 56, 13, 0.12), 0 1px 4px rgba(212, 56, 13, 0.06);
+}
+
+/* ── Header ───────────────────────────────────────── */
+.dpp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+}
+
+.dpp-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.dpp-logo .fa-shield {
+  font-size: 22px;
+  color: #4fd1c5;
+}
+
+.dpp-header-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* ── Warning banner ───────────────────────────────── */
+.dpp-warning-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 24px;
+  background: #fff2e8;
+  color: #873800;
+  font-size: 13px;
+  line-height: 1.5;
+  border-bottom: 1px solid #ffd8bf;
+}
+
+.dpp-warning-banner .fa-exclamation-triangle {
+  margin-top: 2px;
+  color: #d4380d;
+  flex-shrink: 0;
+}
+
+.dpp-card-warning .dpp-warning-banner {
+  background: #fff1f0;
+  color: #820014;
+  border-bottom-color: #ffa39e;
+}
+
+/* ── Body ─────────────────────────────────────────── */
+.dpp-body {
+  padding: 28px 24px;
+}
+
+.dpp-product-section {
+  margin-bottom: 4px;
+}
+
+.dpp-product-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.dpp-product-model {
+  font-size: 15px;
+  color: #595959;
+  margin: 0 0 8px 0;
+}
+
+.dpp-product-manufacturer {
+  font-size: 13px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.dpp-product-manufacturer .fa {
+  margin-right: 4px;
+}
+
+/* ── Divider ──────────────────────────────────────── */
+.dpp-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 20px 0;
+}
+
+/* ── Info grid ────────────────────────────────────── */
+.dpp-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dpp-info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dpp-info-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ── Badges ───────────────────────────────────────── */
+.dpp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dpp-badge-good {
+  background: #f6ffed;
+  color: #135200;
+  border: 1px solid #b7eb8f;
+}
+
+.dpp-badge-neutral {
+  background: #fff7e6;
+  color: #874d00;
+  border: 1px solid #ffd591;
+}
+
+.dpp-badge-danger {
+  background: #fff1f0;
+  color: #820014;
+  border: 1px solid #ffa39e;
+}
+
+/* ── Passport ID ──────────────────────────────────── */
+.dpp-passport-id {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.dpp-id-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  letter-spacing: 0.5px;
+}
+
+/* ── Footer ───────────────────────────────────────── */
+.dpp-footer {
+  padding: 16px 24px;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.dpp-footer-line {
+  font-size: 12px;
+  color: #8c8c8c;
+  line-height: 1.8;
+}
+
+.dpp-footer-line .fa {
+  margin-right: 4px;
+}
+
+.dpp-footer-brand {
+  font-size: 11px;
+  color: #bfbfbf;
+}
+
+/* ── Empty state ──────────────────────────────────── */
+.dpp-card-empty .dpp-body {
+  padding: 40px 24px;
+}
+
+.dpp-empty-icon {
+  font-size: 48px;
+  color: #d9d9d9;
+  margin-bottom: 16px;
+}
+
+.dpp-card-empty h3 {
+  color: #595959;
+  margin: 0 0 8px 0;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 480px) {
+  .dpp-verify-wrapper {
+    padding: 16px 8px;
+  }
+  .dpp-header {
+    padding: 16px 20px;
+  }
+  .dpp-body {
+    padding: 20px;
+  }
+  .dpp-product-name {
+    font-size: 19px;
+  }
+  .dpp-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>x_1919710_refurt_0_dpp_verify_card</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+}]]></link>
+        <name>DPP Verify Card</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+    data.found = false;
+    data.product = '';
+    data.model = '';
+    data.manufacturer = '';
+    data.passportStatus = '';
+    data.passportStatusLabel = '';
+    data.hasFraud = false;
+    data.isWarning = false;
+    data.warningMessage = '';
+    data.assetId = '';
+    data.scanDate = new GlideDateTime().getDisplayValue();
+
+    var sysId = $sp.getParameter('sys_id');
+    if (!sysId) { return; }
+
+    var gr = new GlideRecord('x_1919710_refurt_0_asset_passport');
+    if (!gr.get(sysId)) { return; }
+
+    data.found = true;
+    data.product = gr.getValue('name') || '';
+    data.model = gr.getValue('model_number') || '';
+    data.assetId = gr.getValue('asset_ta0') || '';
+
+    // Dot-walk manufacturer reference safely
+    if (!gr.manufacturer.nil()) {
+        data.manufacturer = gr.manufacturer.getDisplayValue();
+    }
+
+    // Map passport_status to display label and severity
+    var status = gr.getValue('passport_status') || 'unknown';
+    data.passportStatus = status;
+
+    var STATUS_MAP = {
+        'active':             { label: 'Active',             severity: 'good' },
+        'inspection_passed':  { label: 'Inspection Passed',  severity: 'good' },
+        'pending_inspection': { label: 'Pending Inspection', severity: 'neutral' },
+        'suspended':          { label: 'Suspended',          severity: 'danger' },
+        'flagged':            { label: 'Flagged',            severity: 'danger' },
+        'decommissioned':     { label: 'Decommissioned',    severity: 'neutral' }
+    };
+
+    var mapped = STATUS_MAP[status] || { label: status, severity: 'neutral' };
+    data.passportStatusLabel = mapped.label;
+    data.statusSeverity = mapped.severity;
+
+    // Warning banner for flagged/suspended
+    if (status === 'flagged' || status === 'suspended') {
+        data.isWarning = true;
+        data.warningMessage = status === 'flagged'
+            ? 'This device has been flagged due to a reported issue. Exercise caution before purchasing.'
+            : 'This device passport has been suspended. Verification cannot be completed at this time.';
+    }
+
+    // Check for confirmed fraud reports — only yes/no, no details exposed
+    var fr = new GlideRecord('x_1919710_refurt_0_fraud_report');
+    fr.addQuery('asset_passport', sysId);
+    fr.addQuery('status', 'confirmed');
+    fr.setLimit(1);
+    fr.query();
+    data.hasFraud = fr.hasNext();
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:21:24</sys_created_on>
+        <sys_id>159149db5b734c66bd9855c0df737010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DPP Verify Card</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sp_widget_159149db5b734c66bd9855c0df737010</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:21:24</sys_updated_on>
+        <template><![CDATA[<div class="dpp-verify-wrapper">
+  <!-- Not found state -->
+  <div ng-if="!c.data.found" class="dpp-card dpp-card-empty">
+    <div class="dpp-header">
+      <div class="dpp-logo">
+        <i class="fa fa-shield"></i>
+        <span>RefurTrace</span>
+      </div>
+    </div>
+    <div class="dpp-body text-center">
+      <i class="fa fa-question-circle dpp-empty-icon"></i>
+      <h3>Passport Not Found</h3>
+      <p class="text-muted">The requested device passport could not be located. Please check the QR code and try again.</p>
+    </div>
+  </div>
+
+  <!-- Verification card -->
+  <div ng-if="c.data.found" class="dpp-card" ng-class="{'dpp-card-warning': c.data.isWarning}">
+
+    <!-- Header -->
+    <div class="dpp-header">
+      <div class="dpp-logo">
+        <i class="fa fa-shield"></i>
+        <span>RefurTrace</span>
+      </div>
+      <span class="dpp-header-label">Device Verification</span>
+    </div>
+
+    <!-- Warning banner -->
+    <div ng-if="c.data.isWarning" class="dpp-warning-banner">
+      <i class="fa fa-exclamation-triangle"></i>
+      <span>{{c.data.warningMessage}}</span>
+    </div>
+
+    <!-- Body -->
+    <div class="dpp-body">
+
+      <!-- Product info -->
+      <div class="dpp-product-section">
+        <h2 class="dpp-product-name">{{c.data.product}}</h2>
+        <p class="dpp-product-model" ng-if="c.data.model">{{c.data.model}}</p>
+        <p class="dpp-product-manufacturer" ng-if="c.data.manufacturer">
+          <i class="fa fa-building-o"></i> {{c.data.manufacturer}}
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <hr class="dpp-divider" />
+
+      <!-- Status row -->
+      <div class="dpp-info-grid">
+
+        <div class="dpp-info-item">
+          <span class="dpp-info-label">Passport Status</span>
+          <span class="dpp-badge"
+                ng-class="{
+                  'dpp-badge-good': c.data.statusSeverity === 'good',
+                  'dpp-badge-neutral': c.data.statusSeverity === 'neutral',
+                  'dpp-badge-danger': c.data.statusSeverity === 'danger'
+                }">
+            <i class="fa"
+               ng-class="{
+                 'fa-check-circle': c.data.statusSeverity === 'good',
+                 'fa-clock-o': c.data.statusSeverity === 'neutral',
+                 'fa-times-circle': c.data.statusSeverity === 'danger'
+               }"></i>
+            {{c.data.passportStatusLabel}}
+          </span>
+        </div>
+
+        <div class="dpp-info-item">
+          <span class="dpp-info-label">Fraud Check</span>
+          <span class="dpp-badge"
+                ng-class="c.data.hasFraud ? 'dpp-badge-danger' : 'dpp-badge-good'">
+            <i class="fa" ng-class="c.data.hasFraud ? 'fa-times-circle' : 'fa-check-circle'"></i>
+            {{c.data.hasFraud ? 'Fraud Reported' : 'No Confirmed Fraud'}}
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Passport ID -->
+      <div class="dpp-passport-id" ng-if="c.data.assetId">
+        <span class="dpp-info-label">Passport ID</span>
+        <span class="dpp-id-value">{{c.data.assetId}}</span>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="dpp-footer">
+      <div class="dpp-footer-line">
+        <i class="fa fa-clock-o"></i>
+        Verified on {{c.data.scanDate}}
+      </div>
+      <div class="dpp-footer-line dpp-footer-brand">
+        Powered by RefurTrace &copy; {{c.year}}
+      </div>
+    </div>
+
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

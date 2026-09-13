@@ -29,8 +29,19 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous) {
 
+    // ── INSERT ─────────────────────────────────────────────────────
+    // On insert, OTP validation cannot run (the record has no DB row
+    // yet for validateOTP to look up).  Force a clean slate so nobody
+    // can sneak in otp_verified=true or a fake otp_code on create.
+    if (current.operation() == 'insert') {
+        current.setValue('otp_verified', 'false');
+        current.setValue('otp_code', '');
+        return; // allow the insert
+    }
+
+    // ── UPDATE ─────────────────────────────────────────────────────
     // Skip validation if OTP has already been verified on this record
-    if (current.getValue('otp_verified') == 'true') {
+    if (current.getValue('otp_verified') == '1') {
         return;
     }
 
@@ -43,18 +54,25 @@
         return;
     }
 
-    // For updates, validate the entered code against the stored code
-    if (current.operation() == 'update') {
-        var util = new OTPUtil();
-        if (!util.validateOTP(current.getUniqueValue(), enteredCode)) {
-            gs.addErrorMessage('A valid OTP is required before this Service Log can be saved.');
-            current.setAbortAction(true);
-            return;
-        }
+    // Validate the entered code against the stored code in the DB.
+    var gr = new GlideRecord('x_1919710_refurt_0_service_log');
+    if (!gr.get(current.getUniqueValue())) {
+        gs.addErrorMessage('A valid OTP is required before this Service Log can be saved.');
+        current.setAbortAction(true);
+        return;
     }
 
-    // Validation passed — mark the record as verified
-    current.setValue('otp_verified', 'true');
+    var storedCode = gr.getValue('otp_code');
+    if (!storedCode || storedCode.toString() !== enteredCode.toString()) {
+        gs.addErrorMessage('A valid OTP is required before this Service Log can be saved.');
+        current.setAbortAction(true);
+        return;
+    }
+
+    // Validation passed — the after-update BR will handle setting
+    // otp_verified=true and clearing otp_code. We intentionally do NOT
+    // use current.setValue() here because it doesn't persist in all
+    // execution contexts (e.g. ATF recordUpdate steps).
 
 })(current, previous);
 ]]></script>

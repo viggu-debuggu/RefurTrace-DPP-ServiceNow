@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Tests the full OTP workflow: (1) ATF recordInsert creates a service_log, (2) server script stores a known OTP code on that record, (3) ATF recordUpdate submits the code triggering BR validation, (4) recordValidation asserts otp_verified=true.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>false</fail_on_server_error>
+        <name>Service Log OTP Validation - Valid OTP Succeeds</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 08:11:30</sys_created_on>
+        <sys_id>b07f47e86a3e4cfa92bab035ff1e00e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Log OTP Validation - Valid OTP Succeeds</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_test_b07f47e86a3e4cfa92bab035ff1e00e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 08:11:30</sys_updated_on>
+        <test_origin/>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=b07f47e86a3e4cfa92bab035ff1e00e2"/>
+</record_update>

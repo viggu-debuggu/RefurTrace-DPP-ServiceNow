@@ -4,17 +4,17 @@
         <order>1</order>
         <sys_class_name>sys_atf_test_suite_test</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-08-09 05:26:55</sys_created_on>
-        <sys_id>18241c2fef1141b084a251e24c765bd6</sys_id>
+        <sys_created_on>2026-09-13 08:11:31</sys_created_on>
+        <sys_id>36471b04ba494a5cb19c596909bc837b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>34d6c9df4fa945099012e07665f68bfe</sys_name>
+        <sys_name>0fc90675615246eea02ec14973afb74a</sys_name>
         <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
         <sys_policy/>
         <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
-        <sys_update_name>sys_atf_test_suite_test_18241c2fef1141b084a251e24c765bd6</sys_update_name>
+        <sys_update_name>sys_atf_test_suite_test_36471b04ba494a5cb19c596909bc837b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-08-09 05:26:55</sys_updated_on>
-        <test display_value="Service Log OTP Validation - Empty OTP Blocked">34d6c9df4fa945099012e07665f68bfe</test>
-        <test_suite display_value="Service Log OTP Validation">b36bb379e2d84aa6ae681b2b87de2532</test_suite>
+        <sys_updated_on>2026-09-13 08:11:31</sys_updated_on>
+        <test display_value="Service Log OTP Validation - Empty OTP Blocked">0fc90675615246eea02ec14973afb74a</test>
+        <test_suite display_value="Service Log OTP Validation">2996f6f899234e38bfa4e4771b478371</test_suite>
     </sys_atf_test_suite_test>
 </record_update>

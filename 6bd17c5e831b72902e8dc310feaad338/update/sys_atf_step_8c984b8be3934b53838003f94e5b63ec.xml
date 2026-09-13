@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Record Validation</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>4</order>
+        <step_config display_value="Record Validation">1f39a288df60220062fe6c7a4df2639d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:05:02</sys_created_on>
+        <sys_id>8c984b8be3934b53838003f94e5b63ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record Validation</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_step_8c984b8be3934b53838003f94e5b63ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:05:02</sys_updated_on>
+        <table>x_1919710_refurt_0_service_log</table>
+        <test display_value="Service Log OTP Validation - Valid OTP Succeeds">b07f47e86a3e4cfa92bab035ff1e00e2</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=8c984b8be3934b53838003f94e5b63ec"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8c984b8be3934b53838003f94e5b63ec</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>73d68491279d4525875e2c3bab6d4296</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <value>{{step['a736bdb829af4befab5192a64a25e4d0'].record_id}}</value>
+        <variable display_value="Record">52ed1e5b5360220002c6435723dc3421</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8c984b8be3934b53838003f94e5b63ec</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>769df3af33ce48c4915d9545ef4645e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <value>x_1919710_refurt_0_service_log</value>
+        <variable display_value="Table">6aad5a575360220002c6435723dc34b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8c984b8be3934b53838003f94e5b63ec</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>7dfb910c7b584f7d94d77e35369d8388</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <value>otp_verified=true^otp_code=</value>
+        <variable display_value="Field values">ff6e125353a0220002c6435723dc3442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8c984b8be3934b53838003f94e5b63ec</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>820e5040958d41ce8bdc2f120c87d209</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Enforce security">cbddfa135320220002c6435723dc3415</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8c984b8be3934b53838003f94e5b63ec</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>85754b485d744e449f9cdf2ed3dca0d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <value>record_validated</value>
+        <variable display_value="Assert type">67400008676003007ba405225685efa4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8c984b8be3934b53838003f94e5b63ec"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_id</field>
+        <id>8c984b8be3934b53838003f94e5b63ec</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:02</sys_created_on>
+        <sys_id>31f30ad1f503433388d2aa5e2134cd53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:02</sys_updated_on>
+        <table>var__m_atf_input_variable_1f39a288df60220062fe6c7a4df2639d</table>
+        <value>{{step['a736bdb829af4befab5192a64a25e4d0'].record_id}}</value>
+    </sys_element_mapping>
+</record_update>

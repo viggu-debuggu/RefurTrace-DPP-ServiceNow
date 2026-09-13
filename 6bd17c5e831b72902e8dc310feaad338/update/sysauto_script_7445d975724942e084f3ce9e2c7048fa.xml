@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start>2026-09-13 08:55:00</entered_run_start>
+        <entered_time/>
+        <max_drift/>
+        <name>RefurTrace - Seed Demo Data</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period/>
+        <run_start>2026-09-13 08:55:00</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>once</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[(function () {
+    var counts = { asset_passport: 0, service_log: 0, ownership_transfer_case: 0, fraud_report: 0, compliance_record: 0 };
+
+    // ══════════════════════════════════════════════════════════
+    // 1. ASSET PASSPORTS (4 records)
+    // ══════════════════════════════════════════════════════════
+    var passports = [
+        { name: 'iPhone 14 Pro - Refurb Unit A',  serial: 'SN-DEMO-1001', model: 'iPhone 14 Pro',    passport_status: 'active',    statu0: 'active',   batch: 'BATCH-2024-A' },
+        { name: 'Samsung Galaxy S23 - Unit B',     serial: 'SN-DEMO-1002', model: 'Galaxy S23',       passport_status: 'active',    statu0: 'verified', batch: 'BATCH-2024-A' },
+        { name: 'Google Pixel 8 - Suspended Unit', serial: 'SN-DEMO-1003', model: 'Pixel 8',          passport_status: 'suspended', statu0: 'suspended', batch: 'BATCH-2024-B' },
+        { name: 'OnePlus 12 - Clean Unit',         serial: 'SN-DEMO-1004', model: 'OnePlus 12',       passport_status: 'active',    statu0: 'active',   batch: 'BATCH-2024-B' }
+    ];
+    var apIds = [];
+    for (var i = 0; i < passports.length; i++) {
+        var p = passports[i];
+        var ap = new GlideRecord('x_1919710_refurt_0_asset_passport');
+        ap.initialize();
+        ap.setValue('name', p.name);
+        ap.setValue('serial_number', p.serial);
+        ap.setValue('model_number', p.model);
+        ap.setValue('passport_status', p.passport_status);
+        ap.setValue('statu0', p.statu0);
+        ap.setValue('batch_code', p.batch);
+        ap.setValue('short_description', 'Demo asset passport: ' + p.name);
+        var id = ap.insert();
+        apIds.push(id + '');
+        counts.asset_passport++;
+    }
+    gs.info('RefurTrace Demo: Created ' + counts.asset_passport + ' asset passports');
+
+    // ══════════════════════════════════════════════════════════
+    // 2. SERVICE LOGS (3 records — 2 OTP verified, 1 not)
+    // ══════════════════════════════════════════════════════════
+    var serviceLogs = [
+        { ap: 0, type: 'repair',      tech: 'Maria Chen',   notes: 'Screen replacement completed',       otpVerify: true },
+        { ap: 1, type: 'inspection',   tech: 'James Okafor', notes: 'Full diagnostic check passed',       otpVerify: true },
+        { ap: 3, type: 'maintenance',  tech: 'Priya Sharma', notes: 'Battery health check pending OTP',   otpVerify: false }
+    ];
+    for (var s = 0; s < serviceLogs.length; s++) {
+        var sl = serviceLogs[s];
+        var slGr = new GlideRecord('x_1919710_refurt_0_service_log');
+        slGr.initialize();
+        slGr.setValue('asset_passport', apIds[sl.ap]);
+        slGr.setValue('service_type', sl.type);
+        slGr.setValue('technician_name', sl.tech);
+        slGr.setValue('service_notes', sl.notes);
+        slGr.setValue('service_date', new GlideDate().getDisplayValue());
+        slGr.setValue('status', sl.otpVerify ? 'completed' : 'open');
+        var slId = slGr.insert();
+
+        if (sl.otpVerify) {
+            // Two-step OTP workflow: generate then update
+            var util = new OTPUtil();
+            var code = util.generateOTP(slId + '');
+            var slUpd = new GlideRecord('x_1919710_refurt_0_service_log');
+            slUpd.get(slId);
+            slUpd.setValue('otp_code', code);
+            slUpd.update();
+            // Fallback: ensure otp_verified is set
+            var check = new GlideRecord('x_1919710_refurt_0_service_log');
+            check.get(slId);
+            if (check.getValue('otp_verified') != '1') {
+                check.setValue('otp_verified', 'true');
+                check.setValue('otp_code', '');
+                check.setWorkflow(false);
+                check.update();
+            }
+        }
+        counts.service_log++;
+    }
+    gs.info('RefurTrace Demo: Created ' + counts.service_log + ' service logs');
+
+    // ══════════════════════════════════════════════════════════
+    // 3. FRAUD REPORTS (6 records — 3 on AP-1, 3 on AP-2)
+    // ══════════════════════════════════════════════════════════
+    var fraudData = [
+        { ap: 0, type: 'counterfeit_suspected', desc: 'Serial number inconsistency detected',        status: 'confirmed',     report: 'FR-DEMO-001' },
+        { ap: 0, type: 'invalid_qr',            desc: 'QR code does not resolve to expected URL',    status: 'under_review',  report: 'FR-DEMO-002' },
+        { ap: 0, type: 'ownership_mismatch',     desc: 'Registered owner does not match seller ID',  status: 'investigating', report: 'FR-DEMO-003' },
+        { ap: 1, type: 'expired_compliance',     desc: 'Compliance certificate expired 6 months ago', status: 'confirmed',     report: 'FR-DEMO-004' },
+        { ap: 1, type: 'counterfeit_suspected',  desc: 'IMEI does not match manufacturer database',   status: 'under_review',  report: 'FR-DEMO-005' },
+        { ap: 1, type: 'other',                  desc: 'Multiple ownership transfers in 30 days',     status: 'investigating', report: 'FR-DEMO-006' }
+    ];
+    for (var f = 0; f < fraudData.length; f++) {
+        var fd = fraudData[f];
+        var fr = new GlideRecord('x_1919710_refurt_0_fraud_report');
+        fr.initialize();
+        fr.setValue('asset_passport', apIds[fd.ap]);
+        fr.setValue('issue_type', fd.type);
+        fr.setValue('description', fd.desc);
+        fr.setValue('status', fd.status);
+        fr.setValue('report_number', fd.report);
+        fr.setValue('reported_on', new GlideDateTime().getDisplayValue());
+        fr.insert();
+        counts.fraud_report++;
+    }
+    gs.info('RefurTrace Demo: Created ' + counts.fraud_report + ' fraud reports');
+
+    // ══════════════════════════════════════════════════════════
+    // 4. OWNERSHIP TRANSFER CASE (1 record)
+    // ══════════════════════════════════════════════════════════
+    var otc = new GlideRecord('x_1919710_refurt_0_ownership_transfer_case');
+    otc.initialize();
+    otc.setValue('asset_passport', apIds[3]);
+    otc.setValue('transfer_status', 'pending');
+    otc.setValue('owner_consent_status', 'approved');
+    otc.setValue('buyer_consent_status', 'pending');
+    otc.setValue('transfer_request_date', new GlideDateTime().getDisplayValue());
+    otc.insert();
+    counts.ownership_transfer_case++;
+
+    // ══════════════════════════════════════════════════════════
+    // 5. COMPLIANCE RECORD (1 record)
+    // ══════════════════════════════════════════════════════════
+    var cr = new GlideRecord('x_1919710_refurt_0_compliance_record');
+    cr.initialize();
+    cr.setValue('asset_passport', apIds[0]);
+    cr.setValue('compliance_type', 'safety');
+    cr.setValue('compliance_status', 'verified');
+    cr.setValue('certificate_number', 'DEMO-CERT-001');
+    cr.setValue('pass_fail', 'pass');
+    cr.setValue('issued_by', 'National Safety Board');
+    cr.setValue('issue_date', '2024-06-15');
+    cr.setValue('expiry_date', '2026-06-15');
+    cr.insert();
+    counts.compliance_record++;
+
+    var total = counts.asset_passport + counts.service_log + counts.ownership_transfer_case + counts.fraud_report + counts.compliance_record;
+    gs.info('RefurTrace Demo: COMPLETE — Created ' + total + ' total records');
+})();
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 08:52:07</sys_created_on>
+        <sys_id>7445d975724942e084f3ce9e2c7048fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RefurTrace - Seed Demo Data</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sysauto_script_7445d975724942e084f3ce9e2c7048fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 08:52:07</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

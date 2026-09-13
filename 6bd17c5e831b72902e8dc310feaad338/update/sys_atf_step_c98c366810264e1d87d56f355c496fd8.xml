@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:05:02</sys_created_on>
+        <sys_id>c98c366810264e1d87d56f355c496fd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_step_c98c366810264e1d87d56f355c496fd8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:05:02</sys_updated_on>
+        <table/>
+        <test display_value="Service Log OTP Validation - Valid OTP Succeeds">b07f47e86a3e4cfa92bab035ff1e00e2</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=c98c366810264e1d87d56f355c496fd8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>c98c366810264e1d87d56f355c496fd8</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:03</sys_created_on>
+        <sys_id>39b101b85beb43a688e7343d44c77f17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:03</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>c98c366810264e1d87d56f355c496fd8</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:23:03</sys_created_on>
+        <sys_id>fd7d7d75c10d4b08add5118ea24b54a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:23:03</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {
+                var KNOWN_CODE = '654321';
+                // Find the record inserted by step 1
+                var gr = new GlideRecord('x_1919710_refurt_0_service_log');
+                gr.addQuery('technician_name', 'ATF Valid OTP Test');
+                gr.orderByDesc('sys_created_on');
+                gr.setLimit(1);
+                gr.query();
+                if (gr.next()) {
+                    gr.setValue('otp_code', KNOWN_CODE);
+                    gr.setWorkflow(false);
+                    gr.update();
+                    stepResult.setOutputMessage('Stored OTP code ' + KNOWN_CODE + ' on record ' + gr.getUniqueValue());
+                }
+            })(outputs, steps, params, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>
