@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>technician_name</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 08:05:56</sys_created_on>
+        <sys_id>e0d34b8061be4a40a5e5a4dbf350f716</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>technician_name</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ui_policy_action_e0d34b8061be4a40a5e5a4dbf350f716</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 08:05:56</sys_updated_on>
+        <table>x_1919710_refurt_0_service_log</table>
+        <ui_policy display_value="Make fields read-only when OTP verified">8f771c005063452992197d06dee41356</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=e0d34b8061be4a40a5e5a4dbf350f716"/>
+</record_update>

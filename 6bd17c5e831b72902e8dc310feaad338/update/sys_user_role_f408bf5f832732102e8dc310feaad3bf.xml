@@ -2,7 +2,7 @@
     <sys_user_role action="INSERT_OR_UPDATE">
         <assignable_by/>
         <can_delegate>true</can_delegate>
-        <description>Compliance officer role for managing compliance records and approvals</description>
+        <description>Approves evidence and compliance records</description>
         <elevated_privilege>false</elevated_privilege>
         <federated_id>8/M/DEs5HHmd/oo6m7fBONT7b45wVWlAaKNwdAyYXhE=</federated_id>
         <grantable>true</grantable>

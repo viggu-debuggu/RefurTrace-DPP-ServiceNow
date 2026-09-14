@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>certificate_number</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 08:05:56</sys_created_on>
+        <sys_id>ca3e62ba54134da391e5e79a1296674f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>certificate_number</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ui_policy_action_ca3e62ba54134da391e5e79a1296674f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 08:05:56</sys_updated_on>
+        <table>x_1919710_refurt_0_compliance_record</table>
+        <ui_policy display_value="Make certificate fields mandatory when compliance status is verified">7932f959da4a4178a6f1971a8a9d5361</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=ca3e62ba54134da391e5e79a1296674f"/>
+</record_update>

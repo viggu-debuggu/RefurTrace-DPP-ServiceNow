@@ -344,7 +344,7 @@
 }]]></link>
         <name>DPP Verify Card</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function () {
     data.found = false;

@@ -2,7 +2,7 @@
     <sys_user_role action="INSERT_OR_UPDATE">
         <assignable_by/>
         <can_delegate>true</can_delegate>
-        <description>Default admin role</description>
+        <description>Full application administrator for RefurTrace</description>
         <elevated_privilege>false</elevated_privilege>
         <federated_id>yI0kNZdYuzPN9g3UUuKi+Lwe+jns3WM5R9bLUl7ftwk=</federated_id>
         <grantable>true</grantable>

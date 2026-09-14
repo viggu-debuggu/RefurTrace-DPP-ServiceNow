@@ -5,7 +5,7 @@
         <attributes>readonly=true,html=true,html_sanitize=false</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>qr display</column_label>
