@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:03:49</sys_created_on>
+        <sys_id>b9d13b5306f6455597f6196b85c96f2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_step_b9d13b5306f6455597f6196b85c96f2e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:03:49</sys_updated_on>
+        <table/>
+        <test display_value="Portal Security - Only Safe Fields Returned">780eaebd9cca4427b0282c57efcc5b40</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=b9d13b5306f6455597f6196b85c96f2e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b9d13b5306f6455597f6196b85c96f2e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:39:34</sys_created_on>
+        <sys_id>52f79b8bb62940fcab3a0e52e8062c33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:39:34</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b9d13b5306f6455597f6196b85c96f2e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:39:34</sys_created_on>
+        <sys_id>e664d7ad38cc4aa29f20e31a9e93d8fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:39:34</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {
+                // Find any asset_passport record
+                var gr = new GlideRecord('x_1919710_refurt_0_asset_passport');
+                gr.setLimit(1);
+                gr.query();
+                if (!gr.next()) {
+                    stepResult.setOutputMessage('No asset_passport records found — test skipped');
+                    return true;
+                }
+                var sysId = gr.getUniqueValue();
+
+                var svc = new DPPVerificationService();
+                var result = svc.verify(sysId);
+
+                assertEqual({ name: 'Status must be 200', shouldbe: 200, value: result.statusCode });
+
+                var data = result.body;
+
+                // Assert safe fields exist
+                var safeFields = ['product', 'model', 'manufacturer', 'passport_status', 'passport_status_label', 'has_confirmed_fraud', 'passport_id'];
+                for (var i = 0; i &lt; safeFields.length; i++) {
+                    assertEqual({
+                        name: 'Field ' + safeFields[i] + ' must exist',
+                        shouldbe: true,
+                        value: data.hasOwnProperty(safeFields[i])
+                    });
+                }
+
+                // Assert dangerous fields do NOT exist
+                var dangerousFields = ['owned_by', 'risk_score', 'owner', 'cost', 'assigned_to', 'serial_number', 'imei_number', 'managed_by'];
+                for (var j = 0; j &lt; dangerousFields.length; j++) {
+                    assertEqual({
+                        name: 'Field ' + dangerousFields[j] + ' must NOT exist',
+                        shouldbe: false,
+                        value: data.hasOwnProperty(dangerousFields[j])
+                    });
+                }
+
+                // Assert total field count is exactly 7
+                var fieldCount = Object.keys(data).length;
+                assertEqual({ name: 'Exactly 7 fields returned', shouldbe: 7, value: fieldCount });
+
+                stepResult.setOutputMessage('Verified: ' + fieldCount + ' fields returned, all safe');
+            })(outputs, steps, params, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

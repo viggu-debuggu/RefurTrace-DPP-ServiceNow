@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order>2</order>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:03:59</sys_created_on>
+        <sys_id>008af9ac5be94968b91aebb4a60c55da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>0b867ae5167e4404a6ce5cd354088cef</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_008af9ac5be94968b91aebb4a60c55da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:03:59</sys_updated_on>
+        <test display_value="Approval Bypass - Prohibited Terms Blocked">0b867ae5167e4404a6ce5cd354088cef</test>
+        <test_suite display_value="Approval Bypass Protection">fe41ad24bcaa4f1db374b9a4fa6c68db</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>

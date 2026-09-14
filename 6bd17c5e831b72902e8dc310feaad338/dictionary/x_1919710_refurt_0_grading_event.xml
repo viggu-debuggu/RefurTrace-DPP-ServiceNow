@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b6fa80a00f5549f0a249a752e9936434" label="Grading Event" name="x_1919710_refurt_0_grading_event" type="collection">
+        <element label="Notes" max_length="1000" name="notes" type="string"/>
+        <element attributes="min=0,max=100" label="Functional Score" name="functional_score" type="integer"/>
+        <element choice="1" label="Grade" mandatory="true" name="grade" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="F" sequence="5" value="F"/>
+                <element inactive_on_update="false" label="B" sequence="2" value="B"/>
+                <element inactive_on_update="false" label="D" sequence="4" value="D"/>
+                <element inactive_on_update="false" label="A" sequence="1" value="A"/>
+                <element inactive_on_update="false" label="C" sequence="3" value="C"/>
+            </choice>
+        </element>
+        <element attributes="min=0,max=100" label="Battery Health" name="battery_health" type="integer"/>
+        <element label="Asset Passport" mandatory="true" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
+        <element attributes="min=0,max=100" label="Cosmetic Score" name="cosmetic_score" type="integer"/>
+        <element label="Graded By" name="graded_by" reference="sys_user" type="reference"/>
+        <element label="Grading Date" mandatory="true" name="grading_date" type="glide_date"/>
+        <index name="index">
+            <element name="asset_passport"/>
+        </index>
+        <index name="index2">
+            <element name="graded_by"/>
+        </index>
+    </element>
+</database>

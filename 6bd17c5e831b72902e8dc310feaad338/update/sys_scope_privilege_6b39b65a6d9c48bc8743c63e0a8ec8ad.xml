@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>create</operation>
+        <source_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:34:22</sys_created_on>
+        <sys_id>6b39b65a6d9c48bc8743c63e0a8ec8ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1919710_refurt_0_fraud_report</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_scope_privilege_6b39b65a6d9c48bc8743c63e0a8ec8ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:34:22</sys_updated_on>
+        <target_name>x_1919710_refurt_0_fraud_report</target_name>
+        <target_scope display_value="">x_1919710_refurt_0</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

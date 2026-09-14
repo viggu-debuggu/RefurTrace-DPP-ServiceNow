@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version">
+    <sys_ws_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <deprecated>false</deprecated>
+        <is_default>true</is_default>
+        <short_description>Initial release — public verification endpoint</short_description>
+        <sys_class_name>sys_ws_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:38</sys_created_on>
+        <sys_id>d857cec8ad4b48f0813e485cacc8866f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>v1</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ws_version_d857cec8ad4b48f0813e485cacc8866f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:38</sys_updated_on>
+        <version>1</version>
+        <version_id>v1</version_id>
+        <web_service_definition display_value="RefurTrace Verification API">7dbc3543fc4e4f06a32cccd5e43bd110</web_service_definition>
+    </sys_ws_version>
+</record_update>

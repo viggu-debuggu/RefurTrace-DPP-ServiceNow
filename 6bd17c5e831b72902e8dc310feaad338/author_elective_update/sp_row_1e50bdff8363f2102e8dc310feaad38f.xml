@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+  <sp_row action="DELETE" apply_defaults="true">
+    <sys_id>1e50bdff8363f2102e8dc310feaad38f</sys_id>
+    <sys_scope display_value="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+    <sys_update_name>sp_row_1e50bdff8363f2102e8dc310feaad38f</sys_update_name>
+    <class_name/>
+    <order>100</order>
+    <semantic_tag/>
+    <sp_column/>
+    <sp_container>4d50bdff8363f2102e8dc310feaad374</sp_container>
+  </sp_row>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</application>
+        <file_path/>
+        <instance_id>a2ceb275dbeaf55c02d9172913961920</instance_id>
+        <instance_name>dev214835</instance_name>
+        <name>sp_row_1e50bdff8363f2102e8dc310feaad38f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+  <sp_row action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>1e50bdff8363f2102e8dc310feaad38f</sys_id>
+    <sys_scope display_value="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+    <sys_update_name>sp_row_1e50bdff8363f2102e8dc310feaad38f</sys_update_name>
+    <class_name/>
+    <order>100</order>
+    <semantic_tag/>
+    <sp_column/>
+    <sp_container>4d50bdff8363f2102e8dc310feaad374</sp_container>
+  </sp_row>
+</record_update>]]></payload>
+        <payload_hash>-726880495</payload_hash>
+        <record_name>100</record_name>
+        <reverted_from/>
+        <source>bdac0b6d831707105a05e5d0deaad389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 09:21:24</sys_created_on>
+        <sys_id>ceac0b6d831707105a05e5d0deaad3e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a09a12494c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 09:21:24</sys_updated_on>
+        <type>Row</type>
+        <update_guid>ceac0b6d58170710afef0013ca4273e5</update_guid>
+        <update_guid_history>ceac0b6d58170710afef0013ca4273e5:-726880495,702fdf99c8978310200fa993d8003018:-995586571</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="100">80687b31839b87105a05e5d0deaad38a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:10:53</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>1f6844c24c3e422485dac432e5c8fac4</sys_id>
+        <sys_metadata>1e50bdff8363f2102e8dc310feaad38f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_scope_delete display_value="">03c08a7a93f7448a80101cdb7f517ca1</sys_scope_delete>
+        <sys_update_name>sp_row_1e50bdff8363f2102e8dc310feaad38f</sys_update_name>
+        <sys_update_version display_value="sp_row_1e50bdff8363f2102e8dc310feaad38f">ceac0b6d831707105a05e5d0deaad3e6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:10:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

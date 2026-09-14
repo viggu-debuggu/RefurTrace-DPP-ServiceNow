@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3ff40bf09b0d49c4a8a5433dbfdd4093" label="GDPR Erasure Request" name="x_1919710_refurt_0_gdpr_erasure_req" type="collection">
+        <element label="Request Date" mandatory="true" name="request_date" type="glide_date_time"/>
+        <element choice="1" default="not_verified" label="Verification Status" name="verification_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Verified" sequence="2" value="verified"/>
+                <element inactive_on_update="false" label="Not Verified" sequence="1" value="not_verified"/>
+                <element inactive_on_update="false" label="Failed Verification" sequence="3" value="failed_verification"/>
+            </choice>
+        </element>
+        <element label="Tables Processed" max_length="4000" name="tables_processed" type="string"/>
+        <element label="Completion Date" name="completion_date" type="glide_date_time"/>
+        <element label="Subject Identifier" mandatory="true" name="subject_identifier" type="string"/>
+        <element default="0" label="Records Anonymised" name="records_anonymised" type="integer"/>
+        <element label="Audit Trail" name="audit_trail" type="journal_input"/>
+        <element label="Processed By" name="processed_by" reference="sys_user" type="reference"/>
+        <element label="Requested By" name="requested_by" reference="sys_user" type="reference"/>
+        <element choice="1" default="pending" label="Status" mandatory="true" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Failed" sequence="4" value="failed"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Verified" sequence="5" value="verified"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in_progress"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="processed_by"/>
+        </index>
+        <index name="index2">
+            <element name="requested_by"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order>1</order>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:03:59</sys_created_on>
+        <sys_id>2cf12bf0c52640efa3078d2a7adaf728</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>49c3aa7ea2064fdc8958c486b51097c6</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_2cf12bf0c52640efa3078d2a7adaf728</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:03:59</sys_updated_on>
+        <test display_value="GDPR Erasure - Handler Lifecycle">49c3aa7ea2064fdc8958c486b51097c6</test>
+        <test_suite display_value="GDPR Erasure">98762f9e6d354ae8a7f75c1fed1e8094</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>

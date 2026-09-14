@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_1919710_refurt_0/verify/{sys_id}</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Get Passport Verification</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var sysId = request.pathParams.sys_id;
+
+    var svc = new DPPVerificationService();
+    var result = svc.verify(sysId);
+
+    // Security response headers
+    response.setHeader('X-Content-Type-Options', 'nosniff');
+    response.setHeader('Cache-Control', 'public, max-age=300');
+
+    response.setStatus(result.statusCode);
+    response.setBody(result.body);
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_1919710_refurt_0/v1/verify/{sys_id}</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{sys_id}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>Verify a Digital Product Passport by sys_id. Returns only the permitted public f</short_description>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:38</sys_created_on>
+        <sys_id>c0617fcd79464bf49c36df14d8451506</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Passport Verification</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ws_operation_c0617fcd79464bf49c36df14d8451506</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:38</sys_updated_on>
+        <web_service_definition display_value="RefurTrace Verification API">7dbc3543fc4e4f06a32cccd5e43bd110</web_service_definition>
+        <web_service_version display_value="v1">d857cec8ad4b48f0813e485cacc8866f</web_service_version>
+    </sys_ws_operation>
+</record_update>

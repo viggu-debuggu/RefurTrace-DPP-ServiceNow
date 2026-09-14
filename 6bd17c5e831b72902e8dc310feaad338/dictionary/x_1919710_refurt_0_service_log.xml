@@ -12,6 +12,7 @@
         <element label="Next Service Date" max_length="40" name="next_service_date" type="glide_date"/>
         <element label="Cost" max_length="40" name="cost" type="currency"/>
         <element label="Service Notes" max_length="40" name="service_notes" type="string"/>
+        <element label="Work Order Reference" max_length="40" name="work_order_ref" type="string"/>
         <element label="Service Date" max_length="40" name="service_date" type="glide_date"/>
         <element label="Asset Passport" max_length="32" name="asset_passport" reference="x_1919710_refurt_0_asset_passport" type="reference"/>
         <element choice="3" label="Service Type" max_length="40" name="service_type" type="choice">

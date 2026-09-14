@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.PIIEnforcer</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scans all string/text fields on a record for raw PII patterns (email, phone, SSN). Returns the first match found so the caller can abort with a meaningful message.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>PIIEnforcer</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PIIEnforcer = Class.create();
+PIIEnforcer.prototype = {
+    initialize: function () {
+        // Email: local@domain.tld
+        this.emailPattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
+        // Phone: 10+ digit sequences (with optional separators)
+        this.phonePattern = /(?:\+?\d[\d\-\s()]{8,}\d)/;
+        // SSN: XXX-XX-XXXX
+        this.ssnPattern = /\b\d{3}-\d{2}-\d{4}\b/;
+    },
+
+    /**
+     * Scan all string/text fields on the given GlideRecord for PII.
+     * @param {GlideRecord} record - the current record being inserted/updated
+     * @returns {{ detected: boolean, field?: string, type?: string }}
+     */
+    check: function (record) {
+        var fields = this._getStringFields(record);
+        for (var i = 0; i < fields.length; i++) {
+            var fieldName = fields[i];
+            var value = record.getValue(fieldName);
+            if (!value) continue;
+
+            if (this.emailPattern.test(value)) {
+                return { detected: true, field: fieldName, type: 'email address' };
+            }
+            if (this.ssnPattern.test(value)) {
+                return { detected: true, field: fieldName, type: 'SSN' };
+            }
+            if (this.phonePattern.test(value)) {
+                return { detected: true, field: fieldName, type: 'phone number' };
+            }
+        }
+        return { detected: false };
+    },
+
+    /**
+     * Return an array of field names whose internal type is string-like.
+     */
+    _getStringFields: function (record) {
+        var stringFields = [];
+        var tableName = record.getTableName();
+        var gr = new GlideRecord(tableName);
+        var elements = gr.getElements();
+        for (var i = 0; i < elements.length; i++) {
+            var ed = elements[i].getED();
+            var internalType = ed.getInternalType() + '';
+            if (
+                internalType == 'string' ||
+                internalType == 'translated_text' ||
+                internalType == 'html' ||
+                internalType == 'journal' ||
+                internalType == 'journal_input' ||
+                internalType == 'text' ||
+                internalType == 'translated_field'
+            ) {
+                var name = elements[i].getName() + '';
+                // Skip system fields
+                if (name.indexOf('sys_') === 0) continue;
+                stringFields.push(name);
+            }
+        }
+        return stringFields;
+    },
+
+    type: 'PIIEnforcer',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:34</sys_created_on>
+        <sys_id>599ca162b95545c9b703de4f1c56a5f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PIIEnforcer</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_599ca162b95545c9b703de4f1c56a5f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

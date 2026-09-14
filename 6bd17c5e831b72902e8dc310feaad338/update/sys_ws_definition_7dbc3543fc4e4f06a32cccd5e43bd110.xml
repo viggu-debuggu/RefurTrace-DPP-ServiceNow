@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_1919710_refurt_0/verify</base_uri>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_version>v1</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>true</is_versioned>
+        <name>RefurTrace Verification API</name>
+        <namespace>x_1919710_refurt_0</namespace>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <service_id>verify</service_id>
+        <short_description>Public verification endpoint for Digital Product Passports with fail-fast securi</short_description>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:38</sys_created_on>
+        <sys_id>7dbc3543fc4e4f06a32cccd5e43bd110</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RefurTrace Verification API</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_ws_definition_7dbc3543fc4e4f06a32cccd5e43bd110</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:38</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

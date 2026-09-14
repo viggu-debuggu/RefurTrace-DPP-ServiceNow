@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.DPPVerificationService</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Shared fail-fast verification pipeline for Digital Product Passports. Validates input, enforces rate limits, looks up the passport record, serializes only the permitted fields, and checks for confirmed fraud. Called by both the Scripted REST API and the DPP Verify Card SP widget.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>DPPVerificationService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DPPVerificationService = Class.create();
+DPPVerificationService.prototype = {
+    initialize: function () {},
+
+    /**
+     * Fail-fast verification pipeline.
+     * Returns { success: boolean, statusCode: number, body: object }
+     */
+    verify: function (sysId) {
+        // ── 1. Input Validation ──────────────────────────────────────
+        if (!this._isValidSysId(sysId)) {
+            return this._error(400, 'Invalid passport identifier format');
+        }
+
+        // ── 2. Rate Limiting (per-session, keyed by client IP) ───────
+        if (this._isRateLimited()) {
+            return this._error(429, 'Rate limit exceeded. Try again later.');
+        }
+
+        // ── 3. Record Lookup ─────────────────────────────────────────
+        var gr = new GlideRecord('x_1919710_refurt_0_asset_passport');
+        if (!gr.get(sysId)) {
+            return this._error(404, 'Passport not found');
+        }
+
+        // ── 4. 4-Field Serializer (never expose anything else) ───────
+        var result = {
+            product: gr.getValue('name') || '',
+            model: gr.getValue('model_number') || '',
+            manufacturer: !gr.manufacturer.nil()
+                ? gr.manufacturer.getDisplayValue()
+                : '',
+            passport_status: gr.getValue('passport_status') || '',
+            passport_status_label: gr.getDisplayValue('passport_status') || '',
+            has_confirmed_fraud: false,
+            passport_id: gr.getValue('asset_ta0') || ''
+        };
+
+        // ── 5. Fraud Check ───────────────────────────────────────────
+        var fr = new GlideRecord('x_1919710_refurt_0_fraud_report');
+        fr.addQuery('asset_passport', sysId);
+        fr.addQuery('status', 'confirmed');
+        fr.setLimit(1);
+        fr.query();
+        result.has_confirmed_fraud = fr.hasNext();
+
+        return this._success(result);
+    },
+
+    /* ── Private helpers ───────────────────────────────────────────── */
+
+    _isValidSysId: function (sysId) {
+        if (!sysId || typeof sysId !== 'string') {
+            return false;
+        }
+        return /^[0-9a-fA-F]{32}$/.test(sysId);
+    },
+
+    /**
+     * Session-based rate limiter.
+     * Tracks request count per client IP within a 60-second sliding window.
+     * Uses GlideSession.putClientData / getClientData for in-memory storage.
+     */
+    _isRateLimited: function () {
+        var MAX_REQUESTS = 10;
+        var WINDOW_MS = 60 * 1000;
+
+        var session = gs.getSession();
+        var clientIp = session.getClientIP();
+        var now = new GlideDateTime().getNumericValue();
+        var key = 'rftr_rate_' + clientIp;
+        var stored = session.getClientData(key);
+
+        if (stored) {
+            try {
+                var parsed = JSON.parse(stored);
+                if (now - parsed.windowStart < WINDOW_MS) {
+                    parsed.count += 1;
+                    session.putClientData(key, JSON.stringify(parsed));
+                    return parsed.count > MAX_REQUESTS;
+                }
+            } catch (e) {
+                // Corrupted session data — fall through and reset
+            }
+        }
+
+        // Start a fresh window
+        session.putClientData(key, JSON.stringify({
+            windowStart: now,
+            count: 1
+        }));
+        return false;
+    },
+
+    _success: function (data) {
+        return { success: true, statusCode: 200, body: data };
+    },
+
+    _error: function (statusCode, message) {
+        return {
+            success: false,
+            statusCode: statusCode,
+            body: { error: { message: message } }
+        };
+    },
+
+    type: 'DPPVerificationService'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:34</sys_created_on>
+        <sys_id>3d4976cf5f1844b4b8f30b0e6ed05f81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DPPVerificationService</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_3d4976cf5f1844b4b8f30b0e6ed05f81</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

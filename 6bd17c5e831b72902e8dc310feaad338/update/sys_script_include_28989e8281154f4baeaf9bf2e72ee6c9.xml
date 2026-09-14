@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.GDPRErasureHandler</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Handles GDPR Right-to-Erasure requests across all RefurTrace tables. Provides register, identify, anonymise, verify, and audit methods for the complete erasure pipeline.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GDPRErasureHandler</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var GDPRErasureHandler = Class.create();
+GDPRErasureHandler.prototype = {
+    initialize: function () {
+        this.SCOPE_PREFIX = 'x_1919710_refurt_0_';
+        this.LOG_PREFIX = 'GDPRErasureHandler: ';
+        this.TABLE_CONFIG = {
+            'x_1919710_refurt_0_asset_passport': {
+                refFields: ['owned_by', 'managed_by', 'assigned_to', 'supported_by', 'most_frequent_user', 'owner', 'attested_by'],
+                stringFields: ['name']
+            },
+            'x_1919710_refurt_0_service_log': {
+                refFields: [],
+                stringFields: ['technician_name']
+            },
+            'x_1919710_refurt_0_compliance_record': {
+                refFields: ['inspector', 'verified_by'],
+                stringFields: ['issued_by']
+            },
+            'x_1919710_refurt_0_ownership_transfer_case': {
+                refFields: ['current_owner', 'requested_new_owner'],
+                stringFields: []
+            },
+            'x_1919710_refurt_0_fraud_report': {
+                refFields: ['reported_by'],
+                stringFields: []
+            }
+        };
+        this._subjectIdentifier = '';
+        this._subjectSysId = '';
+        this._subjectName = '';
+        this._identifiedRecords = {};
+        this._anonymisedCount = 0;
+        this._verificationResult = {};
+    },
+
+    /**
+     * Creates a new GDPR erasure request record (or logs the intent).
+     * @param {string} subjectIdentifier - sys_id, user_name, or name of the data subject
+     * @returns {string|null} requestId
+     */
+    register: function (subjectIdentifier) {
+        try {
+            gs.info(this.LOG_PREFIX + 'Registering erasure request for subject');
+            this._resolveSubject(subjectIdentifier);
+
+            var requestId = gs.generateGUID();
+
+            // Try to persist to gdpr_erasure_req if the table exists
+            try {
+                var gr = new GlideRecord('x_1919710_refurt_0_gdpr_erasure_req');
+                if (gr.isValid()) {
+                    gr.initialize();
+                    gr.setValue('subject_identifier', subjectIdentifier);
+                    gr.setValue('request_date', new GlideDateTime().getValue());
+                    gr.setValue('status', 'registered');
+                    gr.setValue('processed_by', gs.getUserID());
+                    var sysId = gr.insert();
+                    if (sysId) {
+                        requestId = sysId;
+                        gs.info(this.LOG_PREFIX + 'Created erasure request record: ' + requestId);
+                    }
+                }
+            } catch (tableErr) {
+                gs.info(this.LOG_PREFIX + 'gdpr_erasure_req table not available, using generated ID: ' + requestId);
+            }
+
+            return requestId;
+        } catch (e) {
+            gs.info(this.LOG_PREFIX + 'Error in register: ' + e.message);
+            return null;
+        }
+    },
+
+    /**
+     * Scans all 5 RefurTrace tables for records matching the subject.
+     * @param {string} requestId - the erasure request identifier
+     * @returns {{ tables: Object, totalRecords: number }}
+     */
+    identify: function (requestId) {
+        try {
+            gs.info(this.LOG_PREFIX + 'Identifying records for request: ' + requestId);
+            var result = { tables: {}, totalRecords: 0 };
+
+            for (var tableName in this.TABLE_CONFIG) {
+                var config = this.TABLE_CONFIG[tableName];
+                var shortName = tableName.replace(this.SCOPE_PREFIX, '');
+                var matchedIds = [];
+
+                var gr = new GlideRecord(tableName);
+                var qc = null;
+
+                // Build OR query across all searchable fields
+                if (this._subjectSysId) {
+                    for (var r = 0; r < config.refFields.length; r++) {
+                        if (!qc) {
+                            qc = gr.addQuery(config.refFields[r], this._subjectSysId);
+                        } else {
+                            qc.addOrCondition(config.refFields[r], this._subjectSysId);
+                        }
+                    }
+                }
+                if (this._subjectName) {
+                    for (var s = 0; s < config.stringFields.length; s++) {
+                        if (!qc) {
+                            qc = gr.addQuery(config.stringFields[s], this._subjectName);
+                        } else {
+                            qc.addOrCondition(config.stringFields[s], this._subjectName);
+                        }
+                    }
+                }
+
+                if (!qc) {
+                    result.tables[shortName] = [];
+                    continue;
+                }
+
+                gr.query();
+                while (gr.next()) {
+                    matchedIds.push(gr.getUniqueValue());
+                }
+
+                result.tables[shortName] = matchedIds;
+                result.totalRecords += matchedIds.length;
+                gs.info(this.LOG_PREFIX + 'Found ' + matchedIds.length + ' records in ' + shortName);
+            }
+
+            this._identifiedRecords = result;
+            gs.info(this.LOG_PREFIX + 'Total records identified: ' + result.totalRecords);
+            return result;
+        } catch (e) {
+            gs.info(this.LOG_PREFIX + 'Error in identify: ' + e.message);
+            return { tables: {}, totalRecords: 0 };
+        }
+    },
+
+    /**
+     * Anonymises PII fields in all identified records.
+     * @param {string} requestId - the erasure request identifier
+     * @returns {number} count of anonymised records
+     */
+    anonymise: function (requestId) {
+        try {
+            gs.info(this.LOG_PREFIX + 'Starting anonymisation for request: ' + requestId);
+            var count = 0;
+
+            for (var tableName in this.TABLE_CONFIG) {
+                var config = this.TABLE_CONFIG[tableName];
+                var shortName = tableName.replace(this.SCOPE_PREFIX, '');
+                var recordIds = (this._identifiedRecords.tables) ? this._identifiedRecords.tables[shortName] : [];
+
+                if (!recordIds || recordIds.length === 0) continue;
+
+                for (var i = 0; i < recordIds.length; i++) {
+                    var gr = new GlideRecord(tableName);
+                    if (gr.get(recordIds[i])) {
+                        gr.setWorkflow(false); // Prevent business rules from firing
+
+                        // Clear reference fields pointing to the subject
+                        for (var r = 0; r < config.refFields.length; r++) {
+                            var refVal = gr.getValue(config.refFields[r]);
+                            if (refVal && refVal === this._subjectSysId) {
+                                gr.setValue(config.refFields[r], '');
+                            }
+                        }
+
+                        // Replace string fields with anonymised tokens
+                        for (var s = 0; s < config.stringFields.length; s++) {
+                            var strVal = gr.getValue(config.stringFields[s]);
+                            if (strVal && this._subjectName && strVal.toLowerCase() === this._subjectName.toLowerCase()) {
+                                var hash = this._generateHash(requestId + '_' + config.stringFields[s]);
+                                gr.setValue(config.stringFields[s], 'ANONYMISED_' + config.stringFields[s] + '_' + hash);
+                            }
+                        }
+
+                        gr.update();
+                        count++;
+                    }
+                }
+                gs.info(this.LOG_PREFIX + 'Anonymised records in ' + shortName + ': ' + recordIds.length);
+            }
+
+            this._anonymisedCount = count;
+            gs.info(this.LOG_PREFIX + 'Total records anonymised: ' + count);
+            return count;
+        } catch (e) {
+            gs.info(this.LOG_PREFIX + 'Error in anonymise: ' + e.message);
+            return 0;
+        }
+    },
+
+    /**
+     * Re-scans all tables to verify no PII remains for the subject.
+     * @param {string} requestId - the erasure request identifier
+     * @returns {{ verified: boolean, remainingRecords: number }}
+     */
+    verify: function (requestId) {
+        try {
+            gs.info(this.LOG_PREFIX + 'Verifying erasure for request: ' + requestId);
+            var postScan = this.identify(requestId);
+            var verified = postScan.totalRecords === 0;
+
+            this._verificationResult = {
+                verified: verified,
+                remainingRecords: postScan.totalRecords
+            };
+
+            gs.info(this.LOG_PREFIX + 'Verification result - verified: ' + verified + ', remaining: ' + postScan.totalRecords);
+            return this._verificationResult;
+        } catch (e) {
+            gs.info(this.LOG_PREFIX + 'Error in verify: ' + e.message);
+            return { verified: false, remainingRecords: -1 };
+        }
+    },
+
+    /**
+     * Creates an audit log entry for the erasure request.
+     * @param {string} requestId - the erasure request identifier
+     * @returns {Object|null} the audit entry object
+     */
+    audit: function (requestId) {
+        try {
+            var hashedSubject = this._generateHash(this._subjectIdentifier || 'unknown');
+            var tablesProcessed = [];
+            if (this._identifiedRecords && this._identifiedRecords.tables) {
+                for (var t in this._identifiedRecords.tables) {
+                    tablesProcessed.push(t);
+                }
+            }
+
+            var auditEntry = {
+                requestId: requestId,
+                subjectHash: hashedSubject,
+                tablesProcessed: tablesProcessed.join(', '),
+                recordsAnonymised: this._anonymisedCount,
+                verificationStatus: (this._verificationResult && this._verificationResult.verified) ? 'PASSED' : 'FAILED',
+                timestamp: new GlideDateTime().getDisplayValue()
+            };
+
+            gs.info(this.LOG_PREFIX + 'AUDIT TRAIL | ' +
+                'Request: ' + auditEntry.requestId + ' | ' +
+                'Subject Hash: ' + auditEntry.subjectHash + ' | ' +
+                'Tables: ' + auditEntry.tablesProcessed + ' | ' +
+                'Records Anonymised: ' + auditEntry.recordsAnonymised + ' | ' +
+                'Verification: ' + auditEntry.verificationStatus + ' | ' +
+                'Timestamp: ' + auditEntry.timestamp);
+
+            return auditEntry;
+        } catch (e) {
+            gs.info(this.LOG_PREFIX + 'Error in audit: ' + e.message);
+            return null;
+        }
+    },
+
+    /**
+     * Resolves the subject identifier to a sys_user sys_id and display name.
+     * @param {string} subjectIdentifier - sys_id, user_name, or name
+     * @private
+     */
+    _resolveSubject: function (subjectIdentifier) {
+        this._subjectIdentifier = subjectIdentifier;
+
+        // Try to resolve as sys_id
+        var userGr = new GlideRecord('sys_user');
+        if (userGr.get(subjectIdentifier)) {
+            this._subjectSysId = userGr.getUniqueValue();
+            this._subjectName = userGr.getValue('name') || '';
+            gs.info(this.LOG_PREFIX + 'Resolved subject by sys_id: ' + this._subjectSysId);
+            return;
+        }
+
+        // Try to resolve by user_name
+        userGr = new GlideRecord('sys_user');
+        userGr.addQuery('user_name', subjectIdentifier);
+        userGr.query();
+        if (userGr.next()) {
+            this._subjectSysId = userGr.getUniqueValue();
+            this._subjectName = userGr.getValue('name') || '';
+            gs.info(this.LOG_PREFIX + 'Resolved subject by user_name: ' + this._subjectSysId);
+            return;
+        }
+
+        // Try to resolve by display name
+        userGr = new GlideRecord('sys_user');
+        userGr.addQuery('name', subjectIdentifier);
+        userGr.query();
+        if (userGr.next()) {
+            this._subjectSysId = userGr.getUniqueValue();
+            this._subjectName = userGr.getValue('name') || '';
+            gs.info(this.LOG_PREFIX + 'Resolved subject by name: ' + this._subjectSysId);
+            return;
+        }
+
+        // Fall back to using identifier as a name string for string-field matching
+        this._subjectName = subjectIdentifier;
+        gs.info(this.LOG_PREFIX + 'Could not resolve subject to sys_user, using as name string: ' + subjectIdentifier);
+    },
+
+    /**
+     * Generates a short hash string from the input.
+     * @param {string} input
+     * @returns {string} 8-character hex hash
+     * @private
+     */
+    _generateHash: function (input) {
+        try {
+            var md = new GlideDigest();
+            return md.md5_digest(input).substring(0, 8);
+        } catch (e) {
+            // Fallback: simple numeric hash
+            var hash = 0;
+            for (var i = 0; i < input.length; i++) {
+                var ch = input.charCodeAt(i);
+                hash = ((hash << 5) - hash) + ch;
+                hash = hash & hash; // Convert to 32-bit integer
+            }
+            return Math.abs(hash).toString(16).substring(0, 8);
+        }
+    },
+
+    type: 'GDPRErasureHandler'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 06:36:34</sys_created_on>
+        <sys_id>28989e8281154f4baeaf9bf2e72ee6c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GDPRErasureHandler</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_28989e8281154f4baeaf9bf2e72ee6c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 06:36:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

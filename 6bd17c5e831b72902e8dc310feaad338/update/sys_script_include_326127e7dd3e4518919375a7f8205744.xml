@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1919710_refurt_0.TierActivationUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Runtime guards for optional platform features. Provides methods to check if specific plugins (Service Portal, Integration Hub, Flow Designer, ATF) are active before using tier-specific functionality.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>TierActivationUtil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TierActivationUtil = Class.create()
+TierActivationUtil.prototype = {
+    initialize: function () {},
+
+    /**
+     * Checks if the Service Portal plugin is active.
+     * @returns {boolean} true if com.glide.service-portal is active
+     */
+    isServicePortalAvailable: function () {
+        return this.checkTier('com.glide.service-portal')
+    },
+
+    /**
+     * Checks if the Integration Hub plugin is active.
+     * @returns {boolean} true if com.glide.hub.integrations is active
+     */
+    isIntegrationHubAvailable: function () {
+        return this.checkTier('com.glide.hub.integrations')
+    },
+
+    /**
+     * Checks if the Flow Designer plugin is active.
+     * @returns {boolean} true if com.glide.hub.flow_designer is active
+     */
+    isFlowDesignerAvailable: function () {
+        return this.checkTier('com.glide.hub.flow_designer')
+    },
+
+    /**
+     * Checks if the Automated Test Framework plugin is active.
+     * @returns {boolean} true if com.glide.testing is active
+     */
+    isATFAvailable: function () {
+        return this.checkTier('com.glide.testing')
+    },
+
+    /**
+     * Generic method that checks if a given plugin is active.
+     * Logs a warning if the plugin is not available.
+     * @param {string} pluginId - The plugin identifier to check
+     * @returns {boolean} true if the plugin is active, false otherwise
+     */
+    checkTier: function (pluginId) {
+        var pm = new GlidePluginManager()
+        var isActive = pm.isActive(pluginId)
+        if (!isActive) {
+            gs.warn(
+                'TierActivationUtil: Plugin "' +
+                    pluginId +
+                    '" is not active on this instance. Features depending on it will be unavailable.'
+            )
+        }
+        return isActive
+    },
+
+    type: 'TierActivationUtil',
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:34:23</sys_created_on>
+        <sys_id>326127e7dd3e4518919375a7f8205744</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TierActivationUtil</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_script_include_326127e7dd3e4518919375a7f8205744</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:34:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

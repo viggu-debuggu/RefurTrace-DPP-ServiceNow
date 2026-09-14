@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order>4</order>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 07:04:00</sys_created_on>
+        <sys_id>d649618e1cdd4c5cbc2a54ab0b012f67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>16d684a87a8f4db6a0ab14ff4234fa17</sys_name>
+        <sys_package display_value="RefurTrace" source="x_1919710_refurt_0">6bd17c5e831b72902e8dc310feaad338</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RefurTrace">6bd17c5e831b72902e8dc310feaad338</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_d649618e1cdd4c5cbc2a54ab0b012f67</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 07:04:00</sys_updated_on>
+        <test display_value="Approval Bypass - PII Detection Blocks Insert">16d684a87a8f4db6a0ab14ff4234fa17</test>
+        <test_suite display_value="Approval Bypass Protection">fe41ad24bcaa4f1db374b9a4fa6c68db</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>
